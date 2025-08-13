@@ -1,26 +1,223 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+@layer utilities {
+  .font-BebasNeue-regular {
+    font-family: var(--font-bebas-neue);
+    font-weight: 400;
+  }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+  .font-Gilroy-regular {
+    font-family: var(--font-gilroy);
+    font-weight: 400;
+  }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+  .font-Gilroy-bold {
+    font-family: var(--font-gilroy);
+    font-weight: 700;
+  }
+
+  .font-Manrope-regular {
+    font-family: var(--font-manrope);
+    font-weight: 400;
+  }
+
+  .font-Manrope-medium {
+    font-family: var(--font-manrope);
+    font-weight: 500;
+  }
+
+  .font-Manrope-bold {
+    font-family: var(--font-manrope);
+    font-weight: 700;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@layer base {
+  :root {
+    /* Your gradient colors in RGB format (without alpha) */
+    --gradient-light-red: 255 87 81;
+    --gradient-dark-red: 246 26 18;
+    --gradient-white: 243 243 243;
+    --gradient-smoke-white: 255 255 255;
+    --gradient-orange: 225 127 51;
+    --gradient-dark-orange: 255 95 0;
+    --gradient-black: 0 0 0;
+    --gradient-brown: 43 43 43;
+    --gradient-dark-green: 1 83 85;
+    --gradient-light-green: 0 138 141;
+    --gradient-light-pink: 172 104 217;
+    --gradient-dark-pink: 91 55 115;
+
+    /* Gradient direction variable */
+    --gradient-direction: to right;
+
+    --color-secondary-rgb: 62 0 88;
+    /* Solid Colors (Hex or RGB) */
+    --color-primary: #f61a12;
+    --color-secondary: #ffffff;
+    --color-tertiary: #839297;
+    --color-custom-black: #2b2b2b;
+  }
+}
+
+@layer utilities {
+  .gradient-to-r {
+    --gradient-direction: to right;
+  }
+  .gradient-to-l {
+    --gradient-direction: to left;
+  }
+  .gradient-to-b {
+    --gradient-direction: to bottom;
+  }
+  .gradient-to-t {
+    --gradient-direction: to top;
+  }
+  .gradient-to-br {
+    --gradient-direction: to bottom right;
+  }
+  .gradient-to-bl {
+    --gradient-direction: to bottom left;
+  }
+  .gradient-to-tr {
+    --gradient-direction: to top right;
+  }
+  .gradient-to-tl {
+    --gradient-direction: to top left;
+  }
+
+  /* Background gradient */
+  .bg-gradient-nav {
+    background-image: linear-gradient(
+      var(--gradient-direction, to bottom),
+      rgb(var(--gradient-black, 0 0 0)) 0%,
+      rgb(var(--gradient-brown, 43 43 43)) 100%
+    );
+  }
+  .bg-gradient-card {
+    background-image: linear-gradient(
+      var(--gradient-direction, to right),
+      rgb(var(--gradient-white, 243 243 243)),
+      rgb(var(--gradient-dark-red, 246 26 18))
+    );
+  }
+  .bg-hover-gradient-card:hover {
+    background-image: linear-gradient(
+      var(--gradient-direction, to right),
+      rgb(var(--gradient-white, 243 243 243)),
+      rgb(var(--gradient-dark-red, 246 26 18))
+    );
+  }
+  .bg-gradient-wobo {
+    background-image: linear-gradient(
+      var(--gradient-direction, to right),
+      rgb(var(--gradient-orange, 225 127 51)) 0%,
+      rgb(var(--gradient-dark-orange, 255 95 0)) 66%
+    );
+  }
+  .bg-gradient-golf {
+    background-image: linear-gradient(
+      var(--gradient-direction, to bottom),
+      rgb(var(--gradient-dark-green, 1 83 85)) 0%,
+      rgb(var(--gradient-light-green, 0 138 141)) 60%
+    );
+  }
+  .bg-gradient-b2b {
+    background-image: linear-gradient(
+      var(--gradient-direction, to bottom),
+      rgb(var(--gradient-light-pink, 172 104 217)) 1%,
+      rgb(var(--gradient-dark-pink, 91 55 115)) 100%
+    );
+  }
+
+  /* .bg-gradient-button {
+    background-image: linear-gradient(
+      var(--gradient-direction, to right),
+      rgb(var(--gradient-dark-red, 246 26 18)),
+      rgb(var(--gradient-light-red, 255 87 81))
+    );
+  } */
+
+  .bg-gradient-button {
+    background: linear-gradient(to bottom, #ff5f5f, #ff1a1a);
+    border-radius: 9999px;
+    box-shadow: inset 0 -2px 0px rgba(255, 255, 255, 0.2),
+      inset 0px -1px 4px rgba(255, 255, 255, 0.6),
+      inset -2px 2px 4px rgba(255, 255, 255, 0.1),
+      inset 0px 2px 4px rgba(255, 255, 255, 0.6),
+      0 2px 3px rgba(255, 255, 255, 0.1);
+    text-shadow: 0 1px 2px rgba(255, 255, 255, 0.3);
+  }
+
+  .bg-gradient-stroke {
+    background-image: linear-gradient(
+      var(--gradient-direction, to right),
+      rgb(var(--gradient-pink, 255 105 180)),
+      rgb(var(--gradient-darkpink, 70 0 101))
+    );
+  }
+
+  /* Text gradient */
+  .text-gradient-custom {
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    background-image: linear-gradient(
+      var(--gradient-direction, to left),
+      rgb(var(--gradient-white)),
+      rgb(var(--gradient-purple))
+    );
+  }
+
+  .text-prime {
+    color: var(--color-primary);
+  }
+  .text-second {
+    color: var(--color-secondary);
+  }
+  .text-tertiary {
+    color: var(--color-tertiary);
+  }
+  .text-custom-black {
+    color: var(--color-custom-black);
+  }
+  .bg-selected {
+    background-color: rgb(var(--color-secondary-rgb) / 0.8);
+  }
+}
+
+:root {
+  --animate-marquee: marquee 20s linear infinite;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@layer utilities {
+  .animate-marquee {
+    animation: var(--animate-marquee);
+  }
+
+  .hover\:pause:hover {
+    animation-play-state: paused;
+  }
+
+  /* Optional: Additional marquee variants */
+  .animate-marquee-slow {
+    animation: marquee 30s linear infinite;
+  }
+
+  .animate-marquee-fast {
+    animation: marquee 10s linear infinite;
+  }
+
+  .animate-marquee-reverse {
+    animation: marquee 20s linear infinite reverse;
+  }
 }
