@@ -83,8 +83,8 @@ const Spotlight = () => {
               },
             }}
             viewport={{
-              once: true, // Animation happens only once
-              amount: 0.3, // Trigger when 30% of element is visible
+              once: true,
+              amount: 0.3,
             }}
             className="text-left md:text-center text-second"
           >
@@ -160,7 +160,7 @@ const Spotlight = () => {
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="text-center mt-20 mb-16"
+            className="text-center mt-24 mb-16"
           >
             <h1 className="text-4xl font-Manrope-bold text-custom-black mb-3">
               AI <span className="font-Manrope-regular"> at INFILP </span>

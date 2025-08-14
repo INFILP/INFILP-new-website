@@ -74,7 +74,7 @@ const BuildBanner = ({
   return (
     <motion.div
       ref={ref}
-      className="relative w-full max-w-md md:max-w-[1240px] px-4 mx-auto my-12 group"
+      className="relative w-full max-w-md md:max-w-[1240px] px-4 mx-auto my-24 group"
       variants={containerVariants}
       initial="hidden"
       animate={isInView ? "visible" : "hidden"}
@@ -132,7 +132,7 @@ const BuildBanner = ({
           >
             <button
               onClick={onClick}
-              className="bg-white text-red-600 cursor-pointer px-8 py-3 md:px-10 md:py-4 text-center rounded-full font-Manrope-regular text-base md:text-lg hover:shadow-lg hover:bg-gray-50 transition-all duration-300"
+              className="bg-white text-red-600 cursor-pointer px-8 py-3 md:px-10 md:py-4 text-center rounded-full font-Manrope-bold text-base md:text-lg hover:shadow-lg hover:bg-gray-50 transition-all duration-300"
             >
               {buttonText}
             </button>

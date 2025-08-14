@@ -15,7 +15,7 @@ const TestimonialCard = ({ logo, quoteIcon, text, name, role, image }) => {
           alt="Quote"
           width={200}
           height={200}
-          className="absolute top-0 right-0 w-16 h-16 sm:w-20 sm:h-20 md:w-44 md:h-44 lg:w-32 lg:h-32 xl:w-48 xl:h-48"
+          className="absolute top-0 right-0 w-16 h-16 sm:w-20 sm:h-20 md:w-44 md:h-44 lg:w-32 lg:h-32"
         />
       )}
 
@@ -27,8 +27,8 @@ const TestimonialCard = ({ logo, quoteIcon, text, name, role, image }) => {
         <div className="w-full h-px bg-gray-400"></div>
 
         <div className="flex items-center gap-3">
-          <div className="whitespace-nowrap">
-            <p className=" text-custom-black text-sm md:text-[22px] font-Manrope-medium w-32">
+          <div className="whitespace-nowrap flex flex-col items-end">
+            <p className=" text-custom-black text-sm md:text-[22px] font-Manrope-medium text-right ">
               {name}
             </p>
             <p className="text-tertiary text-xs md:text-base">{role}</p>

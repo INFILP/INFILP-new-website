@@ -55,7 +55,7 @@ const VideoCarousel = ({ videos = [] }) => {
   }, [activeIndex, videoData.length]);
 
   return (
-    <div className="relative w-full ">
+    <div className="relative w-full">
       <style jsx global>{`
         .video-carousel-full {
           width: 100%;
@@ -81,7 +81,6 @@ const VideoCarousel = ({ videos = [] }) => {
           opacity: 1;
           transform: scale(1);
           z-index: 10;
-          //   box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
         }
 
         .video-carousel-full .swiper-slide-prev,
@@ -106,32 +105,46 @@ const VideoCarousel = ({ videos = [] }) => {
           transform: scale(1.3);
         }
 
+        /* Small devices - centered single video */
         @media (max-width: 768px) {
           .video-carousel-full {
-            height: 300px;
+            height: 340px;
+            padding: 0 10px;
           }
 
           .video-carousel-full .swiper-slide {
-            width: 85% !important;
+            width: 100% !important;
+            opacity: 1 !important;
+            transform: scale(1) !important;
           }
 
           .video-carousel-full .swiper-slide-active {
-            transform: scale(1);
+            transform: scale(1) !important;
+            opacity: 1 !important;
           }
 
           .video-carousel-full .swiper-slide-prev,
           .video-carousel-full .swiper-slide-next {
-            transform: scale(0.9);
+            opacity: 1 !important;
+            transform: scale(1) !important;
           }
         }
 
         @media (max-width: 480px) {
           .video-carousel-full {
-            height: 250px;
+            height: 270px;
+            padding: 0 20px; /* Add horizontal padding to the carousel */
           }
 
           .video-carousel-full .swiper-slide {
-            width: 90% !important;
+            width: 100% !important;
+            opacity: 1 !important;
+            transform: scale(1) !important;
+            top: 30;
+          }
+
+          .video-carousel-full .swiper-pagination {
+            bottom: 45px;
           }
         }
       `}</style>
@@ -159,22 +172,27 @@ const VideoCarousel = ({ videos = [] }) => {
         }}
         breakpoints={{
           320: {
-            slidesPerView: 1.1,
+            slidesPerView: 1,
             spaceBetween: 10,
+            centeredSlides: true,
           },
           480: {
-            slidesPerView: 1.2,
+            slidesPerView: 1,
             spaceBetween: 10,
+            centeredSlides: false,
           },
-          770: {
+          769: {
             slidesPerView: 2.2,
             spaceBetween: 10,
+            centeredSlides: true,
           },
           1024: {
             slidesPerView: 2.2,
+            centeredSlides: true,
           },
           1280: {
             slidesPerView: 2.2,
+            centeredSlides: true,
           },
         }}
       >
@@ -182,7 +200,7 @@ const VideoCarousel = ({ videos = [] }) => {
           <SwiperSlide
             key={`${video.id}-${Math.floor(index / videoData.length)}`}
           >
-            <div className="w-full h-auto rounded-3xl overflow-hidden">
+            <div className="w-full h-auto rounded-3xl overflow-hidden ">
               <video
                 ref={(el) => (videoRefs.current[index] = el)}
                 className="w-full h-full object-contain"
@@ -200,7 +218,7 @@ const VideoCarousel = ({ videos = [] }) => {
       </Swiper>
 
       <button
-        className="absolute left-6 top-1/2 min-[769px]:max-[1249px]:top-1/3 xl:top-1/2 transform -translate-y-1/2 z-20 bg-white backdrop-blur-sm hover:bg-white/30 rounded-full p-3 text-black transition-all duration-300 border border-white/30 cursor-pointer"
+        className="absolute left-6 min-[319px]:max-[375px]:top-1/3 top-[50%] sm:top-1/2 min-[769px]:max-[1249px]:top-1/3 xl:top-1/2 transform -translate-y-1/2 z-20 bg-white backdrop-blur-sm hover:bg-white/30 rounded-full p-3 text-black transition-all duration-300 border border-white/30 cursor-pointer"
         onClick={() => swiperRef.current?.slidePrev()}
         aria-label="Previous video"
       >
@@ -208,7 +226,7 @@ const VideoCarousel = ({ videos = [] }) => {
       </button>
 
       <button
-        className="absolute right-6 top-1/2 min-[769px]:max-[1249px]:top-1/3 xl:top-1/2 transform -translate-y-1/2 z-20 bg-white backdrop-blur-sm hover:bg-white/30 rounded-full p-3 text-black transition-all duration-300 border border-white/30 cursor-pointer"
+        className="absolute right-6 min-[319px]:max-[375px]:top-1/3 top-[50%] sm:top-1/2 min-[769px]:max-[1249px]:top-1/3 xl:top-1/2 transform -translate-y-1/2 z-20 bg-white backdrop-blur-sm hover:bg-white/30 rounded-full p-3 text-black transition-all duration-300 border border-white/30 cursor-pointer"
         onClick={() => swiperRef.current?.slideNext()}
         aria-label="Next video"
       >

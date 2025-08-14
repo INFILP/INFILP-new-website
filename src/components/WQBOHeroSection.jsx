@@ -79,7 +79,7 @@ const WQBOHeroSection = ({
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
-        className="text-center mt-10 mb-10"
+        className="text-center mt-24 mb-10"
       >
         <h2 className={`text-4xl font-Manrope-regular ${titleColor} mb-3`}>
           {title.split(" ")[0]}{" "}
@@ -93,7 +93,7 @@ const WQBOHeroSection = ({
       <div className="flex items-center justify-center p-4 max-w-[1240px] h-full mx-auto">
         <motion.div
           ref={ref}
-          className={`relative w-full max-w-[390px] md:max-w-[800px] lg:max-w-[1240px] ${backgroundColor} rounded-3xl overflow-hidden cursor-pointer group h-[430px] md:h-[500px] lg:h-full`}
+          className={`relative w-full max-w-[390px] md:max-w-[800px] lg:max-w-[1240px] ${backgroundColor} rounded-3xl overflow-hidden cursor-pointer group h-[386px] sm:h-[480px] md:h-[500px] lg:h-full`}
           variants={containerVariants}
           initial="hidden"
           animate={isInView ? "visible" : "hidden"}
@@ -119,7 +119,7 @@ const WQBOHeroSection = ({
               </motion.div>
 
               <motion.div
-                className="flex flex-col"
+                className="flex flex-col my-4"
                 variants={contentHoverVariants}
               >
                 <h1
@@ -141,7 +141,7 @@ const WQBOHeroSection = ({
                   src={image.src}
                   width={500}
                   height={500}
-                  className={`object-contain w-full h-auto max-h-[${image.mobileMaxHeight}px] rounded-2xl`}
+                  className={`object-contain w-[281px] max-h-[180px] sm:w-[350px] sm:max-h-[270px] rounded-2xl`}
                   alt={image.alt}
                 />
               </motion.div>
