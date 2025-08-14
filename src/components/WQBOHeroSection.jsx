@@ -51,22 +51,35 @@ const WQBOHeroSection = ({
     },
   };
 
-  const hoverVariants = {
+  const backgroundHoverVariants = {
+    initial: { scale: 1 },
     hover: {
-      scale: hoverScale,
-      y: -hoverElevation,
+      scale: 0.98,
       transition: {
-        duration: 0.3,
+        duration: 0.4,
         ease: "easeInOut",
       },
     },
   };
 
   const contentHoverVariants = {
+    initial: { y: 0 },
     hover: {
-      y: -hoverElevation / 2,
+      y: -hoverElevation,
       transition: {
-        duration: 0.2,
+        duration: 0.3,
+        ease: "easeOut",
+      },
+    },
+  };
+
+  const imageHoverVariants = {
+    initial: { y: 0, scale: 1 },
+    hover: {
+      y: -hoverElevation * 2,
+      scale: 0.98,
+      transition: {
+        duration: 0.4,
         ease: "easeOut",
       },
     },
@@ -93,7 +106,7 @@ const WQBOHeroSection = ({
       <div className="flex items-center justify-center p-4 max-w-[1240px] h-full mx-auto">
         <motion.div
           ref={ref}
-          className={`relative w-full max-w-[390px] md:max-w-[800px] lg:max-w-[1240px] ${backgroundColor} rounded-3xl overflow-hidden cursor-pointer group h-[386px] sm:h-[480px] md:h-[500px] lg:h-full`}
+          className={`relative w-full max-w-[390px] md:max-w-[800px] lg:max-w-[1240px] cursor-pointer group h-[420px] sm:h-[480px] md:h-[500px] lg:h-full`}
           variants={containerVariants}
           initial="hidden"
           animate={isInView ? "visible" : "hidden"}
@@ -101,9 +114,11 @@ const WQBOHeroSection = ({
           onClick={onClick}
         >
           <motion.div
-            className="relative z-10 px-8 py-10 md:px-0 md:py-4 h-full flex items-center justify-center"
-            variants={hoverVariants}
-          >
+            className={`absolute inset-0 ${backgroundColor} rounded-3xl overflow-hidden`}
+            variants={backgroundHoverVariants}
+          />
+
+          <div className="relative z-10 px-8 py-10 md:px-0 md:py-4 h-full flex items-center justify-center">
             <div className="flex flex-col lg:hidden gap-3 items-center text-center h-full justify-between w-auto">
               <motion.div
                 className="flex justify-center"
@@ -135,13 +150,13 @@ const WQBOHeroSection = ({
 
               <motion.div
                 className="w-full flex-1 flex items-center"
-                variants={contentHoverVariants}
+                variants={imageHoverVariants}
               >
                 <Image
                   src={image.src}
                   width={500}
                   height={500}
-                  className={`object-contain w-[281px] max-h-[180px] sm:w-[350px] sm:max-h-[270px] rounded-2xl`}
+                  className={`object-contain w-[281px] max-h-[200px] sm:w-[350px] sm:max-h-[270px] rounded-2xl`}
                   alt={image.alt}
                 />
               </motion.div>
@@ -154,7 +169,7 @@ const WQBOHeroSection = ({
                 variants={containerVariants}
               >
                 <motion.div
-                  className="flex items-center space-x-4 mb-12"
+                  className="flex items-center space-x-4 mb-24"
                   variants={contentHoverVariants}
                 >
                   <Image
@@ -167,7 +182,7 @@ const WQBOHeroSection = ({
                 </motion.div>
 
                 <motion.h2
-                  className={`text-[42px] font-Manrope-bold leading-tight mt-6 ${textColor}`}
+                  className={`text-[42px] font-Manrope-bold leading-tight mt-24 ${textColor}`}
                   variants={contentHoverVariants}
                 >
                   {heading.map((line, index) => (
@@ -180,7 +195,7 @@ const WQBOHeroSection = ({
 
               <motion.div
                 className="flex-1 h-full flex items-center"
-                variants={contentHoverVariants}
+                variants={imageHoverVariants}
               >
                 <Image
                   src={image.src}
@@ -191,7 +206,7 @@ const WQBOHeroSection = ({
                 />
               </motion.div>
             </div>
-          </motion.div>
+          </div>
         </motion.div>
       </div>
     </div>

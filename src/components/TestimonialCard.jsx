@@ -19,7 +19,7 @@ const TestimonialCard = ({ logo, quoteIcon, text, name, role, image }) => {
         />
       )}
 
-      <p className="text-tertiary text-xs md:text-[19px] leading-relaxed">
+      <p className="text-tertiary text-[15px] md:text-[19px] leading-relaxed">
         {text}
       </p>
 
