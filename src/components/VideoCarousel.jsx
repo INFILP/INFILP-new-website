@@ -140,6 +140,17 @@ const VideoCarousel = ({ videos = [] }) => {
             width: 100% !important;
             opacity: 1 !important;
             transform: scale(1) !important;
+          }
+
+          .video-carousel-full .swiper-pagination {
+            bottom: 70px;
+          }
+        }
+        @media (min-width: 320px) and (max-width: 390px) {
+          .video-carousel-full .swiper-slide {
+            width: 100% !important;
+            opacity: 1 !important;
+            transform: scale(1) !important;
             top: 40;
           }
 
@@ -218,7 +229,7 @@ const VideoCarousel = ({ videos = [] }) => {
       </Swiper>
 
       <button
-        className="absolute left-6 min-[319px]:max-[375px]:top-1/3 top-[50%] sm:top-1/2 min-[769px]:max-[1249px]:top-1/3 xl:top-1/2 transform -translate-y-1/2 z-20 bg-white backdrop-blur-sm hover:bg-white/30 rounded-full p-3 text-black transition-all duration-300 border border-white/30 cursor-pointer"
+        className="absolute left-6 min-[319px]:max-[376px]:top-[50%] top-[40%] sm:top-1/2 min-[769px]:max-[1249px]:top-1/3 xl:top-1/2 transform -translate-y-1/2 z-20 bg-white backdrop-blur-sm hover:bg-white/30 rounded-full p-3 text-black transition-all duration-300 border border-white/30 cursor-pointer"
         onClick={() => swiperRef.current?.slidePrev()}
         aria-label="Previous video"
       >
@@ -226,7 +237,7 @@ const VideoCarousel = ({ videos = [] }) => {
       </button>
 
       <button
-        className="absolute right-6 min-[319px]:max-[375px]:top-1/3 top-[50%] sm:top-1/2 min-[769px]:max-[1249px]:top-1/3 xl:top-1/2 transform -translate-y-1/2 z-20 bg-white backdrop-blur-sm hover:bg-white/30 rounded-full p-3 text-black transition-all duration-300 border border-white/30 cursor-pointer"
+        className="absolute right-6 min-[319px]:max-[376px]:top-[50%] top-[40%] sm:top-1/2 min-[769px]:max-[1249px]:top-1/3 xl:top-1/2 transform -translate-y-1/2 z-20 bg-white backdrop-blur-sm hover:bg-white/30 rounded-full p-3 text-black transition-all duration-300 border border-white/30 cursor-pointer"
         onClick={() => swiperRef.current?.slideNext()}
         aria-label="Next video"
       >
