@@ -1,138 +1,3 @@
-// "use client";
-
-// import { motion, useInView } from "framer-motion";
-// import Image from "next/image";
-// import { useRef } from "react";
-
-// const WQBOHeroSection = () => {
-//   const ref = useRef(null);
-//   const isInView = useInView(ref, { once: true, threshold: 0.3 });
-
-//   const containerVariants = {
-//     hidden: { opacity: 0, y: 50 },
-//     visible: {
-//       opacity: 1,
-//       y: 0,
-//       transition: {
-//         duration: 0.8,
-//         ease: "easeOut",
-//         staggerChildren: 0.2,
-//       },
-//     },
-//   };
-
-//   const hoverVariants = {
-//     hover: {
-//       scale: 1.02,
-//       y: -5,
-//       transition: {
-//         duration: 0.3,
-//         ease: "easeInOut",
-//       },
-//     },
-//   };
-
-//   return (
-//     <div>
-//       <motion.div
-//         initial={{ opacity: 0, y: -20 }}
-//         animate={{ opacity: 1, y: 0 }}
-//         transition={{ duration: 0.6 }}
-//         className="text-center mt-16 mb-16"
-//       >
-//         <h1 className="text-4xl font-Manrope-regular text-custom-black mb-3">
-//           Case <span className="font-Manrope-bold">Studies</span>
-//         </h1>
-//         <div className="w-28 h-1 bg-red-500 mx-auto rounded-full"></div>
-//       </motion.div>
-//       <div className="flex items-center justify-center p-4 max-w-[1240px] h-full mx-auto">
-//         <motion.div
-//           ref={ref}
-//           className="relative w-full max-w-[1240px] bg-gradient-to-br bg-gradient-wobo rounded-3xl overflow-hidden cursor-pointer group"
-//           variants={containerVariants}
-//           initial="hidden"
-//           animate={isInView ? "visible" : "hidden"}
-//           whileHover="hover"
-//         >
-//           <motion.div
-//             className="relative z-10 px-8 py-10 md:px-0 md:py-4 "
-//             variants={hoverVariants}
-//           >
-//             <div className="flex flex-col lg:hidden gap-8 items-center text-center">
-//               {/* Logo */}
-//               <motion.div
-//                 className="flex justify-center"
-//                 variants={containerVariants}
-//               >
-//                 <Image
-//                   src="/images/woboLogo.png"
-//                   width={40}
-//                   height={40}
-//                   className="object-contain w-[40px] h-[40px] rounded-2xl"
-//                 />
-//               </motion.div>
-
-//               {/* Main Heading */}
-//               <motion.h1
-//                 className="text-[18px] font-Manrope-bold leading-tight text-white"
-//                 variants={containerVariants}
-//               >
-//                 <div className="mb-2">Empowering Athletes and</div>
-//                 <div>Fitness Merchants</div>
-//               </motion.h1>
-
-//               {/* Mobile Image */}
-//               <Image
-//                 src="/images/portfolioMobile.webp"
-//                 width={500}
-//                 height={500}
-//                 className="object-contain w-full h-auto rounded-2xl"
-//               />
-//             </div>
-
-//             <div className="hidden lg:flex gap-16 items-center">
-//               <motion.div
-//                 className="text-white space-y-8 flex-1 px-10 py-8"
-//                 variants={containerVariants}
-//               >
-//                 <motion.div
-//                   className="flex items-center space-x-4 mb-12"
-//                   variants={containerVariants}
-//                 >
-//                   <Image
-//                     src="/images/woboLogo.png"
-//                     width={110}
-//                     height={119}
-//                     className="object-contain w-[110px] h-[119px] rounded-2xl"
-//                   />
-//                 </motion.div>
-
-//                 <motion.h2
-//                   className="text-[42px] font-Manrope-bold leading-tight mt-6"
-//                   variants={containerVariants}
-//                 >
-//                   <div className="mb-2">Empowering Athletes and</div>
-//                   <div>Fitness Merchants</div>
-//                 </motion.h2>
-//               </motion.div>
-//               <div className="flex-1">
-//                 <Image
-//                   src="/images/portfolioMobile.webp"
-//                   width={1000}
-//                   height={1000}
-//                   className="object-contain w-full h-auto rounded-2xl"
-//                 />
-//               </div>
-//             </div>
-//           </motion.div>
-//         </motion.div>
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default WQBOHeroSection;
-
 "use client";
 
 import { motion, useInView } from "framer-motion";
@@ -140,7 +5,6 @@ import Image from "next/image";
 import { useRef } from "react";
 
 const WQBOHeroSection = ({
-  // Content props
   title = "Case Studies",
   highlightedWord = "Studies",
   heading = ["Empowering Athletes and", "Fitness Merchants"],
@@ -159,18 +23,15 @@ const WQBOHeroSection = ({
     desktopMaxHeight: 350,
   },
 
-  // Style props
   backgroundColor = "bg-gradient-wobo",
   underlineColor = "bg-red-500",
   textColor = "text-white",
   titleColor = "text-custom-black",
 
-  // Animation props
   animationDelay = 0,
   hoverScale = 1.02,
   hoverElevation = 5,
 
-  // Interaction props
   onClick = () => {},
 }) => {
   const ref = useRef(null);
@@ -218,22 +79,21 @@ const WQBOHeroSection = ({
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
-        className="text-center mt-16 mb-16"
+        className="text-center mt-10 mb-10"
       >
-        <h1 className={`text-4xl font-Manrope-regular ${titleColor} mb-3`}>
+        <h2 className={`text-4xl font-Manrope-regular ${titleColor} mb-3`}>
           {title.split(" ")[0]}{" "}
           <span className="font-Manrope-bold">{highlightedWord}</span>
-        </h1>
+        </h2>
         <div
           className={`w-28 h-1 ${underlineColor} mx-auto rounded-full`}
         ></div>
       </motion.div>
 
-      {/* Hero Card */}
       <div className="flex items-center justify-center p-4 max-w-[1240px] h-full mx-auto">
         <motion.div
           ref={ref}
-          className={`relative w-full max-w-[1240px] ${backgroundColor} rounded-3xl overflow-hidden cursor-pointer group h-full`}
+          className={`relative w-full max-w-[390px] md:max-w-[800px] lg:max-w-[1240px] ${backgroundColor} rounded-3xl overflow-hidden cursor-pointer group h-[430px] md:h-[500px] lg:h-full`}
           variants={containerVariants}
           initial="hidden"
           animate={isInView ? "visible" : "hidden"}
@@ -244,8 +104,7 @@ const WQBOHeroSection = ({
             className="relative z-10 px-8 py-10 md:px-0 md:py-4 h-full flex items-center justify-center"
             variants={hoverVariants}
           >
-            {/* Mobile Layout */}
-            <div className="flex flex-col lg:hidden gap-6 items-center text-center h-full justify-between w-full">
+            <div className="flex flex-col lg:hidden gap-3 items-center text-center h-full justify-between w-auto">
               <motion.div
                 className="flex justify-center"
                 variants={contentHoverVariants}

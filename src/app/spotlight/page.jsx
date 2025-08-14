@@ -8,8 +8,53 @@ import Banner from "@/components/Banner";
 import { FeatureCardDemo } from "@/components/FeatureCard ";
 import WQBOHeroSection from "@/components/WQBOHeroSection";
 import Cards from "@/components/Cards";
+import SeeAllWorkComponent from "@/components/SeeAllWorkComponent";
+import VideoCarousel from "@/components/VideoCarousel";
+import TestimonialsCarousel from "@/components/TestimonialsCarousel";
+import BuildBanner from "@/components/BuildBanner";
 
 const Spotlight = () => {
+  const videos = [
+    { id: 1, src: "/videos/gif1.mp4" },
+    { id: 2, src: "/videos/gif2.mp4" },
+    { id: 3, src: "/videos/gif3.mp4" },
+  ];
+
+  const testimonials = [
+    {
+      logo: "/images/testimonialLogo.png",
+      quoteIcon: "/icons/quote.png", // inverted commas image
+      text: "As Co-Owner of The Green Felts, we needed an app for advertising events, managing our player database, enabling event buy-ins, and providing a live leaderboard. INFILP quickly learned our requirements and delivered an excellent app despite their initial unfamiliarity with golf. Their team was a pleasure to work with, consistently updating and improving the app.",
+      name: "Glenn Doylr",
+      role: "CEO at The Green Felts",
+      image: "/images/profile1.png",
+    },
+    {
+      logo: "/images/testimonialLogo.png",
+      quoteIcon: "/icons/quote.png",
+      text: "As Co-Owner of The Green Felts, we needed an app for advertising events, managing our player database, enabling event buy-ins, and providing a live leaderboard. INFILP quickly learned our requirements and delivered an excellent app despite their initial unfamiliarity with golf. Their team was a pleasure to work with, consistently updating and improving the app.",
+      name: "John Smith",
+      role: "CTO at TechCorp",
+      image: "/images/profile1.png",
+    },
+    {
+      logo: "/images/testimonialLogo.png",
+      quoteIcon: "/icons/quote.png", // inverted commas image
+      text: "As Co-Owner of The Green Felts, we needed an app for advertising events, managing our player database, enabling event buy-ins, and providing a live leaderboard. INFILP quickly learned our requirements and delivered an excellent app despite their initial unfamiliarity with golf. Their team was a pleasure to work with, consistently updating and improving the app.",
+      name: "Glenn Doylr",
+      role: "CEO at The Green Felts",
+      image: "/images/profile1.png",
+    },
+    {
+      logo: "/images/testimonialLogo.png",
+      quoteIcon: "/icons/quote.png",
+      text: "As Co-Owner of The Green Felts, we needed an app for advertising events, managing our player database, enabling event buy-ins, and providing a live leaderboard. INFILP quickly learned our requirements and delivered an excellent app despite their initial unfamiliarity with golf. Their team was a pleasure to work with, consistently updating and improving the app.",
+      name: "John Smith",
+      role: "CTO at TechCorp",
+      image: "/images/profile1.png",
+    },
+  ];
+
   return (
     <>
       <section className="relative h-screen w-full overflow-hidden">
@@ -100,6 +145,40 @@ const Spotlight = () => {
             backgroundColor="bg-gradient-b2b"
             delay={0.2}
             onClick={() => console.log("Card clicked!")}
+          />
+        </div>
+        <div>
+          <SeeAllWorkComponent
+            mainText="See all work"
+            buttonText="Let's Go"
+            onClick={() => console.log("Button clicked!")}
+            delay={0.2}
+          />
+        </div>
+        <div>
+          <motion.div
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="text-center mt-20 mb-16"
+          >
+            <h1 className="text-4xl font-Manrope-bold text-custom-black mb-3">
+              AI <span className="font-Manrope-regular"> at INFILP </span>
+            </h1>
+            <div className="w-28 h-1 bg-red-500 mx-auto rounded-full"></div>
+          </motion.div>
+          <VideoCarousel videos={videos} />
+        </div>
+        <div>
+          <TestimonialsCarousel testimonials={testimonials} />;
+        </div>
+        <div>
+          <BuildBanner
+            topText="Turn your idea into reality"
+            mainText="Ready to build something great?"
+            buttonText="Get Started"
+            onClick={() => console.log("Button clicked!")}
+            delay={0.2}
           />
         </div>
       </div>

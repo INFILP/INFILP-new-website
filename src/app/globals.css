@@ -101,6 +101,13 @@
       rgb(var(--gradient-dark-red, 246 26 18))
     );
   }
+  .bg-gradient-seeCard {
+    background-image: linear-gradient(
+      var(--gradient-direction, to right),
+      rgb(var(--gradient-dark-red, 246 26 18)),
+      rgb(var(--gradient-light-red, 255 87 81))
+    );
+  }
   .bg-hover-gradient-card:hover {
     background-image: linear-gradient(
       var(--gradient-direction, to right),
