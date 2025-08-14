@@ -140,11 +140,11 @@ const VideoCarousel = ({ videos = [] }) => {
             width: 100% !important;
             opacity: 1 !important;
             transform: scale(1) !important;
-            top: 30;
+            top: 40;
           }
 
           .video-carousel-full .swiper-pagination {
-            bottom: 45px;
+            bottom: 50px;
           }
         }
       `}</style>
