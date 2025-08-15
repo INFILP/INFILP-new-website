@@ -59,7 +59,7 @@ const VideoCarousel = ({ videos = [] }) => {
       <style jsx global>{`
         .video-carousel-full {
           width: 100%;
-          height: 400px;
+          height: auto;
           overflow: hidden;
         }
 
