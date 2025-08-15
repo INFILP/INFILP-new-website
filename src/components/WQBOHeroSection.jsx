@@ -106,7 +106,7 @@ const WQBOHeroSection = ({
       <div className="flex items-center justify-center p-4 max-w-[1240px] h-full mx-auto">
         <motion.div
           ref={ref}
-          className={`relative w-full max-w-[390px] md:max-w-[800px] lg:max-w-[1240px] cursor-pointer group h-[420px] sm:h-[480px] md:h-[500px] lg:h-full`}
+          className={`relative w-full max-w-[390px] md:max-w-[800px] lg:max-w-[1240px] cursor-pointer group h-[460px] sm:h-[520px] md:h-[500px] lg:h-full`}
           variants={containerVariants}
           initial="hidden"
           animate={isInView ? "visible" : "hidden"}
@@ -138,7 +138,7 @@ const WQBOHeroSection = ({
                 variants={contentHoverVariants}
               >
                 <h1
-                  className={`text-[18px] font-Manrope-bold leading-tight ${textColor}`}
+                  className={`text-2xl font-Manrope-bold leading-tight ${textColor}`}
                 >
                   {heading.map((line, index) => (
                     <div key={index} className={index > 0 ? "mt-2" : ""}>

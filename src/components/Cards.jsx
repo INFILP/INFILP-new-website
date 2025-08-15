@@ -87,7 +87,7 @@ const Cards = ({
   return (
     <motion.div
       ref={ref}
-      className={`flex flex-col items-center text-center ${backgroundColor} gradient-to-t rounded-4xl px-8 text-white md:max-w-[600px] h-[420px] sm:h-[480px] md:h-[720px] mx-4 my-2 md:my-4 cursor-pointer relative overflow-hidden`}
+      className={`flex flex-col items-center text-center ${backgroundColor} gradient-to-t rounded-4xl px-8 text-white md:max-w-[600px] h-[460px] sm:h-[520px] md:h-[720px] mx-4 my-2 md:my-4 cursor-pointer relative overflow-hidden`}
       variants={cardVariants}
       initial="hidden"
       animate={isInView ? "visible" : "hidden"}
@@ -114,7 +114,7 @@ const Cards = ({
         className="flex justify-center mt-3 mb-6 sm:mb-8"
         variants={titleVariants}
       >
-        <h2 className="text-lg md:text-[32px] font-Manrope-bold leading-[130%] font-Manrope-bold max-w-80 md:max-w-lg">
+        <h2 className="text-2xl md:text-[32px] font-Manrope-bold leading-[130%] font-Manrope-bold max-w-80 md:max-w-lg">
           {title}
         </h2>
       </motion.div>
