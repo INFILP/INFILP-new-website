@@ -90,7 +90,7 @@ const VideoCarousel = ({ videos = [] }) => {
         }
 
         .video-carousel-full .swiper-pagination {
-          bottom: 20px;
+          bottom: 30px;
         }
 
         .video-carousel-full .swiper-pagination-bullet {

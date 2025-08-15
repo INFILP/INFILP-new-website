@@ -73,7 +73,7 @@ const SeeAllWorkComponent = ({
   return (
     <motion.div
       ref={ref}
-      className="relative w-full md:max-w-[1240px] px-4 lg:mx-auto mt-2 md:mt-4  group"
+      className="relative w-full md:max-w-[1200px] px-5 md:px-6 xl:px-4 xl:mx-auto mt-2 md:mt-4   group"
       variants={containerVariants}
       initial="hidden"
       animate={isInView ? "visible" : "hidden"}
@@ -81,13 +81,13 @@ const SeeAllWorkComponent = ({
     >
       {/* Layer 2 - Top right layer (always visible) */}
       <motion.div
-        className="absolute inset-0 bg-[#FEB3B1] rounded-tl-2xl rounded-br-2xl opacity-60 transform -translate-x-1 -translate-y-1 md:-translate-x-3 md:-translate-y-3 mx-4"
+        className="absolute inset-0 bg-[#FEB3B1] rounded-tl-2xl rounded-br-2xl opacity-60 transform -translate-x-1 -translate-y-1 md:-translate-x-3 md:-translate-y-3 mx-5 md:mx-6 xl:mx-4"
         variants={layer1Variants}
       />
 
       {/* Layer 3 - Bottom left layer (always visible) */}
       <motion.div
-        className="absolute inset-0 bg-[#FEB3B1] rounded-tl-2xl rounded-br-2xl opacity-80 transform translate-x-1 translate-y-1 md:translate-x-3 md:translate-y-3 mx-4"
+        className="absolute inset-0 bg-[#FEB3B1] rounded-tl-2xl rounded-br-2xl opacity-80 transform translate-x-1 translate-y-1 md:translate-x-3 md:translate-y-3 mx-5 md:mx-6 xl:mx-4"
         variants={layer2Variants}
       />
 
