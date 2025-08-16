@@ -3,6 +3,7 @@
 import React, { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 
 const FeatureCard = ({
   title = "Generative AI",
@@ -17,10 +18,12 @@ const FeatureCard = ({
   onClick,
   className = "",
   delay = 0,
+  slug,
   duration = 0.6,
   threshold = 0.3,
 }) => {
   const ref = useRef(null);
+  const router = useRouter();
   const isInView = useInView(ref, {
     threshold: threshold,
     once: true,
@@ -30,13 +33,28 @@ const FeatureCard = ({
   const handleClick = () => {
     if (onClick) {
       onClick();
-    } else if (href && href !== "#") {
-      // If using Next.js router
-      // router.push(href);
-
-      // For now, using window.location
-      window.location.href = href;
     }
+    if (slug) {
+      // Navigate using the slug to your serviceDetails route
+      router.push(`/serviceDetails/${slug}`);
+    } else if (href && href !== "#") {
+      const hrefToSlugMap = {
+        "/generative-ai": "generative-ai-apps",
+        "/data-analytics": "mobile-app-development",
+        "/mobile-app": "mobile-app-development",
+      };
+
+      const mappedSlug = hrefToSlugMap[href];
+      if (mappedSlug) {
+        router.push(`/serviceDetails/${mappedSlug}`);
+      }
+    } else {
+      // If no slug or href is provided, just log the click
+    }
+    // If using Next.js router
+    // router.push(href);
+    // For now, using window.location
+    // window.location.href = href;
   };
 
   return (
@@ -117,6 +135,7 @@ const FeatureCardDemo = () => {
     {
       title: "Generative AI",
       description: "Scale ideas into features with the power of generative AI.",
+      slug: "generative-ai-apps",
       href: "/generative-ai",
       icons: [
         { id: 1, src: "/images/gpt.png", alt: "Refresh Icon" },
@@ -128,6 +147,7 @@ const FeatureCardDemo = () => {
     {
       title: "Mobile App Development",
       description: "Build fast, beautiful apps ready to scale from day one.",
+      slug: "mobile-app-development",
       href: "/data-analytics",
       icons: [
         { id: 1, src: "/images/native.png", alt: "Graph Icon" },
@@ -160,10 +180,12 @@ const FeatureCardDemo = () => {
               title={card.title}
               description={card.description}
               icons={card.icons}
+              slug={card.slug}
               href={card.href}
-              onClick={card.onClick}
+              // onClick={card.onClick}
               delay={index * 0.15}
               threshold={0.2}
+              onClick={() => console.log(`${card.title} clicked!`)}
               className="group"
             />
           ))}

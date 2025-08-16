@@ -1,0 +1,178 @@
+[
+  {
+    "slug": "generative-ai-apps",
+    "hero_section": {
+      "main_heading": "Trained to Learn. Built to Evolve.",
+      "sub_heading": "Generative AI.",
+      "hero_image": "AI brain/neural network visualization"
+    },
+    "company_description": {
+      "subtext": "CUSTOM GENERATIVE AI",
+      "text": "company building tools for mobile, web, and cloud. Whether you're starting from scratch or scaling fast, we create AI systems that help your business grow and turn smart ideas into real-world outcomes."
+    },
+    "problems_section": {
+      "heading": "Why Gen AI Tools",
+      "sub_heading": "Fail",
+      "subtitle": "Most AI products fall short because they chase hype, rely on off-the-shelf models, or ignore core usability — rushed prototypes, generic outputs, and no real strategy.",
+      "sub_content": "INFILP does it differently.",
+      "discription": "We build Generative AI systems that are made to last — grounded in real user needs, scalable infrastructure, and tangible business outcomes. We take you from first prompt to fully deployed solution — and stay with you beyond launch.",
+      "image": "/images/team1.webp",
+      "direction": "right"
+    },
+    "team_section": {
+      "heading": "A Generative AI Team That's",
+      "sub_heading": "All In",
+      "content": "At INFILP, we don’t just add Gen AI to apps — we build products that think.",
+      "sub_content": "From strategy and design to launch and iteration, we work as your dedicated Gen AI app team, focused on solving real user needs and delivering real-world impact.",
+      "cta_button": "Book Strategy Call",
+      "direction": "left",
+      "image": "/images/team2.webp"
+    },
+    "services_section": {
+      "heading": "What We Do Best",
+      "services": [
+        {
+          "number": "1",
+          "title": "Gen",
+          "subheading": "AI Strategy",
+          "description": "We help you define where Generative AI adds real value — aligning tech with business goals from day one."
+        },
+        {
+          "number": "2",
+          "title": "Prompt",
+          "subheading": "Engineering",
+          "description": "Custom prompts crafted for accuracy, tone, and performance — built to drive better results, faster."
+        },
+        {
+          "number": "3",
+          "title": "Model",
+          "subheading": "Integration",
+          "description": "We integrate leading models (like GPT, Claude, Gemini) into your apps — securely and at scale."
+        },
+        {
+          "number": "4",
+          "title": "Custom",
+          "subheading": "AI Tools",
+          "description": "From chatbots to content generators, we design intelligent tools that merge in your product."
+        },
+        {
+          "number": "5",
+          "title": "Testing & Evaluation",
+          "subheading": "& Evaluation",
+          "description": "We rigorously test and evaluate AI performance to ensure optimal results and reliability."
+        },
+        {
+          "number": "6",
+          "title": "Continuous",
+          "subheading": "Tuning",
+          "description": "AI isn’t one-and-done. We fine-tune prompts, retrain logic, and update models to keep performance sharp."
+        }
+      ]
+    },
+    "faq_section": {
+      "heading": "FAQs",
+      "questions": [
+        "What industries do you work with?",
+        "Do you offer end-to-end development?",
+        "Can you scale products as we grow?",
+        "What AI services do you provide?",
+        "How do you ensure quality?"
+      ],
+      "answers": [
+        "We work with a variety of industries including healthcare, finance, retail, and more.",
+        "Yes, we provide end-to-end development from strategy to deployment and beyond.",
+        "Absolutely, our solutions are designed to scale with your business needs.",
+        "We offer a full range of AI services including strategy, development, integration, and support.",
+        "We have rigorous quality assurance processes in place to ensure the highest standards."
+      ]
+    }
+  },
+  {
+    "slug": "mobile-app-development",
+    "hero_section": {
+      "main_heading": "Made to Matter. Built to Stay.",
+      "sub_heading": "Mobile App Development.",
+      "hero_image": "AI brain/neural network visualization"
+    },
+    "company_description": {
+      "subtext": "CUSTOM MOBILE APP DEVELOPMENT",
+      "text": "company that creates apps for iOS, Android & web. Whether you're just starting out or already growing fast, we build apps that help your business grow, keep users engaged, and deliver real results."
+    },
+    "problems_section": {
+      "heading": "What Most Apps",
+      "sub_heading": "Get Wrong",
+      "subtitle": "Most apps fall short because they chase trends, cut corners, or skip the fundamentals — fast builds, flashy features, and no long-term strategy.",
+      "sub_content": "INFILP does it differently.",
+      "discription": "We craft mobile app solutions that are built to last — focused on user behavior, technical stability, and real business impact. Whether you're a startup, scale-up, or enterprise, we help you go from first idea to App Store launch — and stay with you long after.",
+      "image": "/images/team1.webp",
+      "direction": "right"
+    },
+    "team_section": {
+      "heading": "A Generative AI Team That's",
+      "sub_heading": "All In",
+      "content": "At INFILP, we do more than just build apps — we help you shape products that last.",
+      "sub_content": "From strategy and design to launch and support, we work as your dedicated mobile app team, focused on solving real problems and driving real results.",
+      "cta_button": "Book Strategy Call",
+      "direction": "left",
+      "image": "/images/team2.webp"
+    },
+    "services_section": {
+      "heading": "What We Do Best",
+      "services": [
+        {
+          "number": "1",
+          "title": "iOS",
+          "subheading": "App Development",
+          "description": "Custom iPhone and iPad apps, built with Apple’s native tools for speed, security, and smooth performance."
+        },
+        {
+          "number": "2",
+          "title": "Android",
+          "subheading": "App Development",
+          "description": "Powerful Android apps made to work beautifully across all major devices — from Pixel to Samsung."
+        },
+        {
+          "number": "3",
+          "title": "Product",
+          "subheading": "Design",
+          "description": "Clean, intuitive interfaces designed to delight users and keep them coming back."
+        },
+        {
+          "number": "4",
+          "title": "Generative",
+          "subheading": "AI",
+          "description": "We integrate smart features like AI and automation where they make sense — boosting  user experience."
+        },
+        {
+          "number": "5",
+          "title": "QA",
+          "subheading": "& Testing",
+          "description": "Your app should just work. We test it across real devices and scenarios to catch bugs before users do."
+        },
+        {
+          "number": "6",
+          "title": "Ongoing",
+          "subheading": "Support",
+          "description": "After launch, we stick around. From performance monitoring to updates, we help your app keep improving."
+        }
+      ]
+    },
+    "faq_section": {
+      "heading": "FAQs",
+      "questions": [
+        "What industries do you work with?",
+        "Do you offer end-to-end development?",
+        "Can you scale products as we grow?",
+        "What AI services do you provide?",
+        "How do you ensure quality?"
+      ],
+      "answers": [
+        "We work with a variety of industries including healthcare, finance, retail, and more.",
+        "Yes, we provide end-to-end development from strategy to deployment and beyond.",
+        "Absolutely, our solutions are designed to scale with your business needs.",
+        "We offer a full range of AI services including strategy, development, integration, and support.",
+        "We have rigorous quality assurance processes in place to ensure the highest standards."
+      ]
+    }
+  }
+]
