@@ -3,11 +3,7 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 
-const AppHero = ({
-  subtitle,
-  title ,
-  className = "",
-}) => {
+const AppHero = ({ subtitle, title, className = "" }) => {
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -59,7 +55,7 @@ const AppHero = ({
   return (
     <div>
       <motion.section
-        className={`relative min-h-[400px] flex items-center justify-center overflow-hidden bg-gradient-to-br from-gray-50 to-white ${className} mt-28`}
+        className={`relative min-h-[400px] flex items-center justify-center overflow-hidden ${className} mt-28`}
         variants={containerVariants}
         initial="hidden"
         animate="visible"
