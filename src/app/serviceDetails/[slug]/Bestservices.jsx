@@ -50,7 +50,7 @@ const WhatWeDoBest = ({
 
   return (
     <motion.section
-      className={`pt-16 px-4 md:pt-24 lg:pt-48 bg-white ${className}`}
+      className={`pt-28 px-4 md:pt-36 lg:pt-48 bg-white ${className}`}
       variants={containerVariants}
       initial="hidden"
       whileInView="visible"

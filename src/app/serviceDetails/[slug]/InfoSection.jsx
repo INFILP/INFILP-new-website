@@ -78,7 +78,7 @@ const InfoSection = ({
 
   return (
     <motion.section
-      className={`pt-16 px-4 md:pt-24 lg:pt-48 bg-white ${className} max-w-[1200px] mx-auto`}
+      className={`pt-28 px-4 md:pt-36 lg:pt-48 bg-white ${className} max-w-[1200px] mx-auto`}
       variants={containerVariants}
       initial="hidden"
       whileInView="visible"

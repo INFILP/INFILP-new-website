@@ -122,7 +122,7 @@ const FAQs = ({
 
   return (
     <motion.section
-      className={`pt-16 px-4 md:pt-24 lg:pt-48 ${className}`}
+      className={`pt-28 px-8 md:px-4 md:pt-36 lg:pt-48 ${className}`}
       variants={containerVariants}
       initial="hidden"
       whileInView="visible"

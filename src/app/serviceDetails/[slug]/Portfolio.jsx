@@ -18,7 +18,7 @@ const Portfolio = () => {
     },
   };
   return (
-    <div className=" max-w-7xl mx-auto pt-16 px-4 md:pt-24 lg:pt-48">
+    <div className=" max-w-7xl mx-auto pt-28 px-4 md:pt-36 lg:pt-48">
       <motion.div className="text-center mb-16" variants={titleVariants}>
         <h2 className="text-3xl md:text-4xl lg:text-5xl font-Manrope-regular text-gray-900 mb-4">
           Projects that <span className="font-Manrope-bold">speak</span> for
