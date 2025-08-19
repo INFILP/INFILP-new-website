@@ -14,7 +14,7 @@ const About = () => {
   const testimonials = [
     {
       logo: "/images/testimonialLogo.png",
-      quoteIcon: "/icons/quote.png", // inverted commas image
+      quoteIcon: "/icons/quote.png",
       text: "As Co-Owner of The Green Felts, we needed an app for advertising events, managing our player database, enabling event buy-ins, and providing a live leaderboard. INFILP quickly learned our requirements and delivered an excellent app despite their initial unfamiliarity with golf. Their team was a pleasure to work with, consistently updating and improving the app.",
       name: "Glenn Doylr",
       role: "CEO at The Green Felts",
@@ -30,7 +30,7 @@ const About = () => {
     },
     {
       logo: "/images/testimonialLogo.png",
-      quoteIcon: "/icons/quote.png", // inverted commas image
+      quoteIcon: "/icons/quote.png",
       text: "As Co-Owner of The Green Felts, we needed an app for advertising events, managing our player database, enabling event buy-ins, and providing a live leaderboard. INFILP quickly learned our requirements and delivered an excellent app despite their initial unfamiliarity with golf. Their team was a pleasure to work with, consistently updating and improving the app.",
       name: "Glenn Doylr",
       role: "CEO at The Green Felts",
@@ -81,7 +81,6 @@ const About = () => {
         viewport={{ once: true, amount: 0.3 }}
       >
         <div className="max-w-6xl mx-auto mt-32 px-4">
-          {/* Image Container */}
           <motion.div className="" variants={imageVariants}>
             <Image
               src="/images/infilpbuild.webp"

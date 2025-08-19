@@ -33,7 +33,7 @@ const InfoSection = ({
   const imageVariants = {
     hidden: {
       opacity: 0,
-      x: isImageLeft ? -100 : 100, // Left layout: slide from left, Right layout: slide from right
+      x: isImageLeft ? -100 : 100,
     },
     visible: {
       opacity: 1,
