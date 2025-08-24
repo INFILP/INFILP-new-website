@@ -47,6 +47,20 @@
     --gradient-light-green: 0 138 141;
     --gradient-light-pink: 172 104 217;
     --gradient-dark-pink: 91 55 115;
+    --gradient-light-blue: 104 66 253;
+    --gradient-dark-blue: 103 65 255;
+    --gradient-light-red: 255 88 125;
+    --gradient-dark-red: 248 38 85;
+    --gradient-light-sky: 0 115 176;
+    --gradient-dark-sky: 0 56 85;
+    --gradient-light-bluesky: 12 140 232;
+    --gradient-dark-bluesky: 0 63 123;
+    --gradient-dark-blue1: 77 44 203;
+    --gradient-light-blue1: 142 114 255;
+    --gradient-light-brown: 143 43 19;
+    --gradient-dark-brown: 103 40 35;
+    --gradient-light-skygreen: 113 181 190;
+    --gradient-dark-skygreen: 77 163 174
 
     /* Gradient direction variable */
     --gradient-direction: to right;
@@ -134,6 +148,59 @@
       var(--gradient-direction, to bottom),
       rgb(var(--gradient-light-pink, 172 104 217)) 1%,
       rgb(var(--gradient-dark-pink, 91 55 115)) 100%
+    );
+  }
+  .bg-gradient-crypto {
+    background-image: linear-gradient(
+      var(--gradient-direction, to bottom),
+      rgb(var(--gradient-dark-blue, 91 55 115)) 0%,
+      rgb(var(--gradient-light-blue, 103 65 255)) 100%
+    );
+  }
+  .bg-gradient-market {
+    background-image: linear-gradient(
+      var(--gradient-direction, to bottom),
+      rgb(var(--gradient-light-red, 255 88 125)) 0%,
+      rgb(var(--gradient-dark-red, 248 38 85)) 100%
+    );
+  }
+  .bg-gradient-reserch {
+    background-image: linear-gradient(
+      var(--gradient-direction, to bottom),
+      rgb(var(--gradient-light-sky, 0 115 176)) 0%,
+      rgb(var(--gradient-dark-sky, 0 56 85)) 100%
+    );
+  }
+  .bg-gradient-ai {
+    background-image: linear-gradient(
+      var(--gradient-direction, to bottom),
+      rgb(var(--gradient-light-bluesky, 12 140 232)) 0%,
+      rgb(var(--gradient-dark-bluesky, 0 63 123)) 100%
+    );
+  }
+  .bg-gradient-wealth {
+    background-image: linear-gradient(
+      var(--gradient-direction, to bottom),
+      rgb(var(--gradient-dark-blue1, 77 44 203)) 0%,
+      rgb(var(--gradient-light-blue1, 142 114 255)) 100%
+    );
+  }
+  .bg-gradient-budget {
+    background-image: linear-gradient(
+      var(--gradient-direction, to bottom),
+      rgb(var(--gradient-light-brown, 143 43 19)) 0%,
+      rgb(var(--gradient-dark-brown, 103 40 35)) 100%
+    );
+  }
+.bg-gradient-care {
+  /* Default background (solid color or transparent) */
+  background-color: #9ca3af; /* or any solid color like #f3f4f6 */
+}
+  .bg-gradient-care:hover {
+    background-image: linear-gradient(
+      var(--gradient-direction, to bottom),
+      rgb(var(--gradient-light-skygreen, 113 181 190)) 0%,
+      rgb(var(--gradient-dark-skyfreen, 77 163 174)) 100%
     );
   }
 

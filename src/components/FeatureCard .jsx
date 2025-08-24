@@ -35,7 +35,7 @@ const FeatureCard = ({
       onClick();
     }
     if (slug) {
-      // Navigate using the slug to your serviceDetails route
+     
       router.push(`/serviceDetails/${slug}`);
     } else if (href && href !== "#") {
       const hrefToSlugMap = {
@@ -51,10 +51,6 @@ const FeatureCard = ({
     } else {
       // If no slug or href is provided, just log the click
     }
-    // If using Next.js router
-    // router.push(href);
-    // For now, using window.location
-    // window.location.href = href;
   };
 
   return (

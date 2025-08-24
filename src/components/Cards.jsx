@@ -3,6 +3,7 @@
 import React, { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 
 const Cards = ({
   logoSrc = "/images/woboLogo.png",
@@ -12,92 +13,50 @@ const Cards = ({
   imageAlt = "Card Image",
   delay = 0,
   backgroundColor = "bg-teal-600",
-  onClick = () => {},
+  showBanner,
+  slug,
 }) => {
   const ref = useRef(null);
+  const router = useRouter();
   const isInView = useInView(ref, { once: true, threshold: 0.3 });
 
   const cardVariants = {
-    hidden: {
-      opacity: 0,
-      y: 50,
-    },
+    hidden: { opacity: 0, y: 50 },
     visible: {
       opacity: 1,
       y: 0,
-      transition: {
-        duration: 0.6,
-        ease: "easeOut",
-        delay: delay,
-      },
+      transition: { duration: 0.6, ease: "easeOut", delay },
     },
-    hover: {
-      scale: 0.95, // Shrinks the background card
-      transition: {
-        duration: 0.3,
-        ease: "easeOut",
-      },
-    },
+    hover: { scale: 0.95, transition: { duration: 0.3, ease: "easeOut" } },
   };
 
-  const contentVariants = {
-    hover: {
-      y: -8, // Moves content up when card shrinks
-      scale: 1.05, // Slightly enlarges content to compensate for card shrinking
-      transition: {
-        duration: 0.3,
-        ease: "easeOut",
-      },
-    },
+  const handleClick = () => {
+    if (slug) {
+      router.push(`/portfolioDetail/${slug}`);
+    }
   };
-
-  const logoVariants = {
-    hover: {
-      y: -6,
-      scale: 1.1,
-      transition: {
-        duration: 0.3,
-        ease: "easeOut",
-      },
-    },
-  };
-
-  const titleVariants = {
-    hover: {
-      y: -8,
-      scale: 1.03,
-      transition: {
-        duration: 0.3,
-        ease: "easeOut",
-      },
-    },
-  };
-
-  const imageVariants = {
-    hover: {
-      y: -10,
-      scale: 1.05,
-      transition: {
-        duration: 0.3,
-        ease: "easeOut",
-      },
-    },
-  };
-
   return (
     <motion.div
       ref={ref}
-      className={`flex flex-col items-center text-center ${backgroundColor} gradient-to-t rounded-4xl px-8 text-white md:max-w-[600px] h-[460px] sm:h-[520px] md:h-[720px] mx-4 my-2 md:my-4 cursor-pointer relative overflow-hidden`}
+      className={`relative flex flex-col items-center text-center 
+        rounded-4xl px-8 text-white md:max-w-[600px] 
+        h-[490px] sm:h-[520px] md:h-[720px] mx-4 my-2 md:my-4 
+        cursor-pointer overflow-hidden 
+        ${showBanner ? backgroundColor : "bg-gray-400"}
+      `}
       variants={cardVariants}
       initial="hidden"
       animate={isInView ? "visible" : "hidden"}
       whileHover="hover"
-      onClick={onClick}
+      onClick={handleClick}
     >
-      <motion.div
-        className="flex justify-center mt-8 mb-6"
-        variants={logoVariants}
-      >
+      {showBanner == "true" && (
+        <div className="absolute top-6 -right-16 rotate-45 bg-red-600 text-white font-bold px-16 py-2 text-sm shadow-lg z-20">
+          Coming Soon
+        </div>
+      )}
+
+      <motion.div className="flex justify-center mt-8 mb-6 z-10">
         <div className="relative w-12 h-12 sm:w-14 sm:h-14 md:w-24 md:h-24">
           <Image
             src={logoSrc}
@@ -109,20 +68,14 @@ const Cards = ({
           />
         </div>
       </motion.div>
-
-      <motion.div
-        className="flex justify-center mt-3 mb-6 sm:mb-8"
-        variants={titleVariants}
-      >
-        <h2 className="text-2xl md:text-[32px] font-Manrope-bold leading-[130%] font-Manrope-bold max-w-80 md:max-w-lg">
+      {/* Title */}
+      <motion.div className="flex justify-center mt-3 mb-6 sm:mb-8 z-10">
+        <h2 className="text-2xl md:text-[32px] font-Manrope-bold leading-[130%] max-w-80 md:max-w-lg">
           {title}
         </h2>
       </motion.div>
-
-      <motion.div
-        className="flex justify-center w-full"
-        variants={imageVariants}
-      >
+      {/* Image */}
+      <motion.div className="flex justify-center w-full z-10">
         <div className="relative w-full h-60 sm:h-72 md:h-[437px]">
           <Image
             src={imageSrc}

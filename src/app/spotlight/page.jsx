@@ -102,9 +102,19 @@ const Spotlight = () => {
         <StatsSection />
         <Banner />
         <FeatureCardDemo />
+        <motion.div
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          className="text-center mt-24 mb-10"
+        >
+          <h2 className={`text-4xl font-Manrope-regular mb-3`}>
+            Case
+            <span className="font-Manrope-bold">Studies</span>
+          </h2>
+          <div className={`w-28 h-1 bg-red-500 mx-auto rounded-full`}></div>
+        </motion.div>
         <WQBOHeroSection
-          title="Case"
-          highlightedWord="Studies"
           heading={["Empowering Athletes and ", "Fitness Merchants"]}
           logo={{
             src: "/images/woboLogo.png",
@@ -123,7 +133,7 @@ const Spotlight = () => {
           backgroundColor="bg-gradient-wobo"
           underlineColor="bg-red-500"
           textColor="text-gray-100"
-          onClick={() => console.log("WQBO Hero Section clicked!")}
+          slug="wobo"
         />
         <div className="flex flex-col md:flex-row max-w-[1240px] mx-auto items-center justify-center">
           <Cards
@@ -135,6 +145,8 @@ const Spotlight = () => {
             backgroundColor="bg-gradient-golf"
             delay={0.2}
             onClick={() => console.log("Card clicked!")}
+            showBanner="false"
+            slug="the-green-felts"
           />
           <Cards
             logoSrc="/images/b2b.webp"
@@ -145,6 +157,8 @@ const Spotlight = () => {
             backgroundColor="bg-gradient-b2b"
             delay={0.2}
             onClick={() => console.log("Card clicked!")}
+            showBanner="false"
+            slug="dressplaner"
           />
         </div>
         <div>

@@ -1,0 +1,136 @@
+[
+  {
+    "slug": "test",
+    "name": "WOBO",
+    "descriptions": [
+      "WOBO is a versatile app that enhances the fitness experience for athletes by offering private home gyms, boxing rings, and basketball courts. Athletes can book venues easily and enjoy a peaceful, personalized workout environment. The app features secure payment options and provides motivational audio messages, called DRIPS, to keep users engaged and inspired.",
+      "For merchants, WOBO streamlines venue management, pricing, and bookings with integrated Stripe Connect for seamless payments. Merchants can also record and sell DRIPS to engage clients. The app's comprehensive tools support venue management, feedback collection, and real-time communication."
+    ],
+    "bullet_points": [
+      {
+        "title": "Year",
+        "value": "2023 - Present"
+      },
+      {
+        "title": "Project Type",
+        "value": "Mobile App Development"
+      },
+      {
+        "title": "Industry",
+        "value": "Sports & Fitness"
+      }
+    ],
+    "features": [
+      "Secure payment options",
+      "Motivational audio messages",
+      "Venue management",
+      "Feedback collection",
+      "Real-time communication",
+      "Stripe Connect for seamless payments"
+    ],
+    "problem": {
+      "banner": "https://firebasestorage.googleapis.com/v0/b/infilp.appspot.com/o/WOBO%2Fproblem.webp?alt=media&token=c8467c7f-e6f1-4481-bdf7-eaa4b364c090",
+      "statements": [
+        "Athletes face challenges in finding suitable venues for their workouts, often leading to frustration and missed sessions.",
+        "Merchants struggle to manage bookings, pricing, and payments, resulting in lost opportunities and reduced revenue.",
+        "User-friendly, secure, and provide a seamless experience for both athletes and merchants."
+      ]
+    },
+    "solution": {
+      "banner": "https://firebasestorage.googleapis.com/v0/b/infilp.appspot.com/o/WOBO%2Fsolution.webp?alt=media&token=76a0c3dc-26fe-44e0-a60c-7d6d4ecb8afe",
+      "statements": [
+        "Athletes can easily find suitable venues for their workouts, reducing frustration and missed sessions.",
+        "Merchants can manage bookings, pricing, and payments, increasing opportunities and revenue.",
+        "The app provides a seamless experience for both athletes and merchants, improving user satisfaction and engagement."
+      ]
+    },
+    "social_links": {
+      "instagram": "https://www.instagram.com/world_of_wobo",
+      "tiktok": "https://www.tiktok.com/@worldofwobo",
+      "website": "https://wobo.world/"
+    },
+    "banners": [
+      "https://firebasestorage.googleapis.com/v0/b/infilp.appspot.com/o/WOBO%2Fcasestudy%2F1.webp?alt=media&token=5d228ce4-c836-4d3a-bf7a-9ac465adcbee",
+      "https://firebasestorage.googleapis.com/v0/b/infilp.appspot.com/o/WOBO%2Fcasestudy%2F2.webp?alt=media&token=169806f2-34db-4bef-a26c-3b2d35bb8e80",
+      "https://firebasestorage.googleapis.com/v0/b/infilp.appspot.com/o/WOBO%2Fcasestudy%2F3.webp?alt=media&token=a904abf2-66b9-4bd0-a358-fc85c79e0acd",
+      "https://firebasestorage.googleapis.com/v0/b/infilp.appspot.com/o/WOBO%2Fcasestudy%2F4.webp?alt=media&token=0b2ad47b-c4af-4ece-af02-1114d8109280",
+      "https://firebasestorage.googleapis.com/v0/b/infilp.appspot.com/o/WOBO%2Fcasestudy%2F5.webp?alt=media&token=489433dd-c26b-4f5a-b0fb-c49012c5edc2",
+      "https://firebasestorage.googleapis.com/v0/b/infilp.appspot.com/o/WOBO%2Fcasestudy%2F6.webp?alt=media&token=b1e80be0-3af5-4adc-819d-f23cbe01e160",
+      "https://firebasestorage.googleapis.com/v0/b/infilp.appspot.com/o/WOBO%2Fcasestudy%2F7.webp?alt=media&token=20f149f0-3c47-4404-af74-5542b26682ae",
+      "https://firebasestorage.googleapis.com/v0/b/infilp.appspot.com/o/WOBO%2Fcasestudy%2F8.webp?alt=media&token=8d9aefb8-88f0-41fd-8411-1b0d9763a3b9",
+      "https://firebasestorage.googleapis.com/v0/b/infilp.appspot.com/o/WOBO%2Fcasestudy%2F9.webp?alt=media&token=2e5c117e-1680-4367-b5ac-2f7f2a1cd49d",
+      "https://firebasestorage.googleapis.com/v0/b/infilp.appspot.com/o/WOBO%2Fcasestudy%2F10.webp?alt=media&token=28a60d9b-e6b8-40d2-8ae5-6c176eee9650",
+      "https://firebasestorage.googleapis.com/v0/b/infilp.appspot.com/o/WOBO%2Fcasestudy%2F11.webp?alt=media&token=a3f520c6-368d-4cb0-b345-82f5eeef14a0"
+    ],
+    "related_projects": ["base-reward-wallet", "easy-as-pie-budget"],
+    "apple_store_link": "https://apps.apple.com/us/app/wobo/id6475769960",
+    "play_store_link": "https://play.google.com/store/apps/details?id=com.wobo.android"
+  },
+  {
+    "slug": "wobo",
+    "name": "WOBO",
+    "descriptions": [
+      "WOBO is a versatile app that enhances the fitness experience for athletes by offering private home gyms, boxing rings, and basketball courts. Athletes can book venues easily and enjoy a peaceful, personalized workout environment. The app features secure payment options and provides motivational audio messages, called DRIPS, to keep users engaged and inspired.",
+      "For merchants, WOBO streamlines venue management, pricing, and bookings with integrated Stripe Connect for seamless payments. Merchants can also record and sell DRIPS to engage clients. The app's comprehensive tools support venue management, feedback collection, and real-time communication."
+    ],
+    "bullet_points": [
+      {
+        "title": "Year",
+        "value": "2023 - Present"
+      },
+      {
+        "title": "Project Type",
+        "value": "Mobile App Development"
+      },
+      {
+        "title": "Industry",
+        "value": "Sports & Fitness"
+      }
+    ],
+    "features": [
+      "Secure payment options",
+      "Motivational audio messages",
+      "Venue management",
+      "Feedback collection",
+      "Real-time communication",
+      "Stripe Connect for seamless payments"
+    ],
+    "problem": {
+      "banner": "https://firebasestorage.googleapis.com/v0/b/infilp.appspot.com/o/WOBO%2Fproblem.webp?alt=media&token=c8467c7f-e6f1-4481-bdf7-eaa4b364c090",
+      "statements": [
+        "Athletes face challenges in finding suitable venues for their workouts, often leading to frustration and missed sessions.",
+        "Merchants struggle to manage bookings, pricing, and payments, resulting in lost opportunities and reduced revenue.",
+        "User-friendly, secure, and provide a seamless experience for both athletes and merchants."
+      ]
+    },
+    "solution": {
+      "banner": "https://firebasestorage.googleapis.com/v0/b/infilp.appspot.com/o/WOBO%2Fsolution.webp?alt=media&token=76a0c3dc-26fe-44e0-a60c-7d6d4ecb8afe",
+      "statements": [
+        "Athletes can easily find suitable venues for their workouts, reducing frustration and missed sessions.",
+        "Merchants can manage bookings, pricing, and payments, increasing opportunities and revenue.",
+        "The app provides a seamless experience for both athletes and merchants, improving user satisfaction and engagement."
+      ]
+    },
+    "socialLinksArray": [
+      { "name": "instagram", "url": "https://www.instagram.com/world_of_wobo" },
+      { "name": "tiktok", "url": "https://www.tiktok.com/@worldofwobo" },
+      { "name": "website", "url": "https://wobo.world/" }
+    ],
+    "banners": [
+      "https://firebasestorage.googleapis.com/v0/b/infilp.appspot.com/o/WOBO%2Fcasestudy%2F1.webp?alt=media&token=5d228ce4-c836-4d3a-bf7a-9ac465adcbee",
+      "https://firebasestorage.googleapis.com/v0/b/infilp.appspot.com/o/WOBO%2Fcasestudy%2F2.webp?alt=media&token=169806f2-34db-4bef-a26c-3b2d35bb8e80",
+      "https://firebasestorage.googleapis.com/v0/b/infilp.appspot.com/o/WOBO%2Fcasestudy%2F3.webp?alt=media&token=a904abf2-66b9-4bd0-a358-fc85c79e0acd",
+      "https://firebasestorage.googleapis.com/v0/b/infilp.appspot.com/o/WOBO%2Fcasestudy%2F4.webp?alt=media&token=0b2ad47b-c4af-4ece-af02-1114d8109280",
+      "https://firebasestorage.googleapis.com/v0/b/infilp.appspot.com/o/WOBO%2Fcasestudy%2F5.webp?alt=media&token=489433dd-c26b-4f5a-b0fb-c49012c5edc2",
+      "https://firebasestorage.googleapis.com/v0/b/infilp.appspot.com/o/WOBO%2Fcasestudy%2F6.webp?alt=media&token=b1e80be0-3af5-4adc-819d-f23cbe01e160",
+      "https://firebasestorage.googleapis.com/v0/b/infilp.appspot.com/o/WOBO%2Fcasestudy%2F7.webp?alt=media&token=20f149f0-3c47-4404-af74-5542b26682ae",
+      "https://firebasestorage.googleapis.com/v0/b/infilp.appspot.com/o/WOBO%2Fcasestudy%2F8.webp?alt=media&token=8d9aefb8-88f0-41fd-8411-1b0d9763a3b9",
+      "https://firebasestorage.googleapis.com/v0/b/infilp.appspot.com/o/WOBO%2Fcasestudy%2F9.webp?alt=media&token=2e5c117e-1680-4367-b5ac-2f7f2a1cd49d",
+      "https://firebasestorage.googleapis.com/v0/b/infilp.appspot.com/o/WOBO%2Fcasestudy%2F10.webp?alt=media&token=28a60d9b-e6b8-40d2-8ae5-6c176eee9650",
+      "https://firebasestorage.googleapis.com/v0/b/infilp.appspot.com/o/WOBO%2Fcasestudy%2F11.webp?alt=media&token=a3f520c6-368d-4cb0-b345-82f5eeef14a0"
+    ],
+    "related_projects": ["base-reward-wallet", "easy-as-pie-budget"],
+    "apple_store_link": "https://apps.apple.com/us/app/wobo/id6475769960",
+    "play_store_link": "https://play.google.com/store/apps/details?id=com.wobo.android"
+  }
+]

@@ -3,39 +3,27 @@
 import { motion, useInView } from "framer-motion";
 import Image from "next/image";
 import { useRef } from "react";
+import { useRouter } from "next/navigation";
 
 const WQBOHeroSection = ({
-  title = "Case Studies",
-  highlightedWord = "Studies",
-  heading = ["Empowering Athletes and", "Fitness Merchants"],
-  logo = {
-    src: "/images/woboLogo.png",
-    alt: "Wobo Logo",
-    width: 110,
-    height: 119,
-    mobileWidth: 40,
-    mobileHeight: 40,
-  },
-  image = {
-    src: "/images/portfolioMobile.webp",
-    alt: "Portfolio Image",
-    mobileMaxHeight: 200,
-    desktopMaxHeight: 350,
-  },
+  // title,
+  // highlightedWord,
+  heading,
+  logo,
+  image,
 
-  backgroundColor = "bg-gradient-wobo",
-  underlineColor = "bg-red-500",
-  textColor = "text-white",
-  titleColor = "text-custom-black",
+  backgroundColor,
+  // underlineColor,
+  textColor,
+  // titleColor,
+  slug,
 
   animationDelay = 0,
-  hoverScale = 1.02,
   hoverElevation = 5,
-
-  onClick = () => {},
 }) => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, threshold: 0.3 });
+  const router = useRouter();
 
   const containerVariants = {
     hidden: { opacity: 0, y: 50 },
@@ -85,40 +73,32 @@ const WQBOHeroSection = ({
     },
   };
 
+  const handleClick = () => {
+    if (slug) {
+      router.push(`/portfolioDetail/${slug}`);
+    }
+  };
+
   return (
     <div className="w-full">
       {/* Title Section */}
-      <motion.div
-        initial={{ opacity: 0, y: -20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6 }}
-        className="text-center mt-24 mb-10"
-      >
-        <h2 className={`text-4xl font-Manrope-regular ${titleColor} mb-3`}>
-          {title.split(" ")[0]}{" "}
-          <span className="font-Manrope-bold">{highlightedWord}</span>
-        </h2>
-        <div
-          className={`w-28 h-1 ${underlineColor} mx-auto rounded-full`}
-        ></div>
-      </motion.div>
 
       <div className="flex items-center justify-center p-4 max-w-[1240px] h-full mx-auto">
         <motion.div
           ref={ref}
-          className={`relative w-full max-w-[390px] md:max-w-[800px] lg:max-w-[1180px] cursor-pointer group h-[460px] sm:h-[520px] md:h-[500px] lg:h-full`}
+          className={`relative w-full max-w-[390px] md:max-w-[800px] lg:max-w-[1180px] cursor-pointer group h-[490px] sm:h-[520px] md:h-[500px] lg:h-full`}
           variants={containerVariants}
           initial="hidden"
           animate={isInView ? "visible" : "hidden"}
           whileHover="hover"
-          onClick={onClick}
+          onClick={handleClick}
         >
           <motion.div
             className={`absolute inset-0 ${backgroundColor} rounded-3xl overflow-hidden`}
             variants={backgroundHoverVariants}
           />
 
-          <div className="relative z-10 px-8 py-10 md:px-0 md:py-4 h-full flex items-center justify-center">
+          <div className="relative z-10 px-4 py-10 md:px-0 md:py-4 h-full flex items-center justify-center">
             <div className="flex flex-col lg:hidden gap-3 items-center text-center h-full justify-between w-auto">
               <motion.div
                 className="flex justify-center"
@@ -137,7 +117,7 @@ const WQBOHeroSection = ({
                 className="flex flex-col my-4"
                 variants={contentHoverVariants}
               >
-                <h1
+                <h2
                   className={`text-2xl font-Manrope-bold leading-tight ${textColor}`}
                 >
                   {heading.map((line, index) => (
@@ -145,7 +125,7 @@ const WQBOHeroSection = ({
                       {line}
                     </div>
                   ))}
-                </h1>
+                </h2>
               </motion.div>
 
               <motion.div
@@ -201,7 +181,7 @@ const WQBOHeroSection = ({
                   src={image.src}
                   width={1000}
                   height={1000}
-                  className={`object-contain w-full h-auto max-h-[${image.desktopMaxHeight}px] rounded-2xl`}
+                  className={`object-contain w-full max-w-lg h-auto max-h-[${image.desktopMaxHeight}px] rounded-2xl`}
                   alt={image.alt}
                 />
               </motion.div>

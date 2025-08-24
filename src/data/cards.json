@@ -1,0 +1,178 @@
+[
+  {
+    "slug": "wobo",
+    "title": "Case",
+    "highlightedWord": "Studies",
+    "heading": ["Empowering Athletes and ", "Fitness Merchants"],
+    "logo": {
+      "src": "/images/woboLogo.png",
+      "alt": "Healthcare Logo",
+      "width": 120,
+      "height": 120,
+      "mobileWidth": 50,
+      "mobileHeight": 50
+    },
+    "image": {
+      "src": "/images/portfolioMobile.webp",
+      "alt": "Healthcare App",
+      "mobileMaxHeight": 180,
+      "desktopMaxHeight": 400
+    },
+    "backgroundColor": "bg-gradient-wobo",
+    "underlineColor": "bg-red-500",
+    "textColor": "text-gray-100",
+    "onClick": "router.push(`/portfolioDetails/${slug}`)"
+  },
+  {
+    "slug": "the-green-felts",
+    "showBanner": "false",
+    "logo": {
+      "src": "/images/golf.webp",
+      "alt": "Golf Logo"
+    },
+    "title": "Smart Golf League & Match Management",
+    "image": {
+      "src": "/images/golflap.webp",
+      "alt": "Custom Image"
+    },
+    "backgroundColor": "bg-gradient-golf",
+    "delay": 0.2,
+    "onClick": "Card clicked!"
+  },
+  {
+    "slug": "dressplaner",
+    "showBanner": "false",
+    "logo": {
+      "src": "/images/b2b.webp",
+      "alt": "b2b Logo"
+    },
+    "title": "A Digital Solution To Streamline B2B & B2C Fashion Operations",
+    "image": {
+      "src": "/images/b2bMobile.webp",
+      "alt": "Custom Image"
+    },
+    "backgroundColor": "bg-gradient-b2b",
+    "delay": 0.2,
+    "onClick": "Card clicked!"
+  },
+  {
+    "slug": "base-reward-wallet",
+    "showBanner": "false",
+    "logo": {
+      "src": "/images/cryptoLogo.webp",
+      "alt": "Crypto Logo"
+    },
+    "title": "Africa’s Crypto Future: Secure, Rewarding & Mobile.",
+    "image": {
+      "src": "/images/crypto.webp",
+      "alt": "Custom Image"
+    },
+    "backgroundColor": "bg-gradient-crypto",
+    "delay": 0.2,
+    "onClick": "Card clicked!"
+  },
+  {
+    "slug": "servicehub",
+    "showBanner": "false",
+    "logo": {
+      "src": "/images/marketPlacelogo.webp",
+      "alt": "Golf Logo"
+    },
+    "title": "A Marketplace Connecting Users With Trusted Providers",
+    "image": {
+      "src": "/images/marketPlace.webp",
+      "alt": "Custom Image"
+    },
+    "backgroundColor": "bg-gradient-market",
+    "delay": 0.2,
+    "onClick": "Card clicked!"
+  },
+  {
+    "slug": "heurica",
+    "title": "Case",
+    "highlightedWord": "Studies",
+    "heading": ["Research & Collaborate With", "International PhD Candidates"],
+    "logo": {
+      "src": "/images/researchLogo.webp",
+      "alt": "researchLogo Logo",
+      "width": 120,
+      "height": 120,
+      "mobileWidth": 50,
+      "mobileHeight": 50
+    },
+    "image": {
+      "src": "/images/research.webp",
+      "alt": "resarch App",
+      "mobileMaxHeight": 180,
+      "desktopMaxHeight": 400
+    },
+    "backgroundColor": "bg-gradient-reserch",
+    "underlineColor": "bg-red-500",
+    "textColor": "text-gray-100",
+    "onClick": "console.log('reserch  Section clicked!')"
+  },
+  {
+    "slug": "veteye",
+    "showBanner": "false",
+    "logo": {
+      "src": "/images/ai-powerdLogo.webp",
+      "alt": "ai-powerd Logo"
+    },
+    "title": " AI-Powered Veterinary Diagnosis, Education & Insights",
+    "image": {
+      "src": "/images/ai-powerd.webp",
+      "alt": "ai-powerd Image"
+    },
+    "backgroundColor": "bg-gradient-ai",
+    "delay": 0.2,
+    "onClick": "Card clicked!"
+  },
+  {
+    "slug": "wealth-wise",
+    "showBanner": "false",
+    "logo": {
+      "src": "/images/finananceTrackingLogo.webp",
+      "alt": "Golf Logo"
+    },
+    "title": "Smart Finance Tracking, Bills & Investments",
+    "image": {
+      "src": "/images/financeTracking.webp",
+      "alt": "Custom Image"
+    },
+    "backgroundColor": "bg-gradient-wealth",
+    "delay": 0.2,
+    "onClick": "Card clicked!"
+  },
+  {
+    "slug": "easy-as-pie-budget",
+    "showBanner": "false",
+    "logo": {
+      "src": "/images/budgetLogo.webp",
+      "alt": "budget Logo"
+    },
+    "title": "Budgeting Made Simple, Solo or Shared",
+    "image": {
+      "src": "/images/budget.webp",
+      "alt": "Custom Image"
+    },
+    "backgroundColor": "bg-gradient-budget",
+    "delay": 0.2,
+    "onClick": "Card clicked!"
+  },
+  {
+    "slug": "Commin Soon",
+    "showBanner": "true",
+    "logo": {
+      "src": "/images/careStrengthLogo.webp",
+      "alt": "budget Logo"
+    },
+    "title": "Rally Your Loved Ones With Care & Strength",
+    "image": {
+      "src": "/images/CareStrength.webp",
+      "alt": "Custom Image"
+    },
+    "backgroundColor": "bg-gradient-care",
+    "delay": 0.2,
+    "onClick": "Card clicked!"
+  }
+]
