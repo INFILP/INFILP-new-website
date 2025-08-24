@@ -4,7 +4,6 @@ import React from "react";
 const TestimonialCard = ({ logo, quoteIcon, text, name, role, image }) => {
   return (
     <div className="bg-white rounded-xl p-6 flex flex-col gap-4 max-w-[720px] md:h-[432px] relative">
-      {/* Logo */}
       <div className="w-10 h-12 md:w-24 md:h-28 relative">
         <Image src={logo} alt="Company Logo" fill className="object-contain" />
       </div>
