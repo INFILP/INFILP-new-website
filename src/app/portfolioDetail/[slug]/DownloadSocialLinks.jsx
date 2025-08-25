@@ -143,7 +143,7 @@ const DownloadSocialLinks = ({
             rel="noopener noreferrer"
             whileHover={buttonHover}
             whileTap={{ scale: 0.95 }}
-            className="inline-flex items-center gap-3 bg-gray-900 text-white px-6 py-3 rounded-lg font-Manrope-medium hover:bg-gray-800 transition-colors max-w-[220px] h-[70px] text-[14px] sm:text-base md:text-[24px] whitespace-nowrap"
+            className="inline-flex items-center gap-3 bg-gray-900 text-white px-4 sm:px-6 py-3 rounded-lg font-Manrope-medium hover:bg-gray-800 transition-colors max-w-[220px] h-[70px] text-[14px] sm:text-base md:text-[24px] whitespace-nowrap"
           >
             <motion.div whileHover={iconHover}>
               <Image
@@ -151,7 +151,7 @@ const DownloadSocialLinks = ({
                 width={30}
                 height={30}
                 alt="App Store"
-                className="object-contain w-[26px]"
+                className="object-contain max-w-[26px] w-full"
               />
             </motion.div>
             App Store
@@ -162,7 +162,7 @@ const DownloadSocialLinks = ({
       {/* Social Section */}
       <motion.div
         variants={itemVariants}
-        className="space-y-12 w-full py-12 px-6 mt-6 lg:mt-0 bg-[#F8FAFB]  lg:ml-4 rounded-4xl flex flex-col items-center justify-center text-[16px] md:text-[24px]"
+        className="space-y-12 w-full py-12 px-4 sm:px-6 mt-6 lg:mt-0 bg-[#F8FAFB]  lg:ml-4 rounded-4xl flex flex-col items-center justify-center text-[16px] md:text-[24px]"
       >
         <h2 className="text-4xl lg:text-5xl font-Manrope-regular text-custom-black text-center lg:text-left ">
           Join the <span className="font-semibold">Community</span>

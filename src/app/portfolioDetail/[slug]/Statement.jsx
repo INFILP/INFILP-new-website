@@ -124,7 +124,7 @@ const Statement = ({
       </motion.div>
 
       <motion.div
-        className="w-[331px] h-[277px] sm:w-[540px] sm:h-[420px] lg:w-[560px] lg:h-[600px] flex items-center"
+        className="w-full max-w-[410px] sm:max-w-[630px] lg:max-wxl660px] flex items-center px-4 sm:px-6"
         variants={imageVariants}
         initial="hidden"
         whileInView="visible"
@@ -136,7 +136,7 @@ const Statement = ({
             alt={imageAlt}
             fill
             className="object-conatin w-full"
-            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 70vw, 560px"
           />
         </div>
       </motion.div>

@@ -38,7 +38,7 @@ const PortfolioDetail = () => {
   return (
     <div className="">
       <motion.div
-        className="w-full h-screen relative"
+        className="relative w-full h-[200px] sm:h-[300px] md:h-[400px] lg:h-[500px] xl:h-screen"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{
@@ -50,8 +50,9 @@ const PortfolioDetail = () => {
           src={portfolioData?.top_banner}
           alt="banner"
           fill
-          className="w-full object-cover object-center"
           priority
+          className="object-cover object-center"
+          sizes="100vw"
         />
       </motion.div>
       <Details
