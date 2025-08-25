@@ -57,15 +57,15 @@ const Statement = ({
     },
   };
 
-  const containerClass = `flex items-center gap-8 lg:gap-12 ${
-    reverse ? "flex-row-reverse" : "flex-row"
-  } ${className}`;
+  const containerClass = `flex flex-col-reverse items-center gap-8 lg:gap-12 ${
+    reverse ? "xl:flex-row-reverse" : "xl:flex-row"
+  }`;
 
   return (
-    <div className={`w-full max-w-[1240px] mx-auto py-8 ${containerClass}`}>
+    <div className={`w-full max-w-[1240px] mx-auto py-8 ${containerClass} `}>
       {/* Text Content */}
       <motion.div
-        className="flex flex-col space-y-6 bg-[#F8FAFB] py-4 pl-6 pr-2 rounded-4xl max-w-[599px] "
+        className="flex flex-col space-y-6 bg-[#F8FAFB] py-4 pl-6 pr-2 rounded-4xl max-w-[599px] mx-4 sm:mx-0"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.3 }}
@@ -124,7 +124,7 @@ const Statement = ({
       </motion.div>
 
       <motion.div
-        className="flex-1 max-w-md lg:max-w-2xl"
+        className="w-[331px] h-[277px] sm:w-[540px] sm:h-[420px] lg:w-[560px] lg:h-[600px] flex items-center"
         variants={imageVariants}
         initial="hidden"
         whileInView="visible"
@@ -135,7 +135,7 @@ const Statement = ({
             src={imageSrc}
             alt={imageAlt}
             fill
-            className="object-cover"
+            className="object-conatin w-full"
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           />
         </div>
