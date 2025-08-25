@@ -73,7 +73,7 @@ const SeeAllWorkComponent = ({
   return (
     <motion.div
       ref={ref}
-      className="relative w-full md:max-w-[1200px] px-5 md:px-6 xl:px-4 xl:mx-auto mt-2 md:mt-4   group"
+      className="relative max-w-[420px] mx-auto md:max-w-[1200px] px-5 md:px-6 xl:px-4 xl:mx-auto mt-2 md:mt-4   group"
       variants={containerVariants}
       initial="hidden"
       animate={isInView ? "visible" : "hidden"}
