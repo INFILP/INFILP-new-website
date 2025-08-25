@@ -36,6 +36,8 @@ const Portfolio = () => {
           backgroundColor="bg-gradient-golf"
           delay={0.2}
           onClick={() => console.log("Card clicked!")}
+          showBanner="false"
+          slug="the-green-felts"
         />
         <Cards
           logoSrc="/images/b2b.webp"
@@ -46,6 +48,8 @@ const Portfolio = () => {
           backgroundColor="bg-gradient-b2b"
           delay={0.2}
           onClick={() => console.log("Card clicked!")}
+          showBanner="false"
+          slug="dressplaner"
         />
       </div>
     </div>

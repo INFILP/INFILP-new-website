@@ -1,6 +1,7 @@
 [
   {
     "slug": "wobo",
+    "top_banner": "https://firebasestorage.googleapis.com/v0/b/infilp.appspot.com/o/WOBO%2Fcasestudy%2Fheader.webp?alt=media&token=29ecb87d-b43e-47f0-9b69-d0cac1f9c74d",
     "name": "WOBO",
     "descriptions": [
       "WOBO is a versatile app that enhances the fitness experience for athletes by offering private home gyms, boxing rings, and basketball courts. Athletes can book venues easily and enjoy a peaceful, personalized workout environment. The app features secure payment options and provides motivational audio messages, called DRIPS, to keep users engaged and inspired.",
@@ -62,7 +63,7 @@
       "https://firebasestorage.googleapis.com/v0/b/infilp.appspot.com/o/WOBO%2Fcasestudy%2F10.webp?alt=media&token=28a60d9b-e6b8-40d2-8ae5-6c176eee9650",
       "https://firebasestorage.googleapis.com/v0/b/infilp.appspot.com/o/WOBO%2Fcasestudy%2F11.webp?alt=media&token=a3f520c6-368d-4cb0-b345-82f5eeef14a0"
     ],
-    "related_projects": ["base-reward-wallet", "easy-as-pie-budget"],
+    "related_projects": ["base-reward-wallet", "wealth-wise"],
     "apple_store_link": "https://apps.apple.com/us/app/wobo/id6475769960",
     "play_store_link": "https://play.google.com/store/apps/details?id=com.wobo.android"
   }

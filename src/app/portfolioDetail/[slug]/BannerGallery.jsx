@@ -7,12 +7,14 @@ const BannerGallery = ({ banners }) => {
   return (
     <div className="flex flex-col items-center w-full">
       {banners?.map((src, index) => (
-        <div key={index} className="relative h-screen w-full">
+        <div key={index} className=" w-full ">
           <Image
             src={src}
             alt={`Banner ${index + 1}`}
-            fill
-            className="object-contain"
+            width={0}
+            height={0}
+            sizes="100vw"
+            className="w-full h-auto block"
           />
         </div>
       ))}

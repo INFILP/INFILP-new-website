@@ -58,7 +58,7 @@ const AISection = ({
       viewport={{ once: true, amount: 0.3 }}
     >
       <div className="max-w-6xl mx-auto">
-        {/* Image Container */}
+      
         <motion.div className="" variants={imageVariants}>
           <Image
             src={imageSrc}
@@ -70,7 +70,6 @@ const AISection = ({
           />
         </motion.div>
 
-        {/* Text Container */}
         <motion.div
           className="text-center max-w-4xl mx-auto mt-44"
           variants={textVariants}

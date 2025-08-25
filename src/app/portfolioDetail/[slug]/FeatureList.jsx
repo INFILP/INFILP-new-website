@@ -19,7 +19,7 @@ const FeatureList = ({ features, className = "" }) => {
       y: 0,
       transition: {
         duration: 0.4,
-        ease: [0.4, 0, 0.2, 1], // Custom cubic-bezier for smoother animation
+        ease: [0.4, 0, 0.2, 1],
       },
     },
   };
@@ -28,8 +28,8 @@ const FeatureList = ({ features, className = "" }) => {
     <motion.div
       variants={containerVariants}
       initial="hidden"
-      animate="visible"
-      viewport={{ once: true, amount: 0.2 }}
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.3 }}
       className={`grid grid-cols-1 md:grid-cols-2 gap-8 ${className}`}
     >
       {features &&
@@ -39,12 +39,10 @@ const FeatureList = ({ features, className = "" }) => {
             variants={itemVariants}
             className="flex items-center gap-4 md:gap-4"
           >
-            {/* Optimized Number Badge */}
             <div className="bg-red-500 text-white font-Manrope-medium rounded-lg flex items-center justify-center text-[28px] md:text-5xl w-[49px] h-[48px] md:w-[80px] md:h-[80px] text-center">
               {(index + 1).toString().padStart(2, "0")}
             </div>
 
-            {/* Optimized Feature Text */}
             <span className="text-custom-black font-Manrope-bold text-lg md:text-2xl leading-tight text-wrap">
               {feature}
             </span>
