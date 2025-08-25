@@ -6,7 +6,7 @@ import InfoSection from "./InfoSection";
 import Bestservices from "./Bestservices";
 import FAQs from "./Faqs";
 import { useParams } from "next/navigation";
-import servicesData from "../../../data/services.json"; // Assuming you have a servicesData file
+import servicesData from "../../../data/services.json";
 import { useState, useEffect } from "react";
 import BuildBanner from "@/components/BuildBanner";
 import Portfolio from "./Portfolio";
@@ -17,7 +17,6 @@ const serviceDetails = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    // Find the service data by slug
     const foundService = servicesData.find(
       (service) => service.slug === params.slug
     );

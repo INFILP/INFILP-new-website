@@ -11,6 +11,7 @@ const Header = () => {
   const pathname = usePathname();
 
   const isHomePage = pathname === "/" || pathname === "/spotlight";
+  const isGlassyPage = pathname.startsWith("/portfolioDetail/");
 
   const toggleMenu = useCallback(() => {
     setIsMenuOpen((prev) => !prev);
@@ -47,7 +48,8 @@ const Header = () => {
   const getLinkClasses = (href, baseClasses) => {
     const isActive = isActiveLink(href);
 
-    const shouldUseScrollColors = isHomePage ? isScrolled && !isMenuOpen : true;
+    const shouldUseScrollColors =
+      isHomePage || isGlassyPage ? isScrolled && !isMenuOpen : true;
     const textColor = shouldUseScrollColors
       ? isActive
         ? "text-prime font-Manrope-bold"
@@ -64,7 +66,8 @@ const Header = () => {
       return "w-6 h-0.5 transition-all duration-200 bg-white";
     }
 
-    const shouldUseScrollColors = isHomePage ? isScrolled && !isMenuOpen : true;
+    const shouldUseScrollColors =
+      isHomePage || isGlassyPage ? isScrolled && !isMenuOpen : true;
     return `w-6 h-0.5 transition-all duration-200 ${
       shouldUseScrollColors ? "bg-black" : "bg-white"
     }`;
@@ -77,19 +80,23 @@ const Header = () => {
 
     if (isHomePage) {
       return isScrolled ? "bg-white shadow-md" : "bg-transparent";
-    } else {
-      return "bg-white shadow-md";
     }
+
+    if (isGlassyPage) {
+      return isScrolled
+        ? "bg-white shadow-md"
+        : "bg-white/20 border-b border-white/10 shadow-sm";
+    }
+
+    return "bg-white shadow-md";
   };
 
-  // Determine logo to use
   const getLogoSrc = () => {
-    // When mobile menu is open, always use white logo
     if (isMenuOpen) {
       return "/images/infilpLogo.webp";
     }
 
-    if (isHomePage) {
+    if (isHomePage || isGlassyPage) {
       return isScrolled ? "/images/logoblack.png" : "/images/infilpLogo.webp";
     } else {
       return "/images/logoblack.png";

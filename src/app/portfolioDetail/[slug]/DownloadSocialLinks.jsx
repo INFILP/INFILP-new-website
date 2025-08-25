@@ -118,9 +118,11 @@ const DownloadSocialLinks = ({
         <div className="flex flex-row items-center justify-center gap-4">
           <motion.a
             href={downloadLinks.playStore}
+            target="_blank"
+            rel="noopener noreferrer"
             whileHover={buttonHover}
             whileTap={{ scale: 0.95 }}
-            className="inline-flex items-center gap-3 bg-gray-900 text-white px-6 py-3 rounded-lg font-Manrope-medium hover:bg-gray-800 transition-colors max-w-[220px] h-[70px] text-[14px] md:text-[24px]"
+            className="inline-flex items-center gap-3 bg-gray-900 text-white px-6 py-3 rounded-lg font-Manrope-medium hover:bg-gray-800 transition-colors max-w-[220px] h-[70px] text-[14px] sm:text-base md:text-[24px] whitespace-nowrap"
           >
             <motion.div whileHover={iconHover}>
               <Image
@@ -137,9 +139,11 @@ const DownloadSocialLinks = ({
           {/* App Store Button */}
           <motion.a
             href={downloadLinks.appStore}
+            target="_blank"
+            rel="noopener noreferrer"
             whileHover={buttonHover}
             whileTap={{ scale: 0.95 }}
-            className="inline-flex items-center gap-3 bg-gray-900 text-white px-6 py-3 rounded-lg font-Manrope-medium hover:bg-gray-800 transition-colors max-w-[220px] h-[70px] text-[14px] md:text-[24px]"
+            className="inline-flex items-center gap-3 bg-gray-900 text-white px-6 py-3 rounded-lg font-Manrope-medium hover:bg-gray-800 transition-colors max-w-[220px] h-[70px] text-[14px] sm:text-base md:text-[24px] whitespace-nowrap"
           >
             <motion.div whileHover={iconHover}>
               <Image
@@ -171,6 +175,8 @@ const DownloadSocialLinks = ({
               <motion.a
                 key={key}
                 href={processedSocialLinks[key]}
+                target="_blank"
+                rel="noopener noreferrer"
                 whileHover={socialIconHover}
                 whileTap={{ scale: 0.95 }}
                 className="w-14 h-14 bg-gray-900 rounded-lg flex items-center justify-center text-white hover:bg-gray-800 transition-colors"

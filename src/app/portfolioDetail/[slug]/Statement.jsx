@@ -86,15 +86,13 @@ const Statement = ({
             ))}
           </h2>
           <div className="text-red-500">
-            <svg
-              width="36"
-              height="36"
-              viewBox="0 0 36 36"
-              fill="currentColor"
-              className="w-8 h-8 lg:w-16 lg:h-16"
-            >
-              <path d="M13 3L4 14h6l-2 7 9-11h-6l2-7z" />
-            </svg>
+            <Image
+              src="/images/eleStar.png"
+              alt={imageAlt}
+              width={80}
+              height={80}
+              className="object-contain pr-4"
+            />
           </div>
         </motion.div>
 
@@ -109,7 +107,14 @@ const Statement = ({
               whileInView="visible"
               viewport={{ once: true, amount: 0.3 }}
             >
-              <div className="flex-shrink-0 w-2 h-2 bg-red-500 rounded-full mt-3"></div>
+              {/* <div className="flex-shrink-0 w-2 h-2 bg-red-500 rounded-full mt-3"></div> */}
+              <Image
+                src="/images/tar.png"
+                alt={imageAlt}
+                width={20}
+                height={20}
+                className="object-contain pt-2"
+              />
               <p className="text-gray-700 text-base leading-relaxed font-Manrope-medium md:text-2xl">
                 {point}
               </p>

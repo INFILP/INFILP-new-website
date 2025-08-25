@@ -49,8 +49,8 @@
     --gradient-dark-pink: 91 55 115;
     --gradient-light-blue: 104 66 253;
     --gradient-dark-blue: 103 65 255;
-    --gradient-light-red: 255 88 125;
-    --gradient-dark-red: 248 38 85;
+    --gradient-lightlight-red: 255 88 125;
+    --gradient-darkdark-red: 248 38 85;
     --gradient-light-sky: 0 115 176;
     --gradient-dark-sky: 0 56 85;
     --gradient-light-bluesky: 12 140 232;
@@ -115,11 +115,18 @@
       rgb(var(--gradient-dark-red, 246 26 18))
     );
   }
-  .bg-gradient-seeCard {
+  /* .bg-gradient-seeCard {
     background-image: linear-gradient(
       var(--gradient-direction, to right),
       rgb(var(--gradient-dark-red, 246 26 18)),
       rgb(var(--gradient-light-red, 255 87 81))
+    );
+  } */
+   .bg-gradient-seeCard {
+    background-image: linear-gradient(
+      var(--gradient-direction, to right),
+      rgb(246, 26, 18),
+      rgb(255, 87, 81)
     );
   }
   .bg-hover-gradient-card:hover {
@@ -160,8 +167,8 @@
   .bg-gradient-market {
     background-image: linear-gradient(
       var(--gradient-direction, to bottom),
-      rgb(var(--gradient-light-red, 255 88 125)) 0%,
-      rgb(var(--gradient-dark-red, 248 38 85)) 100%
+      rgb(var(--gradient-lightlight-red, 255 88 125)) 0%,
+      rgb(var(--gradient-darkdark-red, 248 38 85)) 100%
     );
   }
   .bg-gradient-reserch {
