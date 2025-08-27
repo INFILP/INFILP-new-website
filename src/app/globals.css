@@ -1,20 +1,25 @@
 @import "tailwindcss";
 
 @supports (-webkit-touch-callout: none) {
-  /* iOS Safari specific styles */
   .status-bar-overlay {
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
-    height: env(safe-area-inset-top, 20px);
-    background: var(--status-bar-color, #000000);
+    height: env(safe-area-inset-top, 0px); /* Changed from 20px to 0px */
+    background-color: #000000;
     z-index: 9999;
     transition: background-color 0.3s ease;
+    pointer-events: none; /* This is crucial - allows clicks to pass through */
   }
   
   .status-bar-overlay.scrolled {
-    --status-bar-color: #ffffff;
+    background-color: #ffffff;
+  }
+  
+  /* Remove or adjust body padding if it's causing issues */
+  body {
+    padding-top: 0; /* Remove if this is pushing content down too much */
   }
 }
 

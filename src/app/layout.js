@@ -121,30 +121,6 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      {/* <head>
-        <meta
-          name="viewport"
-          content="width=device-width, initial-scale=1, viewport-fit=cover"
-        />
-      </head> */}
-      {/* <head>
-        <meta charset="UTF-8" />
-        <meta
-          name="viewport"
-          content="width=device-width, initial-scale=1.0, viewport-fit=cover"
-        />
-
-        <meta name="theme-color" content="#000000" />
-        <meta name="apple-mobile-web-app-capable" content="yes" />
-        <meta
-          name="apple-mobile-web-app-status-bar-style"
-          content="black-translucent"
-        />
-        <meta name="apple-mobile-web-app-title" content="Infilp" />
-
-        <meta name="msapplication-navbutton-color" content="#000000" />
-        <meta name="msapplication-TileColor" content="#000000" />
-      </head> */}
       <div className="status-bar-overlay" id="status-bar-overlay"></div>
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${bebasNeue.variable} ${gilroy.variable} ${manrope.variable} antialiased`}
