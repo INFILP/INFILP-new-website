@@ -108,7 +108,7 @@ const Header = () => {
       <nav
         className={`fixed top-0 left-0 right-0 z-[9999] px-4 sm:px-6 transition-all duration-300 ${getNavbarBackground()}`}
       >
-        <div className="max-w-7xl mx-auto flex items-center justify-between py-3">
+        <div className="max-w-7xl mx-auto flex items-center justify-between h-15 md:h-[4.5rem]">
           <Link
             href="/spotlight"
             className="flex items-center"

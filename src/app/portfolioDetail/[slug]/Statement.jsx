@@ -64,7 +64,7 @@ const Statement = ({
 
   return (
     <div
-      className={`w-full max-w-[1240px] mx-auto py-4 sm:py-6 lg:py-8 ${containerClass}`}
+      className={`w-full max-w-[1240px] mx-auto py-4 sm:py-6 lg:py-8 ${containerClass} overflow-hidden`}
     >
       <div
         className={` gap-4 sm:gap-6 lg:gap-8 mx-4 sm:mx-6 lg:mx-0 ${containerClass}`}
@@ -130,7 +130,7 @@ const Statement = ({
 
         {/* Image Content */}
         <motion.div
-          className="w-full lg:w-1/2 flex items-center"
+          className="w-full lg:w-1/2 flex items-center "
           variants={imageVariants}
           initial="hidden"
           whileInView="visible"
