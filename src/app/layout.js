@@ -3,6 +3,7 @@ import localFont from "next/font/local";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import DynamicStatusBar from "@/components/DynamicStatusBar";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -120,15 +121,28 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <head>
+      {/* <head>
         <meta
           name="viewport"
           content="width=device-width, initial-scale=1, viewport-fit=cover"
         />
-      </head>
+      </head> */}
+      {/* <head>
+        <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1, viewport-fit=cover"
+        />
+        <meta name="theme-color" content="#000000" />
+        <meta
+          name="apple-mobile-web-app-status-bar-style"
+          content="black-translucent"
+        />
+        <meta name="msapplication-navbutton-color" content="#000000" />
+      </head> */}
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${bebasNeue.variable} ${gilroy.variable} ${manrope.variable} antialiased`}
       >
+        <DynamicStatusBar />
         <Header />
         {children}
         <Footer />
