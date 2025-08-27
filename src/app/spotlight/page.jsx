@@ -12,8 +12,10 @@ import SeeAllWorkComponent from "@/components/SeeAllWorkComponent";
 import VideoCarousel from "@/components/VideoCarousel";
 import TestimonialsCarousel from "@/components/TestimonialsCarousel";
 import BuildBanner from "@/components/BuildBanner";
+import { useRouter } from "next/navigation";
 
 const Spotlight = () => {
+  const router = useRouter();
   const videos = [
     { id: 1, src: "/videos/gif1.mp4" },
     { id: 2, src: "/videos/gif2.mp4" },
@@ -64,7 +66,7 @@ const Spotlight = () => {
           muted
           loop
           playsInline
-          className="absolute top-0 left-0 w-full h-full object-cover z-20"
+          className="absolute top-0 left-0 inset-0 w-full h-full object-cover object-center z-20"
         >
           <source src="/videos/hero.webm" type="video/webm" />
           Your browser does not support the video tag.
@@ -165,7 +167,6 @@ const Spotlight = () => {
           <SeeAllWorkComponent
             mainText="See all work"
             buttonText="Let's Go"
-            onClick={() => console.log("Button clicked!")}
             delay={0.2}
           />
         </div>
@@ -191,7 +192,7 @@ const Spotlight = () => {
             topText="Turn your idea into reality"
             mainText="Ready to build something great?"
             buttonText="Get Started"
-            onClick={() => console.log("Button clicked!")}
+            // onClick={() => router.push(`/portfolio`)}
             delay={0.2}
           />
         </div>

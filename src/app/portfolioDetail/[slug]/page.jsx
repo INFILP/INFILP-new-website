@@ -74,13 +74,14 @@ const PortfolioDetail = () => {
           appStore: `${portfolioData?.apple_store_link}`,
         }}
         socialLinksArray={portfolioData?.socialLinksArray}
-        className="max-w-[1240px] mx-6 lg:mx-3 xl:mx-auto pt-28"
+        className="max-w-[1240px] mx-6 lg:mx-3 xl:mx-auto pt-24"
       />
-      <div className="mt-28">
+      <div className="mt-24">
         <Statement
           title="Problem Statement"
           points={portfolioData?.problem?.statements}
           imageSrc={portfolioData?.problem?.banner}
+          icon="/images/eleStar.png"
           imageAlt="Description"
         />
         <Statement
@@ -88,15 +89,16 @@ const PortfolioDetail = () => {
           points={portfolioData?.solution?.statements}
           imageSrc={portfolioData?.solution?.banner}
           imageAlt="Description"
+          icon="/images/bulb.png"
           reverse={true}
         />
       </div>
-      <div className="mt-36">
+      <div className="mt-24">
         <BannerGallery banners={portfolioData?.banners} />
       </div>
       {portfolioData?.related_projects &&
         portfolioData.related_projects.length > 0 && (
-          <div className="flex flex-col items-center justify-center mt-20 mb-12">
+          <div className="flex flex-col items-center justify-center mt-16 mb-12">
             <motion.div
               initial={{ opacity: 0, y: -20 }}
               animate={{ opacity: 1, y: 0 }}

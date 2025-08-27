@@ -2,15 +2,16 @@
 
 import React, { useRef } from "react";
 import { motion, useInView } from "framer-motion";
+import { useRouter } from "next/navigation";
 
 const BuildBanner = ({
   topText = "Turn your idea into reality",
   mainText = "Ready to build something great?",
   buttonText = "Get Started",
-  onClick,
   delay = 0,
 }) => {
   const ref = useRef(null);
+  const router = useRouter();
   const isInView = useInView(ref, { once: true, threshold: 0.3 });
 
   const containerVariants = {
@@ -69,6 +70,10 @@ const BuildBanner = ({
         ease: "easeInOut",
       },
     },
+  };
+
+  const handleCLick = () => {
+    router.push("/about");
   };
 
   return (
@@ -131,7 +136,7 @@ const BuildBanner = ({
             transition={{ duration: 0.6 }}
           >
             <button
-              onClick={onClick}
+              onClick={handleCLick}
               className="bg-white text-red-600 cursor-pointer px-8 py-3 md:px-10 md:py-4 text-center rounded-full font-Manrope-bold text-base md:text-lg hover:shadow-lg hover:bg-gray-50 transition-all duration-300"
             >
               {buttonText}

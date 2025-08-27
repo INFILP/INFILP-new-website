@@ -174,7 +174,7 @@ const OurApproach = () => {
   ];
 
   return (
-    <section className="pt-32 px-8 bg-white">
+    <section className="pt-28 px-8 bg-white">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <motion.div

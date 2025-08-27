@@ -35,21 +35,14 @@ const FeatureCard = ({
       onClick();
     }
     if (slug) {
-     
+      router.prefetch(`/serviceDetails/${slug}`);
       router.push(`/serviceDetails/${slug}`);
-    } else if (href && href !== "#") {
-      const hrefToSlugMap = {
-        "/generative-ai": "generative-ai-apps",
-        "/data-analytics": "mobile-app-development",
-        "/mobile-app": "mobile-app-development",
-      };
+    }
+  };
 
-      const mappedSlug = hrefToSlugMap[href];
-      if (mappedSlug) {
-        router.push(`/serviceDetails/${mappedSlug}`);
-      }
-    } else {
-      // If no slug or href is provided, just log the click
+  const handleMouseEnter = () => {
+    if (slug) {
+      router.prefetch(`/serviceDetails/${slug}`);
     }
   };
 
@@ -63,12 +56,12 @@ const FeatureCard = ({
         scale: 1.02,
         transition: { duration: 0.3, ease: "easeOut" },
       }}
-     
       transition={{
         duration: duration,
         delay: isInView ? delay : 0,
         ease: "easeOut",
       }}
+      onMouseEnter={handleMouseEnter}
       onClick={handleClick}
       className={`rounded-2xl shadow-lg hover:shadow-2xl bg-hover-gradient-card bg-[#F3F3F3] cursor-pointer transition-all duration-300 max-w-[440px] transform-gpu group overflow-hidden ${className}`}
       style={{ willChange: "transform" }}

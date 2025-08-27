@@ -74,13 +74,13 @@ const About = () => {
         title="Mobile apps, craft web experiences, and plug in GenAI to unlock serious business growth."
       />
       <motion.section
-        className={`pt-16 px-4 md:pt-8 lg:pt-14 bg-white `}
+        className={`pt-8 px-4 md:pt-8 lg:pt-14 bg-white `}
         variants={containerVariants}
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.3 }}
       >
-        <div className="max-w-6xl mx-auto mt-32 px-4">
+        <div className="max-w-6xl mx-auto md:mt-24 px-4">
           <motion.div className="" variants={imageVariants}>
             <Image
               src="/images/infilpbuild.webp"
@@ -96,7 +96,9 @@ const About = () => {
       <WhatAreWe />
       <ExecutiveTeam />
       <OurApproach />
-      <TestimonialsCarousel testimonials={testimonials} />
+      <div className="pt-8">
+        <TestimonialsCarousel testimonials={testimonials} />
+      </div>
       <div className="pt-10">
         <BuildBanner
           topText="Turn your idea into reality"

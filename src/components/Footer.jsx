@@ -41,7 +41,7 @@ const Footer = () => {
             </span>
             <button
               onClick={() => handleCopy("+1 (737) 282-1524", "phone")}
-              className="text-tertiary hover:text-gray-600 transition-colors duration-200 p-1 cursor-pointer"
+              className="text-tertiary hover:text-[#F61A12] hover:scale-110 transition-all duration-300 ease-in-out p-1 cursor-pointer"
               title="Copy phone number"
             >
               {copiedPhone ? (
@@ -62,7 +62,7 @@ const Footer = () => {
             </span>
             <button
               onClick={() => handleCopy("contact@infilp.com", "email")}
-              className="text-tertiary hover:text-gray-600 transition-colors duration-200 p-1 cursor-pointer"
+              className="text-tertiary hover:text-[#F61A12] hover:scale-110 transition-all duration-300 ease-in-out p-1 cursor-pointer"
               title="Copy email"
             >
               {copiedEmail ? (

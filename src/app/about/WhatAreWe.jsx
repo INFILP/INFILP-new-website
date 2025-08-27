@@ -171,7 +171,7 @@ const WhatAreWe = () => {
   ];
 
   return (
-    <section className="pt-32 px-8 ">
+    <section className="pt-24 md:pt-32 px-8 ">
       <div className="max-w-4xl mx-auto">
         {/* Header */}
         <motion.div
@@ -181,9 +181,9 @@ const WhatAreWe = () => {
           animate={isHeaderInView ? "visible" : "hidden"}
           className="text-center mb-8"
         >
-          <h1 className="text-3xl md:text-4xl lg:text-5xl font-Manrope-regular text-gray-900 mb-4">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-Manrope-regular text-gray-900 mb-4">
             What Are <span className="font-Manrope-bold">We</span>
-          </h1>
+          </h2>
           <motion.div
             variants={underlineVariants}
             initial="hidden"

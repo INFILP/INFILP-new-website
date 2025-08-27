@@ -115,6 +115,8 @@ const Cards = ({
   const router = useRouter();
   const isInView = useInView(ref, { once: true, threshold: 0.3 });
 
+  const isComingSoon = slug === "Commin Soon";
+
   const cardVariants = {
     hidden: { opacity: 0, y: 50 },
     visible: {
@@ -138,9 +140,21 @@ const Cards = ({
       transition: { duration: 0.3, ease: "easeOut" },
     },
   };
+  const comingSoonlogoVariants = {
+    hover: {
+      y: -8,
+      transition: { duration: 0.3, ease: "easeOut" },
+    },
+  };
+  const comingSoonImageVariants = {
+    hover: {
+      y: -12,
+      transition: { duration: 0.3, ease: "easeOut" },
+    },
+  };
 
   const handleClick = () => {
-    if (slug) {
+    if (slug && !isComingSoon) {
       router.push(`/portfolioDetail/${slug}`);
     }
   };
@@ -152,7 +166,9 @@ const Cards = ({
         rounded-4xl px-8 text-white md:max-w-[600px] 
         h-[490px] sm:h-[520px] md:h-[720px] mx-4 my-2 md:my-4 
         cursor-pointer overflow-hidden 
+        ${isComingSoon ? "group" : ""}
         ${showBanner ? backgroundColor : "bg-gray-400"}
+        ${isComingSoon ? "cursor-default" : "cursor-pointer"}
       `}
       variants={cardVariants}
       initial="hidden"
@@ -168,7 +184,7 @@ const Cards = ({
 
       <motion.div
         className="flex justify-center mt-8 mb-6 z-10"
-        variants={logoVariants}
+        variants={!isComingSoon ? logoVariants : comingSoonlogoVariants}
       >
         <div className="relative w-12 h-12 sm:w-14 sm:h-14 md:w-24 md:h-24">
           <Image
@@ -192,14 +208,16 @@ const Cards = ({
       {/* Image */}
       <motion.div
         className="flex justify-center w-full z-10"
-        variants={imageVariants}
+        variants={!isComingSoon ? imageVariants : comingSoonImageVariants}
       >
         <div className="relative w-full h-60 sm:h-72 md:h-[437px]">
           <Image
             src={imageSrc}
             alt={imageAlt}
             fill
-            className="object-contain"
+            className={`object-contain ${
+              isComingSoon ? "grayscale group-hover:grayscale-0" : ""
+            } transition-all duration-300`}
             sizes="(max-width: 640px) 40vw, (max-width: 768px) 50vw, 53vw"
             priority
           />

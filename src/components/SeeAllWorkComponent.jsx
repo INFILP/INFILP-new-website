@@ -2,15 +2,25 @@
 
 import React, { useRef } from "react";
 import { motion, useInView } from "framer-motion";
+import { useRouter } from "next/navigation";
 
 const SeeAllWorkComponent = ({
   mainText = "See all work",
   buttonText = "Let's Go",
-  onClick,
   delay = 0,
 }) => {
   const ref = useRef(null);
+  const router = useRouter();
   const isInView = useInView(ref, { once: true, threshold: 0.3 });
+
+  const handleMouseEnter = () => {
+    router.prefetch(`/portfolio`);
+  };
+
+  const handleClick = () => {
+    router.prefetch(`/portfolio`);
+    router.push(`/portfolio`);
+  };
 
   const containerVariants = {
     hidden: {
@@ -105,7 +115,10 @@ const SeeAllWorkComponent = ({
 
         {/* Right side - Button */}
         <motion.div className="flex" variants={buttonHoverVariants}>
-          <button className="bg-white text-red-600 cursor-pointer w-[104px] h-[36px] md:w-[170px] md:h-[48px] text-center rounded-full font-Manrope-medium text-lg md:text-lg hover:shadow-lg transition-shadow duration-300">
+          <button
+            onClick={handleClick}
+            className="bg-white text-red-600 cursor-pointer w-[104px] h-[36px] md:w-[170px] md:h-[48px] text-center rounded-full font-Manrope-medium text-lg md:text-lg hover:shadow-lg transition-shadow duration-300"
+          >
             {buttonText}
           </button>
         </motion.div>

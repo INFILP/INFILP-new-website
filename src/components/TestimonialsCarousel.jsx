@@ -54,12 +54,12 @@ const TestimonialsCarousel = ({ testimonials }) => {
               centeredSlides: false,
             },
             1280: {
-              slidesPerView: "1.4",
+              slidesPerView: "1.6",
               spaceBetween: 30,
               centeredSlides: false,
             },
             1440: {
-              slidesPerView: "1.8",
+              slidesPerView: "1.9",
               spaceBetween: 30,
               centeredSlides: false,
             },

@@ -99,7 +99,7 @@ const TeamMember = ({ member, index }) => {
         transition={{ duration: 0.3 }}
         className="relative mb-6 overflow-hidden rounded-2xl shadow-lg group-hover:shadow-2xl transition-shadow duration-500"
       >
-        <div className="relative w-48 h-60 sm:w-52 sm:h-64 md:w-64 md:h-72">
+        <div className="relative w-36 h-52 sm:w-52 sm:h-64 md:w-64 md:h-72">
           <Image
             src={member.image}
             alt={member.name}
@@ -148,7 +148,7 @@ const TeamMember = ({ member, index }) => {
       </motion.div>
 
       {/* Content */}
-      <motion.div variants={contentVariants} className="text-center px-2">
+      <motion.div variants={contentVariants} className="md:text-center md:px-2">
         <motion.h3
           className="text-lg md:text-[28px] font-Manrope-bold text-custom-black mb-2"
           whileHover={{ scale: 1.05 }}
@@ -267,7 +267,7 @@ const ExecutiveTeam = () => {
   ];
 
   return (
-    <section className="pt-32 px-8 min-h-screen">
+    <section className="pt-24 md:pt-32 sm:px-4 min-h-screen">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <motion.div
@@ -277,9 +277,9 @@ const ExecutiveTeam = () => {
           animate={isHeaderInView ? "visible" : "hidden"}
           className="text-center mb-16"
         >
-          <h1 className="text-4xl md:text-5xl font-Manrope-regular text-custom-black mb-4">
+          <h2 className="text-4xl md:text-5xl font-Manrope-regular text-custom-black mb-4">
             Executive <span className="font-Manrope-bold">Team</span>
-          </h1>
+          </h2>
           <motion.div
             variants={underlineVariants}
             initial="hidden"
@@ -289,7 +289,7 @@ const ExecutiveTeam = () => {
         </motion.div>
 
         {/* Team Grid */}
-        <div className="flex flex-wrap max-w-[1240px] justify-center items-center mx-auto px-4 gap-10">
+        <div className="grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 max-w-[1240px] justify-center items-center mx-auto md:px-4 gap-y-10 md:gap-10">
           {teamMembers.map((member, index) => (
             <TeamMember key={index} member={member} index={index} />
           ))}
