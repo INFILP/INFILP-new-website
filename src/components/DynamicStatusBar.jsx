@@ -292,101 +292,157 @@
 
 // export default DynamicStatusBar;
 
+// "use client";
+
+// import { useEffect } from "react";
+
+// const DynamicStatusBar = () => {
+//   useEffect(() => {
+//     // Detect iOS devices
+//     const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent);
+//     const isStandalone =
+//       window.matchMedia("(display-mode: standalone)").matches ||
+//       window.navigator.standalone;
+
+//     let currentState = null;
+
+//     const updateStatusBar = (isScrolled) => {
+//       const themeColor = isScrolled ? "#ffffff" : "#000000";
+//       const statusBarStyle = isScrolled ? "default" : "black-translucent";
+
+//       if (isIOS) {
+//         // Method 1: Force recreation of theme-color meta tag
+//         const existingThemeMeta = document.querySelector(
+//           'meta[name="theme-color"]'
+//         );
+//         if (existingThemeMeta) {
+//           existingThemeMeta.remove();
+//         }
+
+//         const newThemeMeta = document.createElement("meta");
+//         newThemeMeta.setAttribute("name", "theme-color");
+//         newThemeMeta.setAttribute("content", themeColor);
+//         document.head.appendChild(newThemeMeta);
+
+//         // Method 2: Update apple status bar style
+//         const existingAppleMeta = document.querySelector(
+//           'meta[name="apple-mobile-web-app-status-bar-style"]'
+//         );
+//         if (existingAppleMeta) {
+//           existingAppleMeta.remove();
+//         }
+
+//         const newAppleMeta = document.createElement("meta");
+//         newAppleMeta.setAttribute(
+//           "name",
+//           "apple-mobile-web-app-status-bar-style"
+//         );
+//         newAppleMeta.setAttribute("content", statusBarStyle);
+//         document.head.appendChild(newAppleMeta);
+
+//         // Method 3: For PWA - try to trigger a refresh
+//         if (isStandalone) {
+//           const manifestLink = document.querySelector('link[rel="manifest"]');
+//           if (manifestLink) {
+//             const href = manifestLink.getAttribute("href");
+//             manifestLink.setAttribute("href", href + "?t=" + Date.now());
+//           }
+//         }
+//       } else {
+//         // Android - simple update
+//         const themeMeta = document.querySelector('meta[name="theme-color"]');
+//         if (themeMeta) {
+//           themeMeta.setAttribute("content", themeColor);
+//         }
+//       }
+
+//       // Update other meta tags for completeness
+//       const msNavMeta = document.querySelector(
+//         'meta[name="msapplication-navbutton-color"]'
+//       );
+//       if (msNavMeta) {
+//         msNavMeta.setAttribute("content", themeColor);
+//       }
+
+//       console.log(
+//         `Status bar updated: ${
+//           isScrolled ? "white" : "black"
+//         } | iOS: ${isIOS} | PWA: ${isStandalone}`
+//       );
+//     };
+
+//     const handleScroll = () => {
+//       const scrollY = window.scrollY;
+//       const isScrolled = scrollY > 150;
+
+//       if (currentState !== isScrolled) {
+//         currentState = isScrolled;
+
+//         // Use requestAnimationFrame for smooth updates
+//         requestAnimationFrame(() => {
+//           updateStatusBar(isScrolled);
+//         });
+//       }
+//     };
+
+//     // Initial setup
+//     handleScroll();
+
+//     // Throttled scroll listener
+//     let scrollTimeout;
+//     const throttledScroll = () => {
+//       if (scrollTimeout) return;
+
+//       scrollTimeout = requestAnimationFrame(() => {
+//         handleScroll();
+//         scrollTimeout = null;
+//       });
+//     };
+
+//     window.addEventListener("scroll", throttledScroll, { passive: true });
+
+//     // Additional iOS-specific listeners
+//     if (isIOS) {
+//       // Handle orientation changes
+//       window.addEventListener("orientationchange", () => {
+//         setTimeout(() => handleScroll(), 300);
+//       });
+
+//       // Handle page visibility changes (important for PWAs)
+//       document.addEventListener("visibilitychange", () => {
+//         if (!document.hidden) {
+//           setTimeout(() => handleScroll(), 100);
+//         }
+//       });
+
+//       // Handle focus events (when returning to app)
+//       window.addEventListener("focus", () => {
+//         setTimeout(() => handleScroll(), 100);
+//       });
+//     }
+
+//     return () => {
+//       window.removeEventListener("scroll", throttledScroll);
+//       if (isIOS) {
+//         window.removeEventListener("orientationchange", handleScroll);
+//         document.removeEventListener("visibilitychange", handleScroll);
+//         window.removeEventListener("focus", handleScroll);
+//       }
+//     };
+//   }, []);
+
+//   return null;
+// };
+
+// export default DynamicStatusBar;
+
 "use client";
 
 import { useEffect } from "react";
 
 const DynamicStatusBar = () => {
   useEffect(() => {
-    // Detect iOS devices
-    const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent);
-    const isStandalone =
-      window.matchMedia("(display-mode: standalone)").matches ||
-      window.navigator.standalone;
-
     let currentState = null;
-
-    const updateStatusBar = (isScrolled) => {
-      const themeColor = isScrolled ? "#ffffff" : "#000000";
-      const statusBarStyle = isScrolled ? "default" : "black-translucent";
-
-      // Method 1: CSS overlay approach (most reliable for iOS)
-      const overlay = document.getElementById("status-bar-overlay");
-      if (overlay) {
-        if (isScrolled) {
-          overlay.classList.add("scrolled");
-        } else {
-          overlay.classList.remove("scrolled");
-        }
-      }
-
-      if (isIOS) {
-        // Method 2: Force recreation of theme-color meta tag
-        const existingThemeMeta = document.querySelector(
-          'meta[name="theme-color"]'
-        );
-        if (existingThemeMeta) {
-          existingThemeMeta.remove();
-        }
-
-        const newThemeMeta = document.createElement("meta");
-        newThemeMeta.setAttribute("name", "theme-color");
-        newThemeMeta.setAttribute("content", themeColor);
-        document.head.appendChild(newThemeMeta);
-
-        // Method 3: Update apple status bar style
-        const existingAppleMeta = document.querySelector(
-          'meta[name="apple-mobile-web-app-status-bar-style"]'
-        );
-        if (existingAppleMeta) {
-          existingAppleMeta.remove();
-        }
-
-        const newAppleMeta = document.createElement("meta");
-        newAppleMeta.setAttribute(
-          "name",
-          "apple-mobile-web-app-status-bar-style"
-        );
-        newAppleMeta.setAttribute("content", statusBarStyle);
-        document.head.appendChild(newAppleMeta);
-
-        // Method 4: For PWA - try to trigger a refresh
-        if (isStandalone) {
-          // Update manifest link to force refresh
-          const manifestLink = document.querySelector('link[rel="manifest"]');
-          if (manifestLink) {
-            const href = manifestLink.getAttribute("href");
-            manifestLink.setAttribute("href", href + "?t=" + Date.now());
-          }
-        }
-
-        // Method 5: Force a minimal DOM change to trigger iOS update
-        document.documentElement.style.backgroundColor = themeColor;
-        setTimeout(() => {
-          document.documentElement.style.backgroundColor = "";
-        }, 10);
-      } else {
-        // Android - simple update
-        const themeMeta = document.querySelector('meta[name="theme-color"]');
-        if (themeMeta) {
-          themeMeta.setAttribute("content", themeColor);
-        }
-      }
-
-      // Update other meta tags for completeness
-      const msNavMeta = document.querySelector(
-        'meta[name="msapplication-navbutton-color"]'
-      );
-      if (msNavMeta) {
-        msNavMeta.setAttribute("content", themeColor);
-      }
-
-      console.log(
-        `Status bar updated: ${
-          isScrolled ? "white" : "black"
-        } | iOS: ${isIOS} | PWA: ${isStandalone}`
-      );
-    };
 
     const handleScroll = () => {
       const scrollY = window.scrollY;
@@ -395,82 +451,23 @@ const DynamicStatusBar = () => {
       if (currentState !== isScrolled) {
         currentState = isScrolled;
 
-        // Use requestAnimationFrame for smooth updates
-        requestAnimationFrame(() => {
-          updateStatusBar(isScrolled);
-        });
+        const themeColor = isScrolled ? "#ffffff" : "#000000";
+
+        // Only update existing meta tag content
+        const themeMeta = document.querySelector('meta[name="theme-color"]');
+        if (themeMeta) {
+          themeMeta.setAttribute("content", themeColor);
+        }
       }
     };
 
-    // Initial setup
+    window.addEventListener("scroll", handleScroll, { passive: true });
     handleScroll();
 
-    // Throttled scroll listener
-    let scrollTimeout;
-    const throttledScroll = () => {
-      if (scrollTimeout) return;
-
-      scrollTimeout = requestAnimationFrame(() => {
-        handleScroll();
-        scrollTimeout = null;
-      });
-    };
-
-    window.addEventListener("scroll", throttledScroll, { passive: true });
-
-    // Additional iOS-specific listeners
-    if (isIOS) {
-      // Handle orientation changes
-      window.addEventListener("orientationchange", () => {
-        setTimeout(() => handleScroll(), 300);
-      });
-
-      // Handle page visibility changes (important for PWAs)
-      document.addEventListener("visibilitychange", () => {
-        if (!document.hidden) {
-          setTimeout(() => handleScroll(), 100);
-        }
-      });
-
-      // Handle focus events (when returning to app)
-      window.addEventListener("focus", () => {
-        setTimeout(() => handleScroll(), 100);
-      });
-    }
-
-    return () => {
-      window.removeEventListener("scroll", throttledScroll);
-      if (isIOS) {
-        window.removeEventListener("orientationchange", handleScroll);
-        document.removeEventListener("visibilitychange", handleScroll);
-        window.removeEventListener("focus", handleScroll);
-      }
-    };
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Only render overlay on iOS and when needed
-  return (
-    <>
-      {typeof window !== "undefined" &&
-        /iPad|iPhone|iPod/.test(navigator.userAgent) && (
-          <div
-            className="status-bar-overlay"
-            id="status-bar-overlay"
-            style={{
-              position: "fixed",
-              top: 0,
-              left: 0,
-              right: 0,
-              height: "env(safe-area-inset-top, 0px)",
-              backgroundColor: "#000000",
-              zIndex: 9999,
-              transition: "background-color 0.3s ease",
-              pointerEvents: "none",
-            }}
-          />
-        )}
-    </>
-  );
+  return null;
 };
 
 export default DynamicStatusBar;

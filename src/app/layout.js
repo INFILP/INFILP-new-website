@@ -121,7 +121,6 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <div className="status-bar-overlay" id="status-bar-overlay"></div>
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${bebasNeue.variable} ${gilroy.variable} ${manrope.variable} antialiased`}
       >
