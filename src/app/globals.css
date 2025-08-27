@@ -1,5 +1,23 @@
 @import "tailwindcss";
 
+@supports (-webkit-touch-callout: none) {
+  /* iOS Safari specific styles */
+  .status-bar-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: env(safe-area-inset-top, 20px);
+    background: var(--status-bar-color, #000000);
+    z-index: 9999;
+    transition: background-color 0.3s ease;
+  }
+  
+  .status-bar-overlay.scrolled {
+    --status-bar-color: #ffffff;
+  }
+}
+
 @layer utilities {
   .font-BebasNeue-regular {
     font-family: var(--font-bebas-neue);

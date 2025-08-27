@@ -127,7 +127,7 @@ export default function RootLayout({ children }) {
           content="width=device-width, initial-scale=1, viewport-fit=cover"
         />
       </head> */}
-      <head>
+      {/* <head>
         <meta charset="UTF-8" />
         <meta
           name="viewport"
@@ -144,7 +144,8 @@ export default function RootLayout({ children }) {
 
         <meta name="msapplication-navbutton-color" content="#000000" />
         <meta name="msapplication-TileColor" content="#000000" />
-      </head>
+      </head> */}
+      <div className="status-bar-overlay" id="status-bar-overlay"></div>
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${bebasNeue.variable} ${gilroy.variable} ${manrope.variable} antialiased`}
       >
