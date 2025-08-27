@@ -97,9 +97,9 @@ const TeamMember = ({ member, index }) => {
         variants={imageVariants}
         whileHover={{ y: -8 }}
         transition={{ duration: 0.3 }}
-        className="relative mb-6 overflow-hidden rounded-2xl shadow-lg group-hover:shadow-2xl transition-shadow duration-500"
+        className="relative mb-6 overflow-hidden rounded-2xl shadow-lg group-hover:shadow-2xl transition-shadow duration-500 max-w-64"
       >
-        <div className="relative w-36 h-52 sm:w-52 sm:h-64 md:w-64 md:h-72">
+        <div className="relative min-w-36 w-44 h-52 sm:w-52 sm:h-64 md:w-64 md:h-72">
           <Image
             src={member.image}
             alt={member.name}
