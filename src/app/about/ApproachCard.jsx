@@ -184,9 +184,9 @@ const OurApproach = () => {
           animate={isHeaderInView ? "visible" : "hidden"}
           className="text-center mb-8"
         >
-          <h1 className="text-4xl md:text-5xl font-Manrope-medium text-gray-900 mb-4">
+          <h2 className="text-4xl md:text-5xl font-Manrope-medium text-gray-900 mb-4">
             Our <span className="font-Manrope-regular">approach</span>
-          </h1>
+          </h2>
           <motion.div
             variants={underlineVariants}
             initial="hidden"

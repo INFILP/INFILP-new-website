@@ -267,7 +267,7 @@ const ExecutiveTeam = () => {
   ];
 
   return (
-    <section className="pt-24 md:pt-32 sm:px-4 min-h-screen">
+    <section className="pt-24 md:pt-32 sm:px-4 ">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <motion.div
