@@ -30,13 +30,36 @@ const FeatureCard = ({
     margin: "0px 0px -100px 0px",
   });
 
+  // const handleClick = () => {
+  //   if (onClick) {
+  //     onClick();
+  //   }
+  //   if (slug) {
+  //     router.prefetch(`/serviceDetails/${slug}`);
+  //     router.push(`/serviceDetails/${slug}`);
+  //   }
+  // };
+
   const handleClick = () => {
     if (onClick) {
       onClick();
     }
+
     if (slug) {
-      router.prefetch(`/serviceDetails/${slug}`);
-      router.push(`/serviceDetails/${slug}`);
+      const isMobile =
+        /Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+          navigator.userAgent
+        );
+
+      if (isMobile) {
+        // Add small delay for mobile to prevent accidental taps
+        setTimeout(() => {
+          router.push(`/serviceDetails/${slug}`);
+        }, 100);
+      } else {
+        router.prefetch(`/serviceDetails/${slug}`);
+        router.push(`/serviceDetails/${slug}`);
+      }
     }
   };
 
