@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import { motion, useInView } from "framer-motion";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
@@ -19,6 +19,7 @@ const Cards = ({
   const ref = useRef(null);
   const router = useRouter();
   const isInView = useInView(ref, { once: true, threshold: 0.3 });
+  const [isTouched, setIsTouched] = useState(false);
 
   const isComingSoon = slug === "Commin Soon";
 
@@ -64,6 +65,18 @@ const Cards = ({
     }
   };
 
+  const handleTouchStart = () => {
+    if (isComingSoon) {
+      setIsTouched(true);
+    }
+  };
+
+  const handleTouchEnd = () => {
+    if (isComingSoon) {
+      setIsTouched(false);
+    }
+  };
+
   return (
     <motion.div
       ref={ref}
@@ -80,6 +93,8 @@ const Cards = ({
       animate={isInView ? "visible" : "hidden"}
       whileHover="hover"
       onClick={handleClick}
+      onTouchStart={handleTouchStart}
+      onTouchEnd={handleTouchEnd}
     >
       {showBanner == "true" && (
         <div className="absolute top-6 -right-16 rotate-45 bg-red-600 text-white font-bold px-16 py-2 text-sm shadow-lg z-20">
@@ -120,9 +135,16 @@ const Cards = ({
             src={imageSrc}
             alt={imageAlt}
             fill
+            // className={`object-contain ${
+            //   isComingSoon ? "grayscale group-hover:grayscale-0" : ""
+            // } transition-all duration-300`}
             className={`object-contain ${
-              isComingSoon ? "grayscale group-hover:grayscale-0" : ""
-            } transition-all duration-300`}
+              isComingSoon
+                ? `grayscale md:group-hover:grayscale-0 ${
+                    isTouched ? "grayscale-0" : ""
+                  } transition-all duration-300`
+                : ""
+            }`}
             sizes="(max-width: 640px) 40vw, (max-width: 768px) 50vw, 53vw"
             priority
           />

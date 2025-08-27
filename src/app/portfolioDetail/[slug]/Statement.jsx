@@ -97,7 +97,7 @@ const Statement = ({
                 alt={imageAlt}
                 width={60}
                 height={60}
-                className="object-contain sm:w-[70px] sm:h-[70px] lg:w-[80px] lg:h-[80px]"
+                className="object-contain w-[40px] h-[40px] sm:w-[70px] sm:h-[70px] lg:w-[80px] lg:h-[80px]"
               />
             </div>
           </motion.div>
@@ -120,7 +120,7 @@ const Statement = ({
                   height={16}
                   className="object-contain mt-1 sm:mt-2 sm:w-[20px] sm:h-[20px] flex-shrink-0"
                 />
-                <p className="text-gray-700 text-sm sm:text-base lg:text-lg xl:text-2xl leading-relaxed font-Manrope-medium">
+                <p className="text-gray-700 text-sm sm:text-base lg:text-lg xl:text-2xl leading-relaxed font-Manrope-medium line-clamp-2">
                   {point}
                 </p>
               </motion.div>
@@ -136,7 +136,7 @@ const Statement = ({
           whileInView="visible"
           viewport={{ once: true, amount: 0.3 }}
         >
-          <div className="relative w-full min-h-[330px] sm:min-h-[450px] lg:min-h-[503px] rounded-2xl sm:rounded-3xl lg:rounded-4xl overflow-hidden">
+          <div className="relative w-full min-h-[330px] sm:min-h-[450px] lg:min-h-[420px] rounded-2xl sm:rounded-3xl lg:rounded-4xl overflow-hidden">
             <Image
               src={imageSrc}
               alt={imageAlt}
