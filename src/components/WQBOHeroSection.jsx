@@ -145,7 +145,7 @@ const WQBOHeroSection = ({
             {/* Desktop Layout */}
             <div className="hidden lg:flex gap-16 items-center h-full w-full">
               <motion.div
-                className={`${textColor} space-y-8 flex-1 px-10 py-8 h-full flex flex-col justify-center`}
+                className={`${textColor} space-y-8 flex-1 px-10 py-2 h-full flex flex-col justify-center`}
                 variants={containerVariants}
               >
                 <motion.div
