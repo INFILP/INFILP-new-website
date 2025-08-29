@@ -126,7 +126,7 @@ const DownloadSocialLinks = ({
           >
             <motion.div whileHover={iconHover}>
               <Image
-                src="/images/playstore.png"
+                src="/images/playstore.svg"
                 width={30}
                 height={30}
                 alt="Play Store"
@@ -147,11 +147,11 @@ const DownloadSocialLinks = ({
           >
             <motion.div whileHover={iconHover}>
               <Image
-                src="/images/apple.png"
+                src="/images/apple.svg"
                 width={30}
                 height={30}
                 alt="App Store"
-                className="object-contain max-w-[26px] w-full"
+                className="object-contain max-w-[36px] w-full"
               />
             </motion.div>
             App Store

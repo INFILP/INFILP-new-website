@@ -51,7 +51,7 @@ const CaseStudiesGrid = (relatedProjectSlugs = []) => {
   return (
     <div className="grid grid-cols-1 md:grid-cols-2">
       {cardsToRender.map((item, index) => {
-        if (item.slug === "wobo" || item.slug === "heurica") {
+        if (item.slug === "the-green-felts" || item.slug === "heurica") {
           return (
             <div key={index} className="col-span-1 md:col-span-2">
               <WQBOHeroSection

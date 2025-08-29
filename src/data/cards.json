@@ -1,11 +1,11 @@
 [
   {
-    "slug": "wobo",
+    "slug": "the-green-felts",
     "title": "Case",
     "highlightedWord": "Studies",
-    "heading": ["Empowering Athletes and ", "Fitness Merchants"],
+    "heading": ["Smart Golf League & Match Management"],
     "logo": {
-      "src": "/images/woboLogo.png",
+      "src": "/images/golf.webp",
       "alt": "Healthcare Logo",
       "width": 120,
       "height": 120,
@@ -13,29 +13,29 @@
       "mobileHeight": 50
     },
     "image": {
-      "src": "/images/portfolioMobile.webp",
+      "src": "/images/golflap.webp",
       "alt": "Healthcare App",
       "mobileMaxHeight": 180,
       "desktopMaxHeight": 400
     },
-    "backgroundColor": "bg-gradient-wobo",
+    "backgroundColor": "bg-gradient-golf",
     "underlineColor": "bg-red-500",
     "textColor": "text-gray-100",
     "onClick": "router.push(`/portfolioDetails/${slug}`)"
   },
   {
-    "slug": "the-green-felts",
+    "slug": "wobo",
     "showBanner": "false",
     "logo": {
-      "src": "/images/golf.webp",
-      "alt": "Golf Logo"
+      "src": "/images/woboLogo.png",
+      "alt": "Wobo Logo"
     },
-    "title": "Smart Golf League & Match Management",
+    "title": "Empowering Athletes and Fitness Merchants",
     "image": {
-      "src": "/images/golflap.webp",
+      "src": "/images/portfolioMobile.webp",
       "alt": "Custom Image"
     },
-    "backgroundColor": "bg-gradient-golf",
+    "backgroundColor": "bg-gradient-wobo",
     "delay": 0.2,
     "onClick": "Card clicked!"
   },
@@ -91,7 +91,7 @@
     "slug": "heurica",
     "title": "Case",
     "highlightedWord": "Studies",
-    "heading": ["Research & Collaborate With", "International PhD Candidates"],
+    "heading": ["Research & Collaborate With International PhD Candidates"],
     "logo": {
       "src": "/images/researchLogo.webp",
       "alt": "researchLogo Logo",

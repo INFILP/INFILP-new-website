@@ -114,7 +114,7 @@ const Statement = ({
                 viewport={{ once: true, amount: 0.3 }}
               >
                 <Image
-                  src="/images/tar.png"
+                  src="/images/tar.svg"
                   alt={imageAlt}
                   width={16}
                   height={16}

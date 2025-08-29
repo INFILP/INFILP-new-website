@@ -1,14 +1,11 @@
 "use client";
 
 import React, { useState } from "react";
-import {
-  Copy,
-  Check,
-  Linkedin,
-  MessageSquare,
-  Instagram,
-  Facebook,
-} from "lucide-react";
+import { Copy, Check } from "lucide-react";
+import { FaSquareInstagram } from "react-icons/fa6";
+import { FaSquareBehance } from "react-icons/fa6";
+import { FaLinkedin } from "react-icons/fa6";
+import { FaFacebook } from "react-icons/fa6";
 
 const Footer = () => {
   const [copiedPhone, setCopiedPhone] = useState(false);
@@ -91,27 +88,29 @@ const Footer = () => {
               href="#"
               className="text-tertiary hover:text-gray-600 transition-colors duration-200"
             >
-              <Linkedin size={22} className="md:w-6 md:h-6" />
+              <FaLinkedin size={22} className="md:w-8 md:h-8" />
             </a>
             <a
               href="#"
               className="text-tertiary hover:text-gray-600 transition-colors duration-200"
             >
-              <div className="w-5 h-5 md:w-6 md:h-6 bg-gray-400 hover:bg-gray-600 transition-colors duration-200 rounded text-white text-xs flex items-center justify-center font-bold">
+              {/* <div className="w-5 h-5 md:w-6 md:h-6 bg-gray-400 hover:bg-gray-600 transition-colors duration-200 rounded text-white text-xs flex items-center justify-center font-bold">
                 Be
-              </div>
+              </div> */}
+
+              <FaSquareBehance size={22} className="md:w-8 md:h-8" />
             </a>
             <a
               href="#"
               className="text-tertiary hover:text-gray-600 transition-colors duration-200"
             >
-              <Instagram size={22} className="md:w-6 md:h-6" />
+              <FaSquareInstagram size={22} className="md:w-8 md:h-8" />
             </a>
             <a
               href="#"
               className="text-tertiary hover:text-gray-600 transition-colors duration-200"
             >
-              <Facebook size={22} className="md:w-6 md:h-6" />
+              <FaFacebook size={22} className="md:w-8 md:h-8" />
             </a>
           </div>
         </div>

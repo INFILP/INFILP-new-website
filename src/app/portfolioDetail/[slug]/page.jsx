@@ -81,7 +81,7 @@ const PortfolioDetail = () => {
           title="Problem Statement"
           points={portfolioData?.problem?.statements}
           imageSrc={portfolioData?.problem?.banner}
-          icon="/images/eleStar.png"
+          icon="/images/eleStar.svg"
           imageAlt="Description"
         />
         <Statement
@@ -89,7 +89,7 @@ const PortfolioDetail = () => {
           points={portfolioData?.solution?.statements}
           imageSrc={portfolioData?.solution?.banner}
           imageAlt="Description"
-          icon="/images/bulb.png"
+          icon="/images/bulb.svg"
           reverse={true}
         />
       </div>

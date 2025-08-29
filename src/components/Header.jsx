@@ -4,6 +4,7 @@ import { useState, useCallback, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
+import { RiWhatsappFill } from "react-icons/ri";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -151,9 +152,13 @@ const Header = () => {
           <div className="hidden md:block">
             <Link
               href="/contact"
-              className="bg-gradient-button hover:opacity-90 cursor-pointer text-white flex items-center justify-center w-[145px] h-[46px] rounded-full transition text-sm md:text-lg font-Manrope-medium"
+              className="bg-gradient-button hover:opacity-90 cursor-pointer text-white flex items-center justify-center w-[160px] h-[46px] rounded-full transition text-sm md:text-lg font-Manrope-medium"
               prefetch={false}
             >
+              <RiWhatsappFill
+                size={22}
+                className="md:w-6 md:h-6 text-white mr-1"
+              />
               Contact Us
             </Link>
           </div>
@@ -224,10 +229,14 @@ const Header = () => {
               </Link>
               <Link
                 href="/contact"
-                className="relative bg-gradient-button hover:opacity-90 text-white flex items-center justify-center rounded-full text-[16px] transition-colors mt-4 w-[132px] h-[39px] text-center font-Manrope-medium"
+                className="relative bg-gradient-button hover:opacity-90 text-white flex items-center justify-center rounded-full text-[16px] transition-colors mt-4 w-[140px] h-[42px] text-center font-Manrope-medium"
                 onClick={closeMenu}
                 prefetch={false}
               >
+                <RiWhatsappFill
+                  size={22}
+                  className="md:w-6 md:h-6 text-white mr-1"
+                />
                 Contact Us
               </Link>
             </div>

@@ -117,38 +117,38 @@ const Spotlight = () => {
           <div className={`w-28 h-1 bg-red-500 mx-auto rounded-full`}></div>
         </motion.div>
         <WQBOHeroSection
-          heading={["Empowering Athletes and ", "Fitness Merchants"]}
+          heading={["Smart Golf League & Match Management"]}
           logo={{
-            src: "/images/woboLogo.png",
+            src: "/images/golf.webp",
             alt: "Healthcare Logo",
-            width: 120,
-            height: 120,
+            width: 150,
+            height: 150,
             mobileWidth: 50,
             mobileHeight: 50,
           }}
           image={{
-            src: "/images/portfolioMobile.webp",
+            src: "/images/golflap.webp",
             alt: "Healthcare App",
             mobileMaxHeight: 180,
             desktopMaxHeight: 400,
           }}
-          backgroundColor="bg-gradient-wobo"
+          backgroundColor="bg-gradient-golf"
           underlineColor="bg-red-500"
           textColor="text-gray-100"
-          slug="wobo"
+          slug="the-green-felts"
         />
         <div className="flex flex-col md:flex-row max-w-[1240px] mx-auto items-center justify-center">
           <Cards
-            logoSrc="/images/golf.webp"
-            logoAlt="Golf Logo"
-            title="Smart Golf League & Match Management"
-            imageSrc="/images/golflap.webp"
+            logoSrc="/images/woboLogo.png"
+            logoAlt="wobo Logo"
+            title="Empowering Athletes and Fitness Merchants"
+            imageSrc="/images/portfolioMobile.webp"
             imageAlt="Custom Image"
-            backgroundColor="bg-gradient-golf"
+            backgroundColor="bg-gradient-wobo"
             delay={0.2}
             onClick={() => console.log("Card clicked!")}
             showBanner="false"
-            slug="the-green-felts"
+            slug="wobo"
           />
           <Cards
             logoSrc="/images/b2b.webp"

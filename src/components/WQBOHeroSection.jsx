@@ -136,20 +136,20 @@ const WQBOHeroSection = ({
                   src={image.src}
                   width={500}
                   height={500}
-                  className={`object-contain w-[281px] max-h-[200px] sm:w-[350px] sm:max-h-[270px] rounded-2xl`}
+                  className={`object-contain w-[300px] max-h-[300px] sm:w-[400px] sm:max-h-[370px] rounded-2xl`}
                   alt={image.alt}
                 />
               </motion.div>
             </div>
 
             {/* Desktop Layout */}
-            <div className="hidden lg:flex gap-16 items-center h-full w-full">
+            <div className="hidden lg:flex gap-16 items-center h-full w-full px-8 ">
               <motion.div
-                className={`${textColor} space-y-8 flex-1 px-10 py-2 h-full flex flex-col justify-center`}
+                className={`${textColor} space-y-8 flex-1  py-2 h-full flex flex-col justify-center `}
                 variants={containerVariants}
               >
                 <motion.div
-                  className="flex items-center space-x-4 mb-24"
+                  className="flex items-center  mb-24"
                   variants={contentHoverVariants}
                 >
                   <Image
@@ -162,7 +162,7 @@ const WQBOHeroSection = ({
                 </motion.div>
 
                 <motion.h2
-                  className={`text-[42px] font-Manrope-bold leading-tight mt-24 ${textColor}`}
+                  className={`text-[42px] font-Manrope-bold leading-tight mt-24 w-full ${textColor}`}
                   variants={contentHoverVariants}
                 >
                   {heading.map((line, index) => (
@@ -174,7 +174,7 @@ const WQBOHeroSection = ({
               </motion.div>
 
               <motion.div
-                className="flex-1 h-full flex items-center"
+                className="flex-1 h-full flex items-center "
                 variants={imageHoverVariants}
               >
                 <Image
