@@ -1,15 +1,15 @@
-"use client";
+'use client'
 
-import React, { useRef } from "react";
-import { motion, useInView } from "framer-motion";
+import React, { useRef } from 'react'
+import { motion, useInView } from 'framer-motion'
 
 const HighlightItem = ({ number, text, index }) => {
-  const ref = useRef(null);
+  const ref = useRef(null)
   const isInView = useInView(ref, {
     threshold: 0.3,
     once: true,
-    margin: "0px 0px -50px 0px",
-  });
+    margin: '0px 0px -50px 0px',
+  })
 
   const itemVariants = {
     hidden: {
@@ -24,10 +24,10 @@ const HighlightItem = ({ number, text, index }) => {
       transition: {
         duration: 0.6,
         delay: index * 0.1,
-        ease: "easeOut",
+        ease: 'easeOut',
       },
     },
-  };
+  }
 
   const numberVariants = {
     hidden: {
@@ -42,23 +42,21 @@ const HighlightItem = ({ number, text, index }) => {
       transition: {
         duration: 0.5,
         delay: index * 0.1 + 0.2,
-        ease: "easeOut",
+        ease: 'easeOut',
       },
     },
-  };
+  }
 
   return (
     <motion.div
       ref={ref}
       variants={itemVariants}
       initial="hidden"
-      animate={isInView ? "visible" : "hidden"}
-      className="flex items-center gap-4 group"
-    >
+      animate={isInView ? 'visible' : 'hidden'}
+      className="flex items-center gap-4 group">
       <motion.div
         variants={numberVariants}
-        className="flex-shrink-0 w-12 h-12 md:w-20 md:h-20 bg-red-500 rounded-lg flex items-center justify-center shadow-lg group-hover:shadow-xl transition-shadow duration-300"
-      >
+        className="flex-shrink-0 w-12 h-12 md:w-20 md:h-20 bg-red-500 rounded-lg flex items-center justify-center shadow-lg group-hover:shadow-xl transition-shadow duration-300">
         <span className="text-white font-Manrope-bold text-[28px] md:text-[48px]">
           {number}
         </span>
@@ -70,35 +68,34 @@ const HighlightItem = ({ number, text, index }) => {
         transition={{
           duration: 0.5,
           delay: index * 0.1 + 0.3,
-          ease: "easeOut",
+          ease: 'easeOut',
         }}
-        className="text-[#200100] font-Manrope-bold text-lg md:text-[32px] leading-relaxed"
-      >
+        className="text-[#200100] font-Manrope-bold text-lg md:text-[32px] leading-relaxed">
         {text}
       </motion.p>
     </motion.div>
-  );
-};
+  )
+}
 
 const WhatAreWe = () => {
-  const headerRef = useRef(null);
-  const subtitleRef = useRef(null);
-  const footerRef = useRef(null);
+  const headerRef = useRef(null)
+  const subtitleRef = useRef(null)
+  const footerRef = useRef(null)
 
   const isHeaderInView = useInView(headerRef, {
     threshold: 0.3,
     once: true,
-  });
+  })
 
   const isSubtitleInView = useInView(subtitleRef, {
     threshold: 0.3,
     once: true,
-  });
+  })
 
   const isFooterInView = useInView(footerRef, {
     threshold: 0.3,
     once: true,
-  });
+  })
 
   const headerVariants = {
     hidden: {
@@ -112,23 +109,23 @@ const WhatAreWe = () => {
       scale: 1,
       transition: {
         duration: 0.8,
-        ease: "easeOut",
+        ease: 'easeOut',
       },
     },
-  };
+  }
 
   const underlineVariants = {
     hidden: { width: 0, opacity: 0 },
     visible: {
-      width: "4rem",
+      width: '4rem',
       opacity: 1,
       transition: {
         duration: 0.8,
         delay: 0.5,
-        ease: "easeOut",
+        ease: 'easeOut',
       },
     },
-  };
+  }
 
   const subtitleVariants = {
     hidden: {
@@ -141,10 +138,10 @@ const WhatAreWe = () => {
       transition: {
         duration: 0.6,
         delay: 0.3,
-        ease: "easeOut",
+        ease: 'easeOut',
       },
     },
-  };
+  }
 
   const footerVariants = {
     hidden: {
@@ -156,19 +153,19 @@ const WhatAreWe = () => {
       y: 0,
       transition: {
         duration: 0.6,
-        ease: "easeOut",
+        ease: 'easeOut',
       },
     },
-  };
+  }
 
   const highlights = [
-    "Write your highlight here",
-    "Write your highlight here",
-    "Write your highlight here",
-    "Write your highlight here",
-    "Write your highlight here",
-    "Write your highlight here",
-  ];
+    'Write your highlight here',
+    'Write your highlight here',
+    'Write your highlight here',
+    'Write your highlight here',
+    'Write your highlight here',
+    'Write your highlight here',
+  ]
 
   return (
     <section className="pt-24 md:pt-32 px-8 ">
@@ -178,16 +175,15 @@ const WhatAreWe = () => {
           ref={headerRef}
           variants={headerVariants}
           initial="hidden"
-          animate={isHeaderInView ? "visible" : "hidden"}
-          className="text-center mb-8"
-        >
+          animate={isHeaderInView ? 'visible' : 'hidden'}
+          className="text-center mb-8">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-Manrope-regular text-gray-900 mb-4">
             What Are <span className="font-Manrope-bold">We</span>
           </h2>
           <motion.div
             variants={underlineVariants}
             initial="hidden"
-            animate={isHeaderInView ? "visible" : "hidden"}
+            animate={isHeaderInView ? 'visible' : 'hidden'}
             className="h-1 bg-red-500 mx-auto rounded-full"
           />
         </motion.div>
@@ -197,9 +193,8 @@ const WhatAreWe = () => {
           ref={subtitleRef}
           variants={subtitleVariants}
           initial="hidden"
-          animate={isSubtitleInView ? "visible" : "hidden"}
-          className="text-center mb-4"
-        >
+          animate={isSubtitleInView ? 'visible' : 'hidden'}
+          className="text-center mb-4">
           <p className="text-tertiary font-Manrope-medium text-base md:text-2xl leading-relaxed">
             A 4 year old agency with team members who've been with us for over
             years
@@ -210,9 +205,8 @@ const WhatAreWe = () => {
         <motion.div
           variants={subtitleVariants}
           initial="hidden"
-          animate={isSubtitleInView ? "visible" : "hidden"}
-          className="text-center mb-12"
-        >
+          animate={isSubtitleInView ? 'visible' : 'hidden'}
+          className="text-center mb-12">
           <p className="text-tertiary font-Manrope-medium text-base md:text-2xl">
             Some INFILR highlights:
           </p>
@@ -235,16 +229,15 @@ const WhatAreWe = () => {
           ref={footerRef}
           variants={footerVariants}
           initial="hidden"
-          animate={isFooterInView ? "visible" : "hidden"}
-          className="text-center"
-        >
+          animate={isFooterInView ? 'visible' : 'hidden'}
+          className="text-center">
           <p className="text-tertiary font-Manrope-bold text-sm md:text-2xl ">
             & we are just getting started...
           </p>
         </motion.div>
       </div>
     </section>
-  );
-};
+  )
+}
 
-export default WhatAreWe;
+export default WhatAreWe

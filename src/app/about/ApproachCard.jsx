@@ -1,16 +1,16 @@
-"use client";
+'use client'
 
-import React, { useRef } from "react";
-import { motion, useInView } from "framer-motion";
-import Image from "next/image";
+import React, { useRef } from 'react'
+import { motion, useInView } from 'framer-motion'
+import Image from 'next/image'
 
 const ApproachCard = ({ card, index }) => {
-  const ref = useRef(null);
+  const ref = useRef(null)
   const isInView = useInView(ref, {
     threshold: 0.2,
     once: true,
-    margin: "0px 0px -50px 0px",
-  });
+    margin: '0px 0px -50px 0px',
+  })
 
   const cardVariants = {
     hidden: { opacity: 0, y: 50, scale: 0.9 },
@@ -21,10 +21,10 @@ const ApproachCard = ({ card, index }) => {
       transition: {
         duration: 0.6,
         delay: index * 0.15,
-        ease: "easeOut",
+        ease: 'easeOut',
       },
     },
-  };
+  }
 
   const imageVariants = {
     hidden: { opacity: 0, scale: 0.8 },
@@ -34,25 +34,24 @@ const ApproachCard = ({ card, index }) => {
       transition: {
         duration: 0.8,
         delay: index * 0.15 + 0.3,
-        ease: "easeOut",
+        ease: 'easeOut',
       },
     },
-  };
+  }
 
   return (
     <motion.div
       ref={ref}
       variants={cardVariants}
       initial="hidden"
-      animate={isInView ? "visible" : "hidden"}
+      animate={isInView ? 'visible' : 'hidden'}
       whileHover={{
         y: -8,
         scale: 1.02,
-        transition: { duration: 0.3, ease: "easeOut" },
+        transition: { duration: 0.3, ease: 'easeOut' },
       }}
       className="rounded-2xl shadow-lg hover:shadow-2xl transition-shadow duration-500 overflow-hidden group cursor-pointer max-w-sm h-[400px]"
-      style={{ backgroundColor: card.bgColor }}
-    >
+      style={{ backgroundColor: card.bgColor }}>
       {/* Text Content */}
       <motion.div
         initial={{ opacity: 0, y: 20 }}
@@ -60,10 +59,9 @@ const ApproachCard = ({ card, index }) => {
         transition={{
           duration: 0.6,
           delay: index * 0.15 + 0.2,
-          ease: "easeOut",
+          ease: 'easeOut',
         }}
-        className="mb-6"
-      >
+        className="mb-6">
         <h3 className="text-xl md:text-[28px] font-Manrope-bold text-[#570001] leading-tight pl-6 pt-6">
           {card.title}
         </h3>
@@ -74,8 +72,7 @@ const ApproachCard = ({ card, index }) => {
 
       <motion.div
         variants={imageVariants}
-        className="relative h-[330px] rounded-xl overflow-hidden"
-      >
+        className="relative h-[330px] rounded-xl overflow-hidden">
         <div className="relative w-full h-full ">
           <Image
             src={card.image}
@@ -93,22 +90,22 @@ const ApproachCard = ({ card, index }) => {
         </div>
       </motion.div>
     </motion.div>
-  );
-};
+  )
+}
 
 const OurApproach = () => {
-  const headerRef = useRef(null);
-  const textRef = useRef(null);
+  const headerRef = useRef(null)
+  const textRef = useRef(null)
 
   const isHeaderInView = useInView(headerRef, {
     threshold: 0.3,
     once: true,
-  });
+  })
 
   const isTextInView = useInView(textRef, {
     threshold: 0.2,
     once: true,
-  });
+  })
 
   const headerVariants = {
     hidden: { opacity: 0, y: -30 },
@@ -117,22 +114,22 @@ const OurApproach = () => {
       y: 0,
       transition: {
         duration: 0.8,
-        ease: "easeOut",
+        ease: 'easeOut',
       },
     },
-  };
+  }
 
   const underlineVariants = {
     hidden: { width: 0 },
     visible: {
-      width: "7rem",
+      width: '7rem',
       transition: {
         duration: 0.8,
         delay: 0.5,
-        ease: "easeOut",
+        ease: 'easeOut',
       },
     },
-  };
+  }
 
   const textVariants = {
     hidden: { opacity: 0, y: 20 },
@@ -141,37 +138,37 @@ const OurApproach = () => {
       y: 0,
       transition: {
         duration: 0.6,
-        ease: "easeOut",
+        ease: 'easeOut',
       },
     },
-  };
+  }
 
   const approachCards = [
     {
-      title: "No Hype",
-      subtitle: "Just Honest Code",
-      image: "/images/hype.webp",
-      bgColor: "#FF7F82",
+      title: 'No Hype',
+      subtitle: 'Just Honest Code',
+      image: '/images/hype.webp',
+      bgColor: '#FF7F82',
     },
     {
-      title: "Pixel Perfect",
-      subtitle: "Obsession",
-      image: "/images/handmob.webp",
-      bgColor: "#FFA16A",
+      title: 'Pixel Perfect',
+      subtitle: 'Obsession',
+      image: '/images/handmob.webp',
+      bgColor: '#FFA16A',
     },
     {
-      title: "Real Timelines",
-      subtitle: "Real Results",
-      image: "/images/womenlap.webp",
-      bgColor: "#CF8EFF",
+      title: 'Real Timelines',
+      subtitle: 'Real Results',
+      image: '/images/womenlap.webp',
+      bgColor: '#CF8EFF',
     },
     {
-      title: "AI-Powered",
-      subtitle: "Products",
-      image: "/images/ai.webp",
-      bgColor: "#79CCFF",
+      title: 'AI-Powered',
+      subtitle: 'Products',
+      image: '/images/ai.webp',
+      bgColor: '#79CCFF',
     },
-  ];
+  ]
 
   return (
     <section className="pt-28 px-8 bg-white">
@@ -181,16 +178,15 @@ const OurApproach = () => {
           ref={headerRef}
           variants={headerVariants}
           initial="hidden"
-          animate={isHeaderInView ? "visible" : "hidden"}
-          className="text-center mb-8"
-        >
+          animate={isHeaderInView ? 'visible' : 'hidden'}
+          className="text-center mb-8">
           <h2 className="text-4xl md:text-5xl font-Manrope-medium text-gray-900 mb-4">
             Our <span className="font-Manrope-regular">approach</span>
           </h2>
           <motion.div
             variants={underlineVariants}
             initial="hidden"
-            animate={isHeaderInView ? "visible" : "hidden"}
+            animate={isHeaderInView ? 'visible' : 'hidden'}
             className="h-1 bg-red-500 mx-auto rounded-full"
           />
         </motion.div>
@@ -198,25 +194,22 @@ const OurApproach = () => {
         {/* Description Text */}
         <motion.div
           ref={textRef}
-          className="max-w-4xl mx-auto text-center mb-16 space-y-6"
-        >
+          className="max-w-4xl mx-auto text-center mb-16 space-y-6">
           <motion.p
             variants={textVariants}
             initial="hidden"
-            animate={isTextInView ? "visible" : "hidden"}
+            animate={isTextInView ? 'visible' : 'hidden'}
             transition={{ delay: 0.2 }}
-            className="text-base md:text-2xl font-Manrope-medium text-tertiary leading-relaxed"
-          >
+            className="text-base md:text-2xl font-Manrope-medium text-tertiary leading-relaxed">
             At INFILR, we meet clients wherever they are in their journey.
           </motion.p>
 
           <motion.p
             variants={textVariants}
             initial="hidden"
-            animate={isTextInView ? "visible" : "hidden"}
+            animate={isTextInView ? 'visible' : 'hidden'}
             transition={{ delay: 0.4 }}
-            className="text-base md:text-2xl font-Manrope-medium text-tertiary leading-relaxed"
-          >
+            className="text-base md:text-2xl font-Manrope-medium text-tertiary leading-relaxed">
             Some arrive with a crystal-clear roadmap. Others just know they need
             something. And sometimes, what you think you need isn't what will
             truly move the needle — that's where we come in.
@@ -225,10 +218,9 @@ const OurApproach = () => {
           <motion.p
             variants={textVariants}
             initial="hidden"
-            animate={isTextInView ? "visible" : "hidden"}
+            animate={isTextInView ? 'visible' : 'hidden'}
             transition={{ delay: 0.6 }}
-            className="text-base md:text-2xl font-Manrope-medium text-tertiary leading-relaxed"
-          >
+            className="text-base md:text-2xl font-Manrope-medium text-tertiary leading-relaxed">
             Whether you've got a full plan or just a rough idea, we're your App
             Department on demand. Think of us as your in-house team — made up of
             founders, tech architects, creative thinkers, and real-world
@@ -238,10 +230,9 @@ const OurApproach = () => {
           <motion.p
             variants={textVariants}
             initial="hidden"
-            animate={isTextInView ? "visible" : "hidden"}
+            animate={isTextInView ? 'visible' : 'hidden'}
             transition={{ delay: 0.8 }}
-            className="text-base md:text-2xl font-Manrope-medium text-tertiary leading-relaxed"
-          >
+            className="text-base md:text-2xl font-Manrope-medium text-tertiary leading-relaxed">
             We help shape, refine, and execute ideas that actually work —
             products that are fast, scalable, and aligned with real business
             goals.
@@ -256,7 +247,7 @@ const OurApproach = () => {
         </div>
       </div>
     </section>
-  );
-};
+  )
+}
 
-export default OurApproach;
+export default OurApproach

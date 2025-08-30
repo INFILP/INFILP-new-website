@@ -1,61 +1,61 @@
-"use client";
-import React from "react";
-import { motion } from "framer-motion";
-import { useInView } from "framer-motion";
-import { useRef } from "react";
-import StatsSection from "@/components/StatsSection";
-import Banner from "@/components/Banner";
-import { FeatureCardDemo } from "@/components/FeatureCard ";
-import WQBOHeroSection from "@/components/WQBOHeroSection";
-import Cards from "@/components/Cards";
-import SeeAllWorkComponent from "@/components/SeeAllWorkComponent";
-import VideoCarousel from "@/components/VideoCarousel";
-import TestimonialsCarousel from "@/components/TestimonialsCarousel";
-import BuildBanner from "@/components/BuildBanner";
-import { useRouter } from "next/navigation";
+'use client'
+import React from 'react'
+import { motion } from 'framer-motion'
+import { useInView } from 'framer-motion'
+import { useRef } from 'react'
+import StatsSection from '@/components/StatsSection'
+import Banner from '@/components/Banner'
+import { FeatureCardDemo } from '@/components/FeatureCard '
+import WQBOHeroSection from '@/components/WQBOHeroSection'
+import Cards from '@/components/Cards'
+import SeeAllWorkComponent from '@/components/SeeAllWorkComponent'
+import VideoCarousel from '@/components/VideoCarousel'
+import TestimonialsCarousel from '@/components/TestimonialsCarousel'
+import BuildBanner from '@/components/BuildBanner'
+import { useRouter } from 'next/navigation'
 
 const Spotlight = () => {
-  const router = useRouter();
+  const router = useRouter()
   const videos = [
-    { id: 1, src: "/videos/gif1.mp4" },
-    { id: 2, src: "/videos/gif2.mp4" },
-    { id: 3, src: "/videos/gif3.mp4" },
-  ];
+    { id: 1, src: '/videos/gif1.webm' },
+    { id: 2, src: '/videos/gif2.webm' },
+    { id: 3, src: '/videos/gif3.webm' },
+  ]
 
   const testimonials = [
     {
-      logo: "/images/testimonialLogo.png",
-      quoteIcon: "/icons/quote.png", // inverted commas image
-      text: "As Co-Owner of The Green Felts, we needed an app for advertising events, managing our player database, enabling event buy-ins, and providing a live leaderboard. INFILP quickly learned our requirements and delivered an excellent app despite their initial unfamiliarity with golf. Their team was a pleasure to work with, consistently updating and improving the app.",
-      name: "Glenn Doylr",
-      role: "CEO at The Green Felts",
-      image: "/images/profile1.png",
+      logo: '/images/testimonialLogo.png',
+      quoteIcon: '/icons/quote.png', // inverted commas image
+      text: 'As Co-Owner of The Green Felts, we needed an app for advertising events, managing our player database, enabling event buy-ins, and providing a live leaderboard. INFILP quickly learned our requirements and delivered an excellent app despite their initial unfamiliarity with golf. Their team was a pleasure to work with, consistently updating and improving the app.',
+      name: 'Glenn Doylr',
+      role: 'CEO at The Green Felts',
+      image: '/images/profile1.png',
     },
     {
-      logo: "/images/testimonialLogo.png",
-      quoteIcon: "/icons/quote.png",
-      text: "As Co-Owner of The Green Felts, we needed an app for advertising events, managing our player database, enabling event buy-ins, and providing a live leaderboard. INFILP quickly learned our requirements and delivered an excellent app despite their initial unfamiliarity with golf. Their team was a pleasure to work with, consistently updating and improving the app.",
-      name: "John Smith",
-      role: "CTO at TechCorp",
-      image: "/images/profile1.png",
+      logo: '/images/testimonialLogo.png',
+      quoteIcon: '/icons/quote.png',
+      text: 'As Co-Owner of The Green Felts, we needed an app for advertising events, managing our player database, enabling event buy-ins, and providing a live leaderboard. INFILP quickly learned our requirements and delivered an excellent app despite their initial unfamiliarity with golf. Their team was a pleasure to work with, consistently updating and improving the app.',
+      name: 'John Smith',
+      role: 'CTO at TechCorp',
+      image: '/images/profile1.png',
     },
     {
-      logo: "/images/testimonialLogo.png",
-      quoteIcon: "/icons/quote.png", // inverted commas image
-      text: "As Co-Owner of The Green Felts, we needed an app for advertising events, managing our player database, enabling event buy-ins, and providing a live leaderboard. INFILP quickly learned our requirements and delivered an excellent app despite their initial unfamiliarity with golf. Their team was a pleasure to work with, consistently updating and improving the app.",
-      name: "Glenn Doylr",
-      role: "CEO at The Green Felts",
-      image: "/images/profile1.png",
+      logo: '/images/testimonialLogo.png',
+      quoteIcon: '/icons/quote.png', // inverted commas image
+      text: 'As Co-Owner of The Green Felts, we needed an app for advertising events, managing our player database, enabling event buy-ins, and providing a live leaderboard. INFILP quickly learned our requirements and delivered an excellent app despite their initial unfamiliarity with golf. Their team was a pleasure to work with, consistently updating and improving the app.',
+      name: 'Glenn Doylr',
+      role: 'CEO at The Green Felts',
+      image: '/images/profile1.png',
     },
     {
-      logo: "/images/testimonialLogo.png",
-      quoteIcon: "/icons/quote.png",
-      text: "As Co-Owner of The Green Felts, we needed an app for advertising events, managing our player database, enabling event buy-ins, and providing a live leaderboard. INFILP quickly learned our requirements and delivered an excellent app despite their initial unfamiliarity with golf. Their team was a pleasure to work with, consistently updating and improving the app.",
-      name: "John Smith",
-      role: "CTO at TechCorp",
-      image: "/images/profile1.png",
+      logo: '/images/testimonialLogo.png',
+      quoteIcon: '/icons/quote.png',
+      text: 'As Co-Owner of The Green Felts, we needed an app for advertising events, managing our player database, enabling event buy-ins, and providing a live leaderboard. INFILP quickly learned our requirements and delivered an excellent app despite their initial unfamiliarity with golf. Their team was a pleasure to work with, consistently updating and improving the app.',
+      name: 'John Smith',
+      role: 'CTO at TechCorp',
+      image: '/images/profile1.png',
     },
-  ];
+  ]
 
   return (
     <>
@@ -66,8 +66,7 @@ const Spotlight = () => {
           muted
           loop
           playsInline
-          className="absolute top-0 left-0 inset-0 w-full h-full object-cover object-center z-20"
-        >
+          className="absolute top-0 left-0 inset-0 w-full h-full object-cover object-center z-20">
           <source src="/videos/hero.webm" type="video/webm" />
           Your browser does not support the video tag.
         </video>
@@ -80,7 +79,7 @@ const Spotlight = () => {
               y: 0,
               transition: {
                 duration: 0.8,
-                ease: "easeOut",
+                ease: 'easeOut',
                 delay: 0.2,
               },
             }}
@@ -88,8 +87,7 @@ const Spotlight = () => {
               once: true,
               amount: 0.3,
             }}
-            className="text-left md:text-center text-second"
-          >
+            className="text-left md:text-center text-second">
             <h1 className="text-[32px] md:text-5xl lg:text-8xl font-Gilroy-regular sm:leading-16 lg:leading-32">
               Mobile & Web
               <br />
@@ -108,8 +106,7 @@ const Spotlight = () => {
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="text-center mt-24 mb-10"
-        >
+          className="text-center mt-24 mb-10">
           <h2 className={`text-4xl font-Manrope-regular mb-3`}>
             Case
             <span className="font-Manrope-bold">Studies</span>
@@ -117,18 +114,18 @@ const Spotlight = () => {
           <div className={`w-28 h-1 bg-red-500 mx-auto rounded-full`}></div>
         </motion.div>
         <WQBOHeroSection
-          heading={["Smart Golf League & Match Management"]}
+          heading={['Smart Golf League & Match Management']}
           logo={{
-            src: "/images/golf.webp",
-            alt: "Healthcare Logo",
+            src: '/images/golf.webp',
+            alt: 'Healthcare Logo',
             width: 150,
             height: 150,
             mobileWidth: 50,
             mobileHeight: 50,
           }}
           image={{
-            src: "/images/golflap.webp",
-            alt: "Healthcare App",
+            src: '/images/golflap.webp',
+            alt: 'Healthcare App',
             mobileMaxHeight: 180,
             desktopMaxHeight: 400,
           }}
@@ -146,7 +143,7 @@ const Spotlight = () => {
             imageAlt="Custom Image"
             backgroundColor="bg-gradient-wobo"
             delay={0.2}
-            onClick={() => console.log("Card clicked!")}
+            onClick={() => console.log('Card clicked!')}
             showBanner="false"
             slug="wobo"
           />
@@ -158,7 +155,7 @@ const Spotlight = () => {
             imageAlt="Custom Image"
             backgroundColor="bg-gradient-b2b"
             delay={0.2}
-            onClick={() => console.log("Card clicked!")}
+            onClick={() => console.log('Card clicked!')}
             showBanner="false"
             slug="dressplaner"
           />
@@ -175,8 +172,7 @@ const Spotlight = () => {
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="text-center mt-24 mb-16"
-          >
+            className="text-center mt-24 mb-16">
             <h1 className="text-4xl font-Manrope-bold text-custom-black mb-3">
               AI <span className="font-Manrope-regular"> at INFILP </span>
             </h1>
@@ -198,7 +194,7 @@ const Spotlight = () => {
         </div>
       </div>
     </>
-  );
-};
+  )
+}
 
-export default Spotlight;
+export default Spotlight

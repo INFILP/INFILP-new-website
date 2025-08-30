@@ -1,14 +1,14 @@
-"use client";
+'use client'
 
-import { motion } from "framer-motion";
-import Image from "next/image";
+import { motion } from 'framer-motion'
+import Image from 'next/image'
 
 const AISection = ({
-  imageSrc = "/images/generativeAi.png",
-  imageAlt = "Custom Generative AI",
+  imageSrc = '/images/generativeAi.webp',
+  imageAlt = 'Custom Generative AI',
   highlightText,
   mainText,
-  className = "",
+  className = '',
 }) => {
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -19,7 +19,7 @@ const AISection = ({
         staggerChildren: 0.4,
       },
     },
-  };
+  }
 
   const imageVariants = {
     hidden: {
@@ -29,10 +29,10 @@ const AISection = ({
       opacity: 1,
       transition: {
         duration: 1.2,
-        ease: "easeInOut",
+        ease: 'easeInOut',
       },
     },
-  };
+  }
 
   const textVariants = {
     hidden: {
@@ -44,10 +44,10 @@ const AISection = ({
       y: 0,
       transition: {
         duration: 0.8,
-        ease: "easeOut",
+        ease: 'easeOut',
       },
     },
-  };
+  }
 
   return (
     <motion.section
@@ -55,10 +55,8 @@ const AISection = ({
       variants={containerVariants}
       initial="hidden"
       whileInView="visible"
-      viewport={{ once: true, amount: 0.3 }}
-    >
+      viewport={{ once: true, amount: 0.3 }}>
       <div className="max-w-6xl mx-auto">
-      
         <motion.div className="" variants={imageVariants}>
           <Image
             src={imageSrc}
@@ -75,8 +73,7 @@ const AISection = ({
           variants={textVariants}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, amount: 0.5 }}
-        >
+          viewport={{ once: true, amount: 0.5 }}>
           <p className="text-[32px] md:text-[44px] font-BebasNeue-regular text-[#200100] leading-[150%] md:leading-[120%]">
             <span className="inline">WE'RE A </span>
             <span className="text-red-500">{highlightText}</span>
@@ -85,7 +82,7 @@ const AISection = ({
         </motion.div>
       </div>
     </motion.section>
-  );
-};
+  )
+}
 
-export default AISection;
+export default AISection

@@ -1,58 +1,58 @@
-"use client";
+'use client'
 
-import React, { useState, useRef, useEffect } from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination } from "swiper/modules";
-import { ChevronLeft, ChevronRight } from "lucide-react";
-import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
+import React, { useState, useRef, useEffect } from 'react'
+import { Swiper, SwiperSlide } from 'swiper/react'
+import { Navigation, Pagination } from 'swiper/modules'
+import { ChevronLeft, ChevronRight } from 'lucide-react'
+import 'swiper/css'
+import 'swiper/css/navigation'
+import 'swiper/css/pagination'
 
 const VideoCarousel = ({ videos = [] }) => {
-  const [activeIndex, setActiveIndex] = useState(0);
-  const swiperRef = useRef(null);
-  const videoRefs = useRef([]);
+  const [activeIndex, setActiveIndex] = useState(0)
+  const swiperRef = useRef(null)
+  const videoRefs = useRef([])
 
   const defaultVideos = [
-    { id: 1, src: "/videos/gif1.mp4" },
-    { id: 2, src: "/videos/gif2.mp4" },
-    { id: 3, src: "/videos/gif3.mp4" },
-  ];
+    { id: 1, src: '/videos/gif1.webm' },
+    { id: 2, src: '/videos/gif2.webm' },
+    { id: 3, src: '/videos/gif3.webm' },
+  ]
 
-  const videoData = videos.length > 0 ? videos : defaultVideos;
+  const videoData = videos.length > 0 ? videos : defaultVideos
 
   const loopedVideos =
-    videoData.length === 3 ? [...videoData, ...videoData] : videoData;
+    videoData.length === 3 ? [...videoData, ...videoData] : videoData
 
   const handleSlideChange = (swiper) => {
-    const realIndex = swiper.realIndex % videoData.length;
-    setActiveIndex(realIndex);
-  };
+    const realIndex = swiper.realIndex % videoData.length
+    setActiveIndex(realIndex)
+  }
 
   const handleVideoEnd = () => {
     if (swiperRef.current) {
-      swiperRef.current.slideNext();
+      swiperRef.current.slideNext()
     }
-  };
+  }
 
   useEffect(() => {
-    const currentVideoIndex = activeIndex % videoData.length;
+    const currentVideoIndex = activeIndex % videoData.length
 
     loopedVideos.forEach((_, index) => {
-      const video = videoRefs.current[index];
+      const video = videoRefs.current[index]
       if (video) {
-        const videoIndex = index % videoData.length;
+        const videoIndex = index % videoData.length
         if (videoIndex === currentVideoIndex) {
-          video.currentTime = 0;
+          video.currentTime = 0
           video.play().catch(() => {
             // Handle autoplay restrictions
-          });
+          })
         } else {
-          video.pause();
+          video.pause()
         }
       }
-    });
-  }, [activeIndex, videoData.length]);
+    })
+  }, [activeIndex, videoData.length])
 
   return (
     <div className="relative w-full">
@@ -173,13 +173,13 @@ const VideoCarousel = ({ videos = [] }) => {
           clickable: true,
           dynamicBullets: true,
           renderBullet: function (index, className) {
-            const realIndex = index % videoData.length;
-            return `<span class="${className}" data-index="${realIndex}"></span>`;
+            const realIndex = index % videoData.length
+            return `<span class="${className}" data-index="${realIndex}"></span>`
           },
         }}
         onSlideChange={handleSlideChange}
         onSwiper={(swiper) => {
-          swiperRef.current = swiper;
+          swiperRef.current = swiper
         }}
         breakpoints={{
           320: {
@@ -205,12 +205,10 @@ const VideoCarousel = ({ videos = [] }) => {
             slidesPerView: 2.2,
             centeredSlides: true,
           },
-        }}
-      >
+        }}>
         {loopedVideos.map((video, index) => (
           <SwiperSlide
-            key={`${video.id}-${Math.floor(index / videoData.length)}`}
-          >
+            key={`${video.id}-${Math.floor(index / videoData.length)}`}>
             <div className="w-full h-auto rounded-3xl overflow-hidden ">
               <video
                 ref={(el) => (videoRefs.current[index] = el)}
@@ -218,8 +216,7 @@ const VideoCarousel = ({ videos = [] }) => {
                 onEnded={handleVideoEnd}
                 muted
                 playsInline
-                loop={false}
-              >
+                loop={false}>
                 <source src={video.src} type="video/mp4" />
                 Your browser does not support the video tag.
               </video>
@@ -231,20 +228,18 @@ const VideoCarousel = ({ videos = [] }) => {
       <button
         className="absolute left-6 min-[319px]:max-[376px]:top-[50%] top-[40%] sm:top-1/2 min-[769px]:max-[1249px]:top-1/3 xl:top-1/2 transform -translate-y-1/2 z-20 bg-white backdrop-blur-sm hover:bg-white/30 rounded-full p-3 text-black transition-all duration-300 border border-white/30 cursor-pointer"
         onClick={() => swiperRef.current?.slidePrev()}
-        aria-label="Previous video"
-      >
+        aria-label="Previous video">
         <ChevronLeft className="w-6 h-6" />
       </button>
 
       <button
         className="absolute right-6 min-[319px]:max-[376px]:top-[50%] top-[40%] sm:top-1/2 min-[769px]:max-[1249px]:top-1/3 xl:top-1/2 transform -translate-y-1/2 z-20 bg-white backdrop-blur-sm hover:bg-white/30 rounded-full p-3 text-black transition-all duration-300 border border-white/30 cursor-pointer"
         onClick={() => swiperRef.current?.slideNext()}
-        aria-label="Next video"
-      >
+        aria-label="Next video">
         <ChevronRight className="w-6 h-6" />
       </button>
     </div>
-  );
-};
+  )
+}
 
-export default VideoCarousel;
+export default VideoCarousel
