@@ -14,9 +14,18 @@ const VideoCarousel = ({ videos = [] }) => {
   const videoRefs = useRef([])
 
   const defaultVideos = [
-    { id: 1, src: '/videos/gif1.webm' },
-    { id: 2, src: '/videos/gif2.webm' },
-    { id: 3, src: '/videos/gif3.webm' },
+    {
+      id: 1,
+      src: 'https://firebasestorage.googleapis.com/v0/b/infilp.appspot.com/o/videos%2Flanding_page_ai_section%2Fgif1.webm?alt=media&token=57097199-361f-4470-a780-438c7b1fd3d4',
+    },
+    {
+      id: 2,
+      src: 'https://firebasestorage.googleapis.com/v0/b/infilp.appspot.com/o/videos%2Flanding_page_ai_section%2Fgif2.webm?alt=media&token=fa742a26-ee10-45be-99f4-fbb13bcf8a52',
+    },
+    {
+      id: 3,
+      src: 'https://firebasestorage.googleapis.com/v0/b/infilp.appspot.com/o/videos%2Flanding_page_ai_section%2Fgif3.webm?alt=media&token=83842254-205e-4983-9d6c-95cf58523ee0',
+    },
   ]
 
   const videoData = videos.length > 0 ? videos : defaultVideos
@@ -216,8 +225,9 @@ const VideoCarousel = ({ videos = [] }) => {
                 onEnded={handleVideoEnd}
                 muted
                 playsInline
+                preload="auto"
                 loop={false}>
-                <source src={video.src} type="video/mp4" />
+                <source src={video.src} type="video/webm" />
                 Your browser does not support the video tag.
               </video>
             </div>

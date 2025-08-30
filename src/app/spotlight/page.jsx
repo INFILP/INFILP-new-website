@@ -5,7 +5,6 @@ import { useInView } from 'framer-motion'
 import { useRef } from 'react'
 import StatsSection from '@/components/StatsSection'
 import Banner from '@/components/Banner'
-import { FeatureCardDemo } from '@/components/FeatureCard '
 import WQBOHeroSection from '@/components/WQBOHeroSection'
 import Cards from '@/components/Cards'
 import SeeAllWorkComponent from '@/components/SeeAllWorkComponent'
@@ -13,18 +12,28 @@ import VideoCarousel from '@/components/VideoCarousel'
 import TestimonialsCarousel from '@/components/TestimonialsCarousel'
 import BuildBanner from '@/components/BuildBanner'
 import { useRouter } from 'next/navigation'
+import { FeatureCardDemo } from '@/components/FeatureCard'
 
 const Spotlight = () => {
   const router = useRouter()
   const videos = [
-    { id: 1, src: '/videos/gif1.webm' },
-    { id: 2, src: '/videos/gif2.webm' },
-    { id: 3, src: '/videos/gif3.webm' },
+    {
+      id: 1,
+      src: 'https://firebasestorage.googleapis.com/v0/b/infilp.appspot.com/o/videos%2Flanding_page_ai_section%2Fgif1.webm?alt=media&token=57097199-361f-4470-a780-438c7b1fd3d4',
+    },
+    {
+      id: 2,
+      src: 'https://firebasestorage.googleapis.com/v0/b/infilp.appspot.com/o/videos%2Flanding_page_ai_section%2Fgif2.webm?alt=media&token=fa742a26-ee10-45be-99f4-fbb13bcf8a52',
+    },
+    {
+      id: 3,
+      src: 'https://firebasestorage.googleapis.com/v0/b/infilp.appspot.com/o/videos%2Flanding_page_ai_section%2Fgif3.webm?alt=media&token=83842254-205e-4983-9d6c-95cf58523ee0',
+    },
   ]
 
   const testimonials = [
     {
-      logo: '/images/testimonialLogo.png',
+      logo: '/images/testimonialLogo.webp',
       quoteIcon: '/icons/quote.png', // inverted commas image
       text: 'As Co-Owner of The Green Felts, we needed an app for advertising events, managing our player database, enabling event buy-ins, and providing a live leaderboard. INFILP quickly learned our requirements and delivered an excellent app despite their initial unfamiliarity with golf. Their team was a pleasure to work with, consistently updating and improving the app.',
       name: 'Glenn Doylr',
@@ -32,7 +41,7 @@ const Spotlight = () => {
       image: '/images/profile1.png',
     },
     {
-      logo: '/images/testimonialLogo.png',
+      logo: '/images/testimonialLogo.webp',
       quoteIcon: '/icons/quote.png',
       text: 'As Co-Owner of The Green Felts, we needed an app for advertising events, managing our player database, enabling event buy-ins, and providing a live leaderboard. INFILP quickly learned our requirements and delivered an excellent app despite their initial unfamiliarity with golf. Their team was a pleasure to work with, consistently updating and improving the app.',
       name: 'John Smith',
@@ -40,7 +49,7 @@ const Spotlight = () => {
       image: '/images/profile1.png',
     },
     {
-      logo: '/images/testimonialLogo.png',
+      logo: '/images/testimonialLogo.webp',
       quoteIcon: '/icons/quote.png', // inverted commas image
       text: 'As Co-Owner of The Green Felts, we needed an app for advertising events, managing our player database, enabling event buy-ins, and providing a live leaderboard. INFILP quickly learned our requirements and delivered an excellent app despite their initial unfamiliarity with golf. Their team was a pleasure to work with, consistently updating and improving the app.',
       name: 'Glenn Doylr',
@@ -48,7 +57,7 @@ const Spotlight = () => {
       image: '/images/profile1.png',
     },
     {
-      logo: '/images/testimonialLogo.png',
+      logo: '/images/testimonialLogo.webp',
       quoteIcon: '/icons/quote.png',
       text: 'As Co-Owner of The Green Felts, we needed an app for advertising events, managing our player database, enabling event buy-ins, and providing a live leaderboard. INFILP quickly learned our requirements and delivered an excellent app despite their initial unfamiliarity with golf. Their team was a pleasure to work with, consistently updating and improving the app.',
       name: 'John Smith',
@@ -66,6 +75,7 @@ const Spotlight = () => {
           muted
           loop
           playsInline
+          preload="none"
           className="absolute top-0 left-0 inset-0 w-full h-full object-cover object-center z-20">
           <source src="/videos/hero.webm" type="video/webm" />
           Your browser does not support the video tag.
@@ -108,8 +118,7 @@ const Spotlight = () => {
           transition={{ duration: 0.6 }}
           className="text-center mt-24 mb-10">
           <h2 className={`text-4xl font-Manrope-regular mb-3`}>
-            Case
-            <span className="font-Manrope-bold">Studies</span>
+            Case <span className="font-Manrope-bold">Studies</span>
           </h2>
           <div className={`w-28 h-1 bg-red-500 mx-auto rounded-full`}></div>
         </motion.div>
@@ -117,7 +126,7 @@ const Spotlight = () => {
           heading={['Smart Golf League & Match Management']}
           logo={{
             src: '/images/golf.webp',
-            alt: 'Healthcare Logo',
+            alt: 'golf Logo',
             width: 150,
             height: 150,
             mobileWidth: 50,
