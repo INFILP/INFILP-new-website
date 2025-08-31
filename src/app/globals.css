@@ -7,7 +7,6 @@ html, body {
   height: 100%;
 }
 
-/* For iOS Safari - remove status bar gap */
 @supports (-webkit-touch-callout: none) {
   body {
     padding-top: env(safe-area-inset-top);
