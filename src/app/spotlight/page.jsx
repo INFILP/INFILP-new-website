@@ -16,18 +16,36 @@ import { FeatureCardDemo } from '@/components/FeatureCard'
 
 const Spotlight = () => {
   const router = useRouter()
+  // const videos = [
+  //   {
+  //     id: 1,
+  //     src: 'https://firebasestorage.googleapis.com/v0/b/infilp.appspot.com/o/videos%2Flanding_page_ai_section%2Fgif1.webm?alt=media&token=57097199-361f-4470-a780-438c7b1fd3d4',
+  //   },
+  //   {
+  //     id: 2,
+  //     src: 'https://firebasestorage.googleapis.com/v0/b/infilp.appspot.com/o/videos%2Flanding_page_ai_section%2Fgif2.webm?alt=media&token=fa742a26-ee10-45be-99f4-fbb13bcf8a52',
+  //   },
+  //   {
+  //     id: 3,
+  //     src: 'https://firebasestorage.googleapis.com/v0/b/infilp.appspot.com/o/videos%2Flanding_page_ai_section%2Fgif3.webm?alt=media&token=83842254-205e-4983-9d6c-95cf58523ee0',
+  //   },
+  // ]
+
   const videos = [
     {
       id: 1,
-      src: 'https://firebasestorage.googleapis.com/v0/b/infilp.appspot.com/o/videos%2Flanding_page_ai_section%2Fgif1.webm?alt=media&token=57097199-361f-4470-a780-438c7b1fd3d4',
+      webm: 'https://firebasestorage.googleapis.com/v0/b/infilp.appspot.com/o/videos%2Flanding_page_ai_section%2Fgif1.webm?alt=media&token=57097199-361f-4470-a780-438c7b1fd3d4',
+      mp4: 'https://firebasestorage.googleapis.com/v0/b/infilp.appspot.com/o/videos%2Flanding_page_ai_section%2Fgif1.mp4?alt=media&token=xxx', // 👈 add your mp4 version
     },
     {
       id: 2,
-      src: 'https://firebasestorage.googleapis.com/v0/b/infilp.appspot.com/o/videos%2Flanding_page_ai_section%2Fgif2.webm?alt=media&token=fa742a26-ee10-45be-99f4-fbb13bcf8a52',
+      webm: 'https://firebasestorage.googleapis.com/v0/b/infilp.appspot.com/o/videos%2Flanding_page_ai_section%2Fgif2.webm?alt=media&token=fa742a26-ee10-45be-99f4-fbb13bcf8a52',
+      mp4: 'https://firebasestorage.googleapis.com/v0/b/infilp.appspot.com/o/videos%2Flanding_page_ai_section%2Fgif2.mp4?alt=media&token=xxx',
     },
     {
       id: 3,
-      src: 'https://firebasestorage.googleapis.com/v0/b/infilp.appspot.com/o/videos%2Flanding_page_ai_section%2Fgif3.webm?alt=media&token=83842254-205e-4983-9d6c-95cf58523ee0',
+      webm: 'https://firebasestorage.googleapis.com/v0/b/infilp.appspot.com/o/videos%2Flanding_page_ai_section%2Fgif3.webm?alt=media&token=83842254-205e-4983-9d6c-95cf58523ee0',
+      mp4: 'https://firebasestorage.googleapis.com/v0/b/infilp.appspot.com/o/videos%2Flanding_page_ai_section%2Fgif3.mp4?alt=media&token=xxx',
     },
   ]
 
