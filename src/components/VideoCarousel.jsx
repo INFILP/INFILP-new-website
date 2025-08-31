@@ -224,6 +224,7 @@ const VideoCarousel = ({ videos = [] }) => {
                 className="w-full h-full object-contain"
                 onEnded={handleVideoEnd}
                 muted
+                autoPlay
                 playsInline
                 preload="auto"
                 loop={false}>
