@@ -23,6 +23,7 @@ const FeatureCard = ({
   threshold = 0.3,
 }) => {
   const ref = useRef(null)
+  const hasPreloaded = useRef(false)
   const router = useRouter()
   const isInView = useInView(ref, {
     threshold: threshold,
@@ -82,7 +83,6 @@ const FeatureCard = ({
       const isMobileDevice = isMobile()
 
       if (isMobileDevice) {
-        // Add small delay for mobile to prevent accidental taps
         setTimeout(() => {
           router.push(`/serviceDetails/${slug}`)
         }, 100)

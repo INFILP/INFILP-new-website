@@ -1,8 +1,8 @@
-"use client";
+'use client'
 
-import React from "react";
-import { motion } from "framer-motion";
-import Image from "next/image";
+import React from 'react'
+import { motion } from 'framer-motion'
+import Image from 'next/image'
 
 const Statement = ({
   title,
@@ -11,10 +11,8 @@ const Statement = ({
   imageAlt,
   icon,
   reverse = false,
-  className = "",
+  className = '',
 }) => {
-  console.log(points, "these are points");
-
   const textVariants = {
     hidden: { opacity: 0, y: 20 },
     visible: {
@@ -22,10 +20,10 @@ const Statement = ({
       y: 0,
       transition: {
         duration: 0.6,
-        ease: "easeOut",
+        ease: 'easeOut',
       },
     },
-  };
+  }
 
   const pointVariants = {
     hidden: { opacity: 0, y: 10 },
@@ -35,10 +33,10 @@ const Statement = ({
       transition: {
         delay: 0.2 + i * 0.1,
         duration: 0.4,
-        ease: "easeOut",
+        ease: 'easeOut',
       },
     }),
-  };
+  }
 
   const imageVariants = {
     hidden: {
@@ -52,42 +50,37 @@ const Statement = ({
       scale: 1,
       transition: {
         duration: 0.7,
-        ease: "easeOut",
+        ease: 'easeOut',
         delay: 0.2,
       },
     },
-  };
+  }
 
   const containerClass = `flex flex-col-reverse items-center gap-8 lg:gap-12 ${
-    reverse ? "xl:flex-row-reverse" : "xl:flex-row"
-  }`;
+    reverse ? 'xl:flex-row-reverse' : 'xl:flex-row'
+  }`
 
   return (
     <div
-      className={`w-full max-w-[1240px] mx-auto py-4 sm:py-6 lg:py-8 ${containerClass} overflow-hidden`}
-    >
+      className={`w-full max-w-[1240px] mx-auto py-4 sm:py-6 lg:py-8 ${containerClass} overflow-hidden`}>
       <div
-        className={` gap-4 sm:gap-6 lg:gap-8 mx-4 sm:mx-6 lg:mx-0 ${containerClass}`}
-      >
+        className={` gap-4 sm:gap-6 lg:gap-8 mx-4 sm:mx-6 lg:mx-0 ${containerClass}`}>
         {/* Text Content */}
         <motion.div
           className="flex flex-col space-y-4 sm:space-y-6 bg-[#F8FAFB] p-4 sm:p-6 rounded-2xl sm:rounded-3xl lg:rounded-4xl w-full lg:w-1/2 min-h-auto  shadow-sm"
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, amount: 0.3 }}
-        >
+          viewport={{ once: true, amount: 0.3 }}>
           <motion.div
             className="flex items-start sm:items-center gap-3 justify-between"
-            variants={textVariants}
-          >
+            variants={textVariants}>
             <h2 className="text-xl sm:text-2xl lg:text-3xl xl:text-[40px] text-gray-900 font-Manrope-regular flex-1">
-              {title.split(" ").map((word, index) => (
+              {title.split(' ').map((word, index) => (
                 <span
                   key={index}
-                  className={index === 1 ? "font-Manrope-bold" : ""}
-                >
+                  className={index === 1 ? 'font-Manrope-bold' : ''}>
                   {word}
-                  {index < title.split(" ").length - 1 ? " " : ""}
+                  {index < title.split(' ').length - 1 ? ' ' : ''}
                 </span>
               ))}
             </h2>
@@ -111,8 +104,7 @@ const Statement = ({
                 custom={index}
                 initial="hidden"
                 whileInView="visible"
-                viewport={{ once: true, amount: 0.3 }}
-              >
+                viewport={{ once: true, amount: 0.3 }}>
                 <Image
                   src="/images/tar.svg"
                   alt={imageAlt}
@@ -134,8 +126,7 @@ const Statement = ({
           variants={imageVariants}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, amount: 0.3 }}
-        >
+          viewport={{ once: true, amount: 0.3 }}>
           <div className="relative w-full min-h-[330px] sm:min-h-[450px] lg:min-h-[420px] rounded-2xl sm:rounded-3xl lg:rounded-4xl overflow-hidden">
             <Image
               src={imageSrc}
@@ -148,6 +139,6 @@ const Statement = ({
         </motion.div>
       </div>
     </div>
-  );
-};
-export default Statement;
+  )
+}
+export default Statement

@@ -1,33 +1,31 @@
-"use client";
-import React from "react";
-import AppHero from "./AppHero";
-import AISection from "./AISection";
-import InfoSection from "./InfoSection";
-import Bestservices from "./Bestservices";
-import FAQs from "./Faqs";
-import { useParams } from "next/navigation";
-import servicesData from "../../../data/services.json";
-import { useState, useEffect } from "react";
-import BuildBanner from "@/components/BuildBanner";
-import Portfolio from "./Portfolio";
+'use client'
+import React from 'react'
+import AppHero from './AppHero'
+import AISection from './AISection'
+import InfoSection from './InfoSection'
+import Bestservices from './Bestservices'
+import FAQs from './Faqs'
+import { useParams } from 'next/navigation'
+import servicesData from '../../../data/services.json'
+import { useState, useEffect } from 'react'
+import BuildBanner from '@/components/BuildBanner'
+import Portfolio from './Portfolio'
 
 const serviceDetails = () => {
-  const params = useParams();
-  const [serviceData, setServiceData] = useState(null);
-  const [loading, setLoading] = useState(true);
+  const params = useParams()
+  const [serviceData, setServiceData] = useState(null)
+  const [loading, setLoading] = useState(true)
 
   useEffect(() => {
     const foundService = servicesData.find(
       (service) => service.slug === params.slug
-    );
-    console.log(foundService, "this is foundService");
-    if (foundService) {
-      setServiceData(foundService);
-    }
-    setLoading(false);
-  }, [params.slug]);
+    )
 
-  console.log("Services Data:", serviceData?.services_section.services);
+    if (foundService) {
+      setServiceData(foundService)
+    }
+    setLoading(false)
+  }, [params.slug])
 
   return (
     <div>
@@ -46,7 +44,7 @@ const serviceDetails = () => {
         subtitle={serviceData?.problems_section.subtitle}
         subdescription={serviceData?.problems_section.sub_content}
         description={serviceData?.problems_section.discription}
-        imageSrc={serviceData?.problems_section.image || "/images/team1.webp"}
+        imageSrc={serviceData?.problems_section.image || '/images/team1.webp'}
         imageAlt="Team working on AI development"
         layout={serviceData?.problems_section.direction}
       />
@@ -56,7 +54,7 @@ const serviceDetails = () => {
         subtitle={serviceData?.team_section.content}
         description={serviceData?.team_section.sub_content}
         buttonText={serviceData?.team_section.cta_button}
-        imageSrc={serviceData?.team_section.image || "/images/team2.webp"}
+        imageSrc={serviceData?.team_section.image || '/images/team2.webp'}
         imageAlt="Mobile app mockup showing Gen AI tools"
         layout={serviceData?.team_section.direction}
       />
@@ -74,12 +72,12 @@ const serviceDetails = () => {
           topText="Turn your idea into reality"
           mainText="Ready to build something great?"
           buttonText="Get Started"
-          onClick={() => console.log("Button clicked!")}
+          onClick={() => console.log('Button clicked!')}
           delay={0.2}
         />
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default serviceDetails;
+export default serviceDetails
